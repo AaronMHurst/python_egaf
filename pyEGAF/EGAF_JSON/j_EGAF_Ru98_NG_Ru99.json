@@ -1,0 +1,161 @@
+{
+    "nucleusID": "Ru99",
+    "datasetType": "evaluatedGammarayActivationFile",
+    "nucleusZ": 44,
+    "nucleusA": 99,
+    "nucleusN": 55,
+    "nucleusTargetZ": 44,
+    "nucleusTargetA": 98,
+    "nucleusTargetN": 54,
+    "nucleusTargetElement": "Ru",
+    "nucleusTargetID": "Ru98",
+    "numberPrimaryGammas": 0,
+    "numberSecondaryGammas": 1,
+    "totalNumberLevels": 3,
+    "totalNumberGammas": 1,
+    "unitEnergy": "keV",
+    "recordQ": [
+        {
+            "energyNeutronSeparationAME2020": 7471.8315,
+            "dEnergyNeutronSeparationAME2020": 6.4715,
+            "energyProtonSeparationAME2020": 8482.142,
+            "dEnergyProtonSeparationAME2020": 3.39293626,
+            "energyNeutronSeparationENSDF": null,
+            "energyProtonSeparationENSDF": null,
+            "energyNeutronSeparationEGAF": 7464.0,
+            "dEnergyNeutronSeparationEGAF": 7.0
+        }
+    ],
+    "neutronCaptureNormalization": [
+        {
+            "normalizationRecord": [
+                {
+                    "multiplierIsotopicCorrection": 53.5,
+                    "dMultiplierIsotopicCorrection": 0.9,
+                    "naturalIsotopicAbundance": 1.8691588785046729,
+                    "dNaturalIsotopicAbundance": 0.03144379421783562,
+                    "adoptedTotalThermalCaptureCrossSection": 8.0,
+                    "dAdoptedTotalThermalCaptureCrossSection": 0.0,
+                    "unitAdoptedCrossSection": "b",
+                    "keyNumber": "1981MuZQ"
+                }
+            ]
+        }
+    ],
+    "levelScheme": [
+        {
+            "levelIndex": 0,
+            "levelEnergy": 0.0,
+            "dLevelEnergy": 0.0,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 1,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": 2.5,
+                    "spinIsTentative": false,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": 1,
+                    "paritySign": "positive",
+                    "parityIsTentative": false
+                }
+            ],
+            "numberOfGammas": 0,
+            "gammaDecay": []
+        },
+        {
+            "levelIndex": 1,
+            "levelEnergy": 89.69,
+            "dLevelEnergy": 0.1,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 1,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": 1.5,
+                    "spinIsTentative": false,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": 1,
+                    "paritySign": "positive",
+                    "parityIsTentative": false
+                }
+            ],
+            "numberOfGammas": 1,
+            "gammaDecay": [
+                {
+                    "gammaEnergy": 89.69,
+                    "dGammaEnergy": 0.1,
+                    "levelIndexInitial": 1,
+                    "levelIndexFinal": 0,
+                    "levelEnergyInitial": 89.69,
+                    "levelEnergyFinal": 0.0,
+                    "gammaTransitionType": "secondary",
+                    "gammaFeedsGroundState": true,
+                    "gammaAbsoluteIntensities": [
+                        {
+                            "partialElementalCrossSection": 0.0036,
+                            "dPartialElementalCrossSection": 0.0007,
+                            "partialIsotopicCrossSection": 0.1926,
+                            "dPartialIsotopicCrossSection": 0.03758989358856979,
+                            "populationPerNeutronCapture": 0.024075,
+                            "dPopulationPerNeutronCapture": 0.004698736698571224
+                        }
+                    ],
+                    "multipolarity": null,
+                    "multipolarityIsTentative": false,
+                    "multipolarityIsAssumed": false,
+                    "mixingRatio": null,
+                    "dMixingRatio": null,
+                    "mixingRatioSign": null,
+                    "calculatedTotalInternalConversionCoefficient": 0.0,
+                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+                    "calculatedAtomicShellConversionCoefficients": [
+                        {
+                            "calculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellQ": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellQ": 0.0
+                        }
+                    ],
+                    "reducedTransitionProbabilities": []
+                }
+            ]
+        },
+        {
+            "levelIndex": 2,
+            "levelEnergy": 7464.0,
+            "dLevelEnergy": 7.0,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 1,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": 0.5,
+                    "spinIsTentative": false,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": 1,
+                    "paritySign": "positive",
+                    "parityIsTentative": false
+                }
+            ],
+            "numberOfGammas": 0,
+            "gammaDecay": []
+        }
+    ]
+}

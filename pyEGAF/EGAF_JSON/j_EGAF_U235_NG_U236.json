@@ -1,0 +1,800 @@
+{
+    "nucleusID": "U236",
+    "datasetType": "evaluatedGammarayActivationFile",
+    "nucleusZ": 92,
+    "nucleusA": 236,
+    "nucleusN": 144,
+    "nucleusTargetZ": 92,
+    "nucleusTargetA": 235,
+    "nucleusTargetN": 143,
+    "nucleusTargetElement": "U",
+    "nucleusTargetID": "U235",
+    "numberPrimaryGammas": 1,
+    "numberSecondaryGammas": 10,
+    "totalNumberLevels": 10,
+    "totalNumberGammas": 11,
+    "unitEnergy": "keV",
+    "recordQ": [
+        {
+            "energyNeutronSeparationAME2020": 6545.5184,
+            "dEnergyNeutronSeparationAME2020": 0.259,
+            "energyProtonSeparationAME2020": 7133.2898,
+            "dEnergyProtonSeparationAME2020": 14.01668772,
+            "energyNeutronSeparationENSDF": null,
+            "energyProtonSeparationENSDF": null,
+            "energyNeutronSeparationEGAF": 6544.73,
+            "dEnergyNeutronSeparationEGAF": 0.15
+        }
+    ],
+    "neutronCaptureNormalization": [
+        {
+            "normalizationRecord": [
+                {
+                    "multiplierIsotopicCorrection": 138.9,
+                    "dMultiplierIsotopicCorrection": 1.0,
+                    "naturalIsotopicAbundance": 0.7199424046076314,
+                    "dNaturalIsotopicAbundance": 0.005183170659522183,
+                    "adoptedTotalThermalCaptureCrossSection": 98.3,
+                    "dAdoptedTotalThermalCaptureCrossSection": 0.8,
+                    "unitAdoptedCrossSection": "b",
+                    "keyNumber": "1984MuZY"
+                }
+            ]
+        }
+    ],
+    "levelScheme": [
+        {
+            "levelIndex": 0,
+            "levelEnergy": 0.0,
+            "dLevelEnergy": 0.0,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 1,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": 0.0,
+                    "spinIsTentative": false,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": 1,
+                    "paritySign": "positive",
+                    "parityIsTentative": false
+                }
+            ],
+            "numberOfGammas": 0,
+            "gammaDecay": []
+        },
+        {
+            "levelIndex": 1,
+            "levelEnergy": 0.0,
+            "dLevelEnergy": 0.0,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 1,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": null,
+                    "spinIsTentative": true,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": 0,
+                    "paritySign": null,
+                    "parityIsTentative": true
+                }
+            ],
+            "numberOfGammas": 2,
+            "gammaDecay": [
+                {
+                    "gammaEnergy": 297.0,
+                    "dGammaEnergy": 0.1,
+                    "levelIndexInitial": 1,
+                    "levelIndexFinal": 0,
+                    "levelEnergyInitial": 0.0,
+                    "levelEnergyFinal": 0.0,
+                    "gammaTransitionType": "secondary",
+                    "gammaFeedsGroundState": true,
+                    "gammaAbsoluteIntensities": [
+                        {
+                            "partialElementalCrossSection": 0.22,
+                            "dPartialElementalCrossSection": 0.02,
+                            "partialIsotopicCrossSection": 30.558,
+                            "dPartialIsotopicCrossSection": 2.786697687227662,
+                            "populationPerNeutronCapture": 0.3108646998982706,
+                            "dPopulationPerNeutronCapture": 0.02846157286403957
+                        }
+                    ],
+                    "multipolarity": null,
+                    "multipolarityIsTentative": false,
+                    "multipolarityIsAssumed": false,
+                    "mixingRatio": null,
+                    "dMixingRatio": null,
+                    "mixingRatioSign": null,
+                    "calculatedTotalInternalConversionCoefficient": 0.0,
+                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+                    "calculatedAtomicShellConversionCoefficients": [
+                        {
+                            "calculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellQ": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellQ": 0.0
+                        }
+                    ],
+                    "reducedTransitionProbabilities": []
+                },
+                {
+                    "gammaEnergy": 1279.01,
+                    "dGammaEnergy": 0.1,
+                    "levelIndexInitial": 1,
+                    "levelIndexFinal": 0,
+                    "levelEnergyInitial": 0.0,
+                    "levelEnergyFinal": 0.0,
+                    "gammaTransitionType": "secondary",
+                    "gammaFeedsGroundState": true,
+                    "gammaAbsoluteIntensities": [
+                        {
+                            "partialElementalCrossSection": 0.2,
+                            "dPartialElementalCrossSection": 0.01,
+                            "partialIsotopicCrossSection": 27.78,
+                            "dPartialIsotopicCrossSection": 1.4033249801809986,
+                            "populationPerNeutronCapture": 0.2826042726347915,
+                            "dPopulationPerNeutronCapture": 0.014460019972087719
+                        }
+                    ],
+                    "multipolarity": null,
+                    "multipolarityIsTentative": false,
+                    "multipolarityIsAssumed": false,
+                    "mixingRatio": null,
+                    "dMixingRatio": null,
+                    "mixingRatioSign": null,
+                    "calculatedTotalInternalConversionCoefficient": 0.0,
+                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+                    "calculatedAtomicShellConversionCoefficients": [
+                        {
+                            "calculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellQ": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellQ": 0.0
+                        }
+                    ],
+                    "reducedTransitionProbabilities": []
+                }
+            ]
+        },
+        {
+            "levelIndex": 2,
+            "levelEnergy": 45.242,
+            "dLevelEnergy": 0.006,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 1,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": 2.0,
+                    "spinIsTentative": false,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": 1,
+                    "paritySign": "positive",
+                    "parityIsTentative": false
+                }
+            ],
+            "numberOfGammas": 1,
+            "gammaDecay": [
+                {
+                    "gammaEnergy": 45.242,
+                    "dGammaEnergy": 0.006,
+                    "levelIndexInitial": 2,
+                    "levelIndexFinal": 0,
+                    "levelEnergyInitial": 45.242,
+                    "levelEnergyFinal": 0.0,
+                    "gammaTransitionType": "secondary",
+                    "gammaFeedsGroundState": true,
+                    "gammaAbsoluteIntensities": [
+                        {
+                            "partialElementalCrossSection": 0.0,
+                            "dPartialElementalCrossSection": 0.0,
+                            "partialIsotopicCrossSection": 0.0,
+                            "dPartialIsotopicCrossSection": 0.0,
+                            "populationPerNeutronCapture": 0.0,
+                            "dPopulationPerNeutronCapture": 0.0
+                        }
+                    ],
+                    "multipolarity": null,
+                    "multipolarityIsTentative": false,
+                    "multipolarityIsAssumed": false,
+                    "mixingRatio": null,
+                    "dMixingRatio": null,
+                    "mixingRatioSign": null,
+                    "calculatedTotalInternalConversionCoefficient": 0.0,
+                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+                    "calculatedAtomicShellConversionCoefficients": [
+                        {
+                            "calculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellQ": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellQ": 0.0
+                        }
+                    ],
+                    "reducedTransitionProbabilities": []
+                }
+            ]
+        },
+        {
+            "levelIndex": 3,
+            "levelEnergy": 149.475,
+            "dLevelEnergy": 0.008,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 1,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": 4.0,
+                    "spinIsTentative": false,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": 1,
+                    "paritySign": "positive",
+                    "parityIsTentative": false
+                }
+            ],
+            "numberOfGammas": 1,
+            "gammaDecay": [
+                {
+                    "gammaEnergy": 104.233,
+                    "dGammaEnergy": 0.005,
+                    "levelIndexInitial": 3,
+                    "levelIndexFinal": 2,
+                    "levelEnergyInitial": 149.475,
+                    "levelEnergyFinal": 45.242,
+                    "gammaTransitionType": "secondary",
+                    "gammaFeedsGroundState": false,
+                    "gammaAbsoluteIntensities": [
+                        {
+                            "partialElementalCrossSection": 0.0,
+                            "dPartialElementalCrossSection": 0.0,
+                            "partialIsotopicCrossSection": 0.0,
+                            "dPartialIsotopicCrossSection": 0.0,
+                            "populationPerNeutronCapture": 0.0,
+                            "dPopulationPerNeutronCapture": 0.0
+                        }
+                    ],
+                    "multipolarity": null,
+                    "multipolarityIsTentative": false,
+                    "multipolarityIsAssumed": false,
+                    "mixingRatio": null,
+                    "dMixingRatio": null,
+                    "mixingRatioSign": null,
+                    "calculatedTotalInternalConversionCoefficient": 0.0,
+                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+                    "calculatedAtomicShellConversionCoefficients": [
+                        {
+                            "calculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellQ": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellQ": 0.0
+                        }
+                    ],
+                    "reducedTransitionProbabilities": []
+                }
+            ]
+        },
+        {
+            "levelIndex": 4,
+            "levelEnergy": 687.6,
+            "dLevelEnergy": 0.05,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 1,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": 1.0,
+                    "spinIsTentative": false,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": -1,
+                    "paritySign": "negative",
+                    "parityIsTentative": false
+                }
+            ],
+            "numberOfGammas": 0,
+            "gammaDecay": []
+        },
+        {
+            "levelIndex": 5,
+            "levelEnergy": 744.15,
+            "dLevelEnergy": 0.08,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 1,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": 3.0,
+                    "spinIsTentative": false,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": -1,
+                    "paritySign": "negative",
+                    "parityIsTentative": false
+                }
+            ],
+            "numberOfGammas": 0,
+            "gammaDecay": []
+        },
+        {
+            "levelIndex": 6,
+            "levelEnergy": 966.63,
+            "dLevelEnergy": 0.09,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 1,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": 1.0,
+                    "spinIsTentative": false,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": -1,
+                    "paritySign": "negative",
+                    "parityIsTentative": false
+                }
+            ],
+            "numberOfGammas": 0,
+            "gammaDecay": []
+        },
+        {
+            "levelIndex": 7,
+            "levelEnergy": 988.38,
+            "dLevelEnergy": 0.07,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 1,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": 2.0,
+                    "spinIsTentative": false,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": -1,
+                    "paritySign": "negative",
+                    "parityIsTentative": false
+                }
+            ],
+            "numberOfGammas": 4,
+            "gammaDecay": [
+                {
+                    "gammaEnergy": 21.0,
+                    "dGammaEnergy": 1.0,
+                    "levelIndexInitial": 7,
+                    "levelIndexFinal": 6,
+                    "levelEnergyInitial": 988.38,
+                    "levelEnergyFinal": 966.63,
+                    "gammaTransitionType": "secondary",
+                    "gammaFeedsGroundState": false,
+                    "gammaAbsoluteIntensities": [
+                        {
+                            "partialElementalCrossSection": 0.0,
+                            "dPartialElementalCrossSection": 0.0,
+                            "partialIsotopicCrossSection": 0.0,
+                            "dPartialIsotopicCrossSection": 0.0,
+                            "populationPerNeutronCapture": 0.0,
+                            "dPopulationPerNeutronCapture": 0.0
+                        }
+                    ],
+                    "multipolarity": null,
+                    "multipolarityIsTentative": false,
+                    "multipolarityIsAssumed": false,
+                    "mixingRatio": null,
+                    "dMixingRatio": null,
+                    "mixingRatioSign": null,
+                    "calculatedTotalInternalConversionCoefficient": 0.0,
+                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+                    "calculatedAtomicShellConversionCoefficients": [
+                        {
+                            "calculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellQ": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellQ": 0.0
+                        }
+                    ],
+                    "reducedTransitionProbabilities": []
+                },
+                {
+                    "gammaEnergy": 243.6,
+                    "dGammaEnergy": 0.2,
+                    "levelIndexInitial": 7,
+                    "levelIndexFinal": 5,
+                    "levelEnergyInitial": 988.38,
+                    "levelEnergyFinal": 744.15,
+                    "gammaTransitionType": "secondary",
+                    "gammaFeedsGroundState": false,
+                    "gammaAbsoluteIntensities": [
+                        {
+                            "partialElementalCrossSection": 0.023,
+                            "dPartialElementalCrossSection": 0.003,
+                            "partialIsotopicCrossSection": 3.1947,
+                            "dPartialIsotopicCrossSection": 0.41733426650587896,
+                            "populationPerNeutronCapture": 0.03249949135300102,
+                            "dPopulationPerNeutronCapture": 0.004253747296000807
+                        }
+                    ],
+                    "multipolarity": null,
+                    "multipolarityIsTentative": false,
+                    "multipolarityIsAssumed": false,
+                    "mixingRatio": null,
+                    "dMixingRatio": null,
+                    "mixingRatioSign": null,
+                    "calculatedTotalInternalConversionCoefficient": 0.0,
+                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+                    "calculatedAtomicShellConversionCoefficients": [
+                        {
+                            "calculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellQ": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellQ": 0.0
+                        }
+                    ],
+                    "reducedTransitionProbabilities": []
+                },
+                {
+                    "gammaEnergy": 300.0,
+                    "dGammaEnergy": 0.1,
+                    "levelIndexInitial": 7,
+                    "levelIndexFinal": 4,
+                    "levelEnergyInitial": 988.38,
+                    "levelEnergyFinal": 687.6,
+                    "gammaTransitionType": "secondary",
+                    "gammaFeedsGroundState": false,
+                    "gammaAbsoluteIntensities": [
+                        {
+                            "partialElementalCrossSection": 0.016,
+                            "dPartialElementalCrossSection": 0.003,
+                            "partialIsotopicCrossSection": 2.2224,
+                            "dPartialIsotopicCrossSection": 0.41700706229031664,
+                            "populationPerNeutronCapture": 0.022608341810783316,
+                            "dPopulationPerNeutronCapture": 0.004246176102458209
+                        }
+                    ],
+                    "multipolarity": null,
+                    "multipolarityIsTentative": false,
+                    "multipolarityIsAssumed": false,
+                    "mixingRatio": null,
+                    "dMixingRatio": null,
+                    "mixingRatioSign": null,
+                    "calculatedTotalInternalConversionCoefficient": 0.0,
+                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+                    "calculatedAtomicShellConversionCoefficients": [
+                        {
+                            "calculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellQ": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellQ": 0.0
+                        }
+                    ],
+                    "reducedTransitionProbabilities": []
+                },
+                {
+                    "gammaEnergy": 943.137,
+                    "dGammaEnergy": 0.066,
+                    "levelIndexInitial": 7,
+                    "levelIndexFinal": 2,
+                    "levelEnergyInitial": 988.38,
+                    "levelEnergyFinal": 45.242,
+                    "gammaTransitionType": "secondary",
+                    "gammaFeedsGroundState": false,
+                    "gammaAbsoluteIntensities": [
+                        {
+                            "partialElementalCrossSection": 0.082,
+                            "dPartialElementalCrossSection": 0.01,
+                            "partialIsotopicCrossSection": 11.389800000000001,
+                            "dPartialIsotopicCrossSection": 1.3914183411181558,
+                            "populationPerNeutronCapture": 0.11586775178026451,
+                            "dPopulationPerNeutronCapture": 0.014186190206517015
+                        }
+                    ],
+                    "multipolarity": null,
+                    "multipolarityIsTentative": false,
+                    "multipolarityIsAssumed": false,
+                    "mixingRatio": null,
+                    "dMixingRatio": null,
+                    "mixingRatioSign": null,
+                    "calculatedTotalInternalConversionCoefficient": 0.0,
+                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+                    "calculatedAtomicShellConversionCoefficients": [
+                        {
+                            "calculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellQ": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellQ": 0.0
+                        }
+                    ],
+                    "reducedTransitionProbabilities": []
+                }
+            ]
+        },
+        {
+            "levelIndex": 8,
+            "levelEnergy": 1058.54,
+            "dLevelEnergy": 0.06,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 1,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": 4.0,
+                    "spinIsTentative": true,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": 1,
+                    "paritySign": "positive",
+                    "parityIsTentative": true
+                }
+            ],
+            "numberOfGammas": 2,
+            "gammaDecay": [
+                {
+                    "gammaEnergy": 909.063,
+                    "dGammaEnergy": 0.063,
+                    "levelIndexInitial": 8,
+                    "levelIndexFinal": 3,
+                    "levelEnergyInitial": 1058.54,
+                    "levelEnergyFinal": 149.475,
+                    "gammaTransitionType": "secondary",
+                    "gammaFeedsGroundState": false,
+                    "gammaAbsoluteIntensities": [
+                        {
+                            "partialElementalCrossSection": 0.026,
+                            "dPartialElementalCrossSection": 0.004,
+                            "partialIsotopicCrossSection": 3.6114,
+                            "dPartialIsotopicCrossSection": 0.5562080186405083,
+                            "populationPerNeutronCapture": 0.03673855544252289,
+                            "dPopulationPerNeutronCapture": 0.005666164851633967
+                        }
+                    ],
+                    "multipolarity": null,
+                    "multipolarityIsTentative": false,
+                    "multipolarityIsAssumed": false,
+                    "mixingRatio": null,
+                    "dMixingRatio": null,
+                    "mixingRatioSign": null,
+                    "calculatedTotalInternalConversionCoefficient": 0.0,
+                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+                    "calculatedAtomicShellConversionCoefficients": [
+                        {
+                            "calculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellQ": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellQ": 0.0
+                        }
+                    ],
+                    "reducedTransitionProbabilities": []
+                },
+                {
+                    "gammaEnergy": 1014.1,
+                    "dGammaEnergy": 1.0,
+                    "levelIndexInitial": 8,
+                    "levelIndexFinal": 2,
+                    "levelEnergyInitial": 1058.54,
+                    "levelEnergyFinal": 45.242,
+                    "gammaTransitionType": "secondary",
+                    "gammaFeedsGroundState": false,
+                    "gammaAbsoluteIntensities": [
+                        {
+                            "partialElementalCrossSection": 0.026,
+                            "dPartialElementalCrossSection": 0.004,
+                            "partialIsotopicCrossSection": 3.6114,
+                            "dPartialIsotopicCrossSection": 0.5562080186405083,
+                            "populationPerNeutronCapture": 0.03673855544252289,
+                            "dPopulationPerNeutronCapture": 0.005666164851633967
+                        }
+                    ],
+                    "multipolarity": null,
+                    "multipolarityIsTentative": false,
+                    "multipolarityIsAssumed": false,
+                    "mixingRatio": null,
+                    "dMixingRatio": null,
+                    "mixingRatioSign": null,
+                    "calculatedTotalInternalConversionCoefficient": 0.0,
+                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+                    "calculatedAtomicShellConversionCoefficients": [
+                        {
+                            "calculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellQ": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellQ": 0.0
+                        }
+                    ],
+                    "reducedTransitionProbabilities": []
+                }
+            ]
+        },
+        {
+            "levelIndex": 9,
+            "levelEnergy": 6544.73,
+            "dLevelEnergy": 0.15,
+            "levelIsIsomer": false,
+            "isomerDecay": [],
+            "numberOfSpins": 2,
+            "spins": [
+                {
+                    "spinIndex": 0,
+                    "spinReal": 3.0,
+                    "spinIsTentative": true,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": -1,
+                    "paritySign": "negative",
+                    "parityIsTentative": false
+                },
+                {
+                    "spinIndex": 1,
+                    "spinReal": 4.0,
+                    "spinIsTentative": true,
+                    "spinIsLimit": false,
+                    "spinLimits": null,
+                    "parity": -1,
+                    "paritySign": "negative",
+                    "parityIsTentative": false
+                }
+            ],
+            "numberOfGammas": 1,
+            "gammaDecay": [
+                {
+                    "gammaEnergy": 6395.16,
+                    "dGammaEnergy": 0.15,
+                    "levelIndexInitial": 9,
+                    "levelIndexFinal": 3,
+                    "levelEnergyInitial": 6544.73,
+                    "levelEnergyFinal": 149.475,
+                    "gammaTransitionType": "primary",
+                    "gammaFeedsGroundState": false,
+                    "gammaAbsoluteIntensities": [
+                        {
+                            "partialElementalCrossSection": 0.0032,
+                            "dPartialElementalCrossSection": 0.0004,
+                            "partialIsotopicCrossSection": 0.44448000000000004,
+                            "dPartialIsotopicCrossSection": 0.0556520763314362,
+                            "populationPerNeutronCapture": 0.0045216683621566636,
+                            "dPopulationPerNeutronCapture": 0.0005673399203002464
+                        }
+                    ],
+                    "multipolarity": null,
+                    "multipolarityIsTentative": false,
+                    "multipolarityIsAssumed": false,
+                    "mixingRatio": null,
+                    "dMixingRatio": null,
+                    "mixingRatioSign": null,
+                    "calculatedTotalInternalConversionCoefficient": 0.0,
+                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+                    "calculatedAtomicShellConversionCoefficients": [
+                        {
+                            "calculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellK": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellL": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellM": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellN": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellO": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellP": 0.0,
+                            "calculatedInternalConversionCoefficientAtomicShellQ": 0.0,
+                            "dCalculatedInternalConversionCoefficientAtomicShellQ": 0.0
+                        }
+                    ],
+                    "reducedTransitionProbabilities": []
+                }
+            ]
+        }
+    ]
+}

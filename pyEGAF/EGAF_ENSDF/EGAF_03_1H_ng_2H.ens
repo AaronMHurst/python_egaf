@@ -1,0 +1,14 @@
+  2H     1H(N,G) E=THERMAL: {~EGAF}                                             
+  2H  c  Evaluated Gamma-ray Activation File (EGAF).
+  2H 2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+  2H  c  BR$|s{-0}=0.3326 7 (1981MuZQ)
+  2H  cG RI$Elemental |s(|g) assuming %Abundance=99.9885 70    
+  2H   N 1.000115  70 0.3326  7
+  2H  PN                                                                    C
+  2H 2PN Thermal cross section in barns.
+  2H  cN NR$Isotopic |s(|g)=NR*RI.
+  2H 2cN Divide by |s{-0} for intensity per neutron capture.
+  2H   L 0            1+                                                        
+  2H   L 2224.56601 9                                                           
+  2H   G 2223.24835 9 0.3326  7
+

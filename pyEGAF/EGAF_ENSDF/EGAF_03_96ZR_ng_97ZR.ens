@@ -1,0 +1,18 @@
+ 97ZR    96ZR(N,G) E=THERMAL: {~EGAF}                                           
+ 97ZR c  Evaluated Gamma-ray Activation File (EGAF).
+ 97ZR2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 97ZR c  BR$|s{-0}=0.0229 10 (1981MuZQ)  
+ 97ZR cG RI$Elemental |s(|g) assuming %Abundance=2.80  9       
+ 97ZR  N 35.7      11 0.0229 10
+ 97ZR PN                                                                    C
+ 97ZR2PN Thermal cross section in barns.
+ 97ZR cN NR$Isotopic |s(|g)=NR*RI.
+ 97ZR2cN Divide by |s{-0} for intensity per neutron capture.
+ 97ZR  L       0.0   1/2+                                                       
+ 97ZR  L    1102.68 63/2+                                                       
+ 97ZR  G    1102.67 6  0.0235 8                                                 
+ 97ZR  L     1264.4 2 7/2+                                                      
+ 97ZR  G     160.9410  0.0111 7                                                 
+ 97ZR  L     5575.1 4                                                           
+ 97ZR  G     5574.9 4  0.0023 4
+

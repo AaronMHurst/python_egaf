@@ -1,0 +1,56 @@
+208PB    207PB(N,G) E=THERMAL: {~EGAF}                                          
+208PB c  Evaluated Gamma-ray Activation File (EGAF).
+208PB2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+208PB c  BR$|s{-0}=0.712 10 (1984MuZY)  
+208PB cG RI$Elemental |s(|g) assuming %Abundance=22.1  1       
+208PB  N     4.525 20 0.712  10
+208PB PN                                                                    C
+208PB2PN Thermal cross section in barns.
+208PB cN NR$Isotopic |s(|g)=NR*RI.
+208PB2cN Divide by |s{-0} for intensity per neutron capture.
+208PB  L       0.0   0+                                                         
+208PB  L    2614.55 33-                                                         
+208PB  G    2614.53 3 0.00040 3                                                 
+208PB  L       3998 4                                                           
+208PB  G       1383 4 3.3E-05 7                                                 
+208PB  G       3998 4                                                           
+208PB  L   4051.96 173-                                                         
+208PB  G   1437.40 17   8E-06 3                                                 
+208PB  G   4051.91 17                                                           
+208PB  L    4085.50 72+                                                         
+208PB  G    4085.46 71.04E-0417                                                 
+208PB  L   4229.72 162-                                                         
+208PB  G   1615.16 16 2.2E-05 3                                                 
+208PB  G   4229.67 16                                                           
+208PB  L    4254.73 8(3-)                                                       
+208PB  G    1640.17 8 3.6E-05 4                                                 
+208PB  G    4254.68 8                                                           
+208PB  L    4701.3 21                                                           
+208PB  G    2086.8 21 3.8E-05 8                                                 
+208PB  L       4882 7 (0+)                                                      
+208PB  G       4882 7                                                           
+208PB  L       4905 6(0+)                                                       
+208PB  G       4905 6                                                           
+208PB  L    4937.18 83-                                                         
+208PB  G    2322.62 8 3.0E-05 4                                                 
+208PB  G    4937.12 8 2.5E-0525                                                 
+208PB  L   5384.78 152-                                                         
+208PB  G   1155.06 161.10E-0519                                                 
+208PB  G   1332.82 19   5E-06 3                                                 
+208PB  G   2770.21 15 1.6E-05 3                                                 
+208PB  G   5384.71 15   8E-06 3                                                 
+208PB  L   5844.55 20(1)                                                        
+208PB  G   5844.46 20 1.4E-05 4                                                 
+208PB  L       6343 33-                                                         
+208PB  G       3729 3 2.2E-0511                                                 
+208PB  G       6343 3                                                           
+208PB  L    7367.92 70-,1-                                                      
+208PB  G       1025 3 2.2E-05 5                                                 
+208PB  G   1523.36 19 1.1E-05 3                                                 
+208PB  G   1983.13 15 3.8E-05 8                                                 
+208PB  G    2430.72 8 3.0E-05 4                                                 
+208PB  G    3113.17 8 3.6E-05 6                                                 
+208PB  G    3282.39 7 8.5E-05 9                                                 
+208PB  G    4753.31 72.33E-0417                                                 
+208PB  G    7367.78 7   0.137 3                                                 
+           

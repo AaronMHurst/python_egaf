@@ -1,0 +1,20 @@
+ 93MO    92MO(N,G) E=THERMAL: {~EGAF}                                           
+ 93MO c  Evaluated Gamma-ray Activation File (EGAF).
+ 93MO2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 93MO c  BR$|s{-0}=0.019 (1981MuZQ)  
+ 93MO cG RI$Elemental |s(|g) assuming %Abundance=14.84 35      
+ 93MO  N     6.74  16 0.019    
+ 93MO PN                                                                    C
+ 93MO2PN Thermal cross section in barns.
+ 93MO cN NR$Isotopic |s(|g)=NR*RI.
+ 93MO2cN Divide by |s{-0} for intensity per neutron capture.
+ 93MO  L       0.0                                                              
+ 93MO  L      943.6 3                                                           
+ 93MO  G      943.6 3  0.0075 9                                                 
+ 93MO  L     1492.2 4                                                           
+ 93MO  G     1492.2 4 0.0043 10                                                 
+ 93MO  L     8070.0 3 1/2+                                                      
+ 93MO  G     6577.6 3  0.0010 2                                                 
+ 93MO  G   7126.16 11  0.0032 6                                                 
+ 93MO  G     8069.7 3 0.00044 7
+

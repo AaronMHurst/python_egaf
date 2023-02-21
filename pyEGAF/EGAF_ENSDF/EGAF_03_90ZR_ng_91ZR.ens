@@ -1,0 +1,54 @@
+ 91ZR    90ZR(N,G) E=THERMAL: {~EGAF}                                           
+ 91ZR c  Evaluated Gamma-ray Activation File (EGAF).
+ 91ZR2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 91ZR c  BR$|s{-0}=0.011 5 (1981MuZQ)  
+ 91ZR cG RI$Elemental |s(|g) assuming %Abundance=51.45 40      
+ 91ZR  N    1.944  15 0.011   5
+ 91ZR PN                                                                    C
+ 91ZR2PN Thermal cross section in barns.
+ 91ZR cN NR$Isotopic |s(|g)=NR*RI.
+ 91ZR2cN Divide by |s{-0} for intensity per neutron capture.
+ 91ZR  L       0.0   5/2+                                                       
+ 91ZR  L     1205.6 71/2+                                                       
+ 91ZR  G     1205.6 7   0.042 5                                                 
+ 91ZR  L     1465.7 75/2+                                                       
+ 91ZR  G     1465.7 7   0.06315                                                 
+ 91ZR  L     1880.4 47/2+                                                       
+ 91ZR  G     1880.4 4   0.016 4                                                 
+ 91ZR  L     2042.3 43/2+                                                       
+ 91ZR  G     2042.2 4   0.032 8                                                 
+ 91ZR  L    2358.3 12(1/2)-                                                     
+ 91ZR  G    2358.2 12                                                           
+ 91ZR  L     2533.2 5(3/2+,5/2+)                                                
+ 91ZR  G      652.8 4  0.002914                                                 
+ 91ZR  G     1067.5 7  0.0017 8                                                 
+ 91ZR  G     2533.2 5  0.003714                                                 
+ 91ZR  L     2557.8 81/2+                                                       
+ 91ZR  G     2557.8 8   0.016 4                                                 
+ 91ZR  L    2577.3 14(3/2)-                                                     
+ 91ZR  G    2577.3 14   0.016 4                                                 
+ 91ZR  L     2640.1 8(3/2)-                                                     
+ 91ZR  G     2640.1 8  0.010525                                                 
+ 91ZR  L     2694.0 6(7/2)-                                                     
+ 91ZR  G     2694.0 6                                                           
+ 91ZR  L    2873.5 113/2+,5/2+                                                  
+ 91ZR  G    2873.4 11                                                           
+ 91ZR  L    3082.7 123/2+                                                       
+ 91ZR  G    3082.6 12  0.009625                                                 
+ 91ZR  L    3475.8 15 1/2-,3/2-                                                 
+ 91ZR  G    3475.8 15   0.019 5                                                 
+ 91ZR  L    3982.4 153/2+,5/2+                                                  
+ 91ZR  G    3982.3 15   0.015 4                                                 
+ 91ZR  L    4179.1 12 1/2(+),3/2,5/2+                                           
+ 91ZR  G    4179.0 12                                                           
+ 91ZR  L     7192.7 81/2+                                                       
+ 91ZR  G    3013.5 13                                                           
+ 91ZR  G    3210.3 15                                                           
+ 91ZR  G    3716.8 15                                                           
+ 91ZR  G    4319.1 12                                                           
+ 91ZR  G    4552.4 11                                                           
+ 91ZR  G    4615.3 14                                                           
+ 91ZR  G    4834.3 13                                                           
+ 91ZR  G     5150.3 9  0.001712                                                 
+ 91ZR  G    5986.8 10  0.0012 5
+

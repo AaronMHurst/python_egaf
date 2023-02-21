@@ -1,0 +1,27 @@
+ 37AR    36AR(N,G) E=THERMAL: {~EGAF}                                           
+ 37AR c  Evaluated Gamma-ray Activation File (EGAF).
+ 37AR2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 37AR c  BR$|s{-0}=5.2 5 (1981MuZQ)
+ 37AR cG RI$Elemental |s(|g) assuming %Abundance=0.3365 30     
+ 37AR  N 297        3 5.2     5
+ 37AR PN                                                                    C
+ 37AR2PN Thermal cross section in barns.
+ 37AR cN NR$Isotopic |s(|g)=NR*RI.
+ 37AR2cN Divide by |s{-0} for intensity per neutron capture.
+ 37AR  L        0.0  3/2+              35.04 D   4                              
+ 37AR  L     1409.8 9 1/2+             660 FS    140                            
+ 37AR  G     1409.710  0.006012                                                 
+ 37AR  L    1611.27  7/2-              4.37 NS   9                              
+ 37AR  G    1611.23   0.0006024                                                S
+ 37AR  L     2490.7 73/2-              560 FS    100                            
+ 37AR  G      879.3   0.0006012                                                S
+ 37AR  G     2490.8 8  0.008822                                                 
+ 37AR  L    3518.5 123/2-              38 FS     20                             
+ 37AR  G     1027.7    0.0013 4                                                S
+ 37AR  G     2108.015  0.003910                                                 
+ 37AR  L     8789.9 9 1/2+                                                      
+ 37AR  G     5270.612  0.003710                                                 
+ 37AR  G     6298.910  0.007619                                                 
+ 37AR  G     7380.320 0.0003612                                                 
+ 37AR  G     8787.720  0.0021 6
+

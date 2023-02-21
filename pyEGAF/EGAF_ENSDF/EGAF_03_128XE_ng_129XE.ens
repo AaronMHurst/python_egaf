@@ -1,0 +1,21 @@
+129XE    128XE(N,G) E=THERMAL: {~EGAF}                                          
+129XE c  Evaluated Gamma-ray Activation File (EGAF).
+129XE2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+129XE c  BR$|s{-0}=8 LT (1981MuZQ)  
+129XE cG RI$Elemental |s(|g) assuming %Abundance=1.92  3       
+129XE  N 52.1       8 8      LT
+129XE PN                                                                    C
+129XE2PN Thermal cross section in barns.
+129XE cN NR$Isotopic |s(|g)=NR*RI.
+129XE2cN Divide by |s{-0} for intensity per neutron capture.
+129XE  L       0.0    1/2+                                                      
+129XE  L   39.5780 20 3/2+                                                      
+129XE  L    318.14 21 3/2+                                                      
+129XE  G     278.5621  0.0025 9                                                 
+129XE  G     318.18    0.004611                                                 
+129XE  L    321.63 17 5/2+                                                      
+129XE  G     282.0517  0.003910                                                 
+129XE  G      321.7    0.0011 2                                                 
+129XE  L      442.7 3 (5/2)+                                                    
+129XE  G      403.1 3  0.010623
+

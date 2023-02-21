@@ -1,0 +1,28 @@
+ 87KR    86KR(N,G) E=THERMAL: {~EGAF}                                           
+ 87KR c  Evaluated Gamma-ray Activation File (EGAF).
+ 87KR2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 87KR c  BR$|s{-0}=0.003 2 (1981MuZQ)
+ 87KR cG RI$Elemental |s(|g) assuming %Abundance=17.30 22      
+ 87KR  N 5.78       7 0.003   2
+ 87KR PN                                                                    C
+ 87KR2PN Thermal cross section in barns.
+ 87KR cN NR$Isotopic |s(|g)=NR*RI.
+ 87KR2cN Divide by |s{-0} for intensity per neutron capture.
+ 87KR  L       0.0   5/2+                                                       
+ 87KR  L    531.90 121/2+                                                       
+ 87KR  G     531.9113  1.9E-43                                                  
+ 87KR  L   1475.96 151/2,3/2,5/2+                                               
+ 87KR  G      944.2 3  3.1E-514                                                 
+ 87KR  G    1475.9417  2.4E-44                                                  
+ 87KR  L     2005.2 5                                                           
+ 87KR  G     2005.2 5  2.4E-514                                                 
+ 87KR  L   2122.48 251/2,3/2,5/2+                                              ?
+ 87KR  G     2122.4 3  6.9E-519                                                 
+ 87KR  L     2371.8 31/2,3/2,5/2+                                               
+ 87KR  G     1839.8 4  5.0E-514                                                 
+ 87KR  L   5515.20 251/2+                                                       
+ 87KR  G     3143.3 4  1.1E-43                                                  
+ 87KR  G     3392.6 3  2.0E-45                                                  
+ 87KR  G     4039.6 6  1.0E-44                                                  
+ 87KR  G     4983.1 4  6.6E-519
+

@@ -1,0 +1,33 @@
+ 77GE    76GE(N,G) E=THERMAL: {~EGAF}                                           
+ 77GE c  Evaluated Gamma-ray Activation File (EGAF).
+ 77GE2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 77GE c  BR$|s{-0}=0.06 1 (1981MuZQ)  
+ 77GE cG RI$Elemental |s(|g) assuming %Abundance=7.61 38       
+ 77GE  N      13.1  6 0.06    1
+ 77GE PN                                                                    C
+ 77GE2PN Thermal cross section in barns.
+ 77GE cN NR$Isotopic |s(|g)=NR*RI.
+ 77GE2cN Divide by |s{-0} for intensity per neutron capture.
+ 77GE  L       0.0     7/2+                                                     
+ 77GE  L    159.65 16  1/2-               52.9 S 6                              
+ 77GE  G    159.61 17                                                           
+ 77GE  L      628.4 6  3/2-                                                     
+ 77GE  G      468.7 6                                                           
+ 77GE  G      628.4 6                                                           
+ 77GE  L     1021.8 4  1/2,3/2,5/2-                                             
+ 77GE  G      393.5 7                                                           
+ 77GE  G      862.2 4  0.0012 8                                                 
+ 77GE  L   1250.56 10  1/2+                                                     
+ 77GE  G   1250.55 10 0.0110 21                                                 
+ 77GE  L     1878.9 5                                                           
+ 77GE  L     2063.5 3                                                           
+ 77GE  G     1903.8 3  0.0018 7                                                 
+ 77GE  G     2063.4 3                                                           
+ 77GE  L     6072.3 4  1/2+                                                     
+ 77GE  G     4008.7 4 0.0051 13                                                 
+ 77GE  G     4193.2 4 0.0071 12                                                 
+ 77GE  G     4821.6 4  0.0003 2                                                 
+ 77GE  G     5050.3 5   0.004 2                                                 
+ 77GE  G     5443.7 6  0.0004 2                                                 
+ 77GE  G     5912.4 4  0.008  3
+

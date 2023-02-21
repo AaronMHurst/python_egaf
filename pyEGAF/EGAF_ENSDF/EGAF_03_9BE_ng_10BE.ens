@@ -1,0 +1,31 @@
+ 10BE    9BE(N,G) E=THERMAL: {~EGAF}                                            
+ 10BE c  Evaluated Gamma-ray Activation File (EGAF).
+ 10BE2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 10BE c  BR$|s{-0}=0.0076 8 (1981MuZQ)
+ 10BE cG RI$Elemental |s(|g) assuming %Abundance=100           
+ 10BE  N 1.0          0.0076  8
+ 10BE PN                                                                    C
+ 10BE2PN Thermal cross section in barns.
+ 10BE cN NR$Isotopic |s(|g)=NR*RI.
+ 10BE2cN Divide by |s{-0} for intensity per neutron capture.
+ 10BE  L       0.0   0+                1.51E6 Y  6                              
+ 10BE  L  3368.056 252+                125 FS    12                             
+ 10BE  G  3367.448 250.00285 22                                                 
+ 10BE  L    5958.43 32+                55 FS     LT                             
+ 10BE  G  2590.014 190.00191 15                                                 
+ 10BE  G    5956.53 31.46E-0412                                                 
+ 10BE  L   5960.76 121-                                                         
+ 10BE  G   5958.85 12 6.8E-6  8                                                 
+ 10BE  L    6180.16 50+                                                         
+ 10BE  G    219.40 10 4.5E-06 6                                                 
+ 10BE  G    2811.68 51.05E-0512                                                 
+ 10BE  L    6264.53 52-                                                         
+ 10BE  G    304.24 13 2.3E-06 5                                                ?
+ 10BE  G    2896.02 41.16E-0513                                                 
+ 10BE  L    6812.10 31-,2-                                                      
+ 10BE  G     547.55 41.09E-0510                                                 
+ 10BE  G     631.92 4 1.8E-05 4                                                 
+ 10BE  G   853.630 120.00208 24                                                 
+ 10BE  G  3443.406 20 0.00098 7                                                 
+ 10BE  G    6809.61 3  0.0058 5
+

@@ -1,0 +1,48 @@
+ 21NE    20NE(N,G) E=THERMAL: {~EGAF}                                           
+ 21NE c  Evaluated Gamma-ray Activation File (EGAF).
+ 21NE2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 21NE c  BR$|s{-0}=0.037 4 (1981MUZQ)
+ 21NE cG RI$Elemental |s(|g) assuming %Abundance=90.48  3      
+ 21NE  N 1.1052    4  0.037   4
+ 21NE PN                                                                    C
+ 21NE2PN Thermal cross section in barns.
+ 21NE cN NR$Isotopic |s(|g)=NR*RI.
+ 21NE2cN Divide by |s{-0} for intensity per neutron capture.
+ 21NE  L        0.0  3/2+              STABLE                                   
+ 21NE  L     350.79 75/2+              7.17 PS   12                             
+ 21NE  G     350.72 6  0.0198 4                                                S
+ 21NE  L   2788.80 141/2-              81 PS     5                              
+ 21NE  G    2437.8425 0.00036 7                                                 
+ 21NE  G    2788.6314  7.2E-518                                                S
+ 21NE  L    2794.18 41/2+              5.2 FS    6                              
+ 21NE  G    2793.94 5 0.0090011                                                 
+ 21NE  L   3663.60 113/2-              65 FS     6                              
+ 21NE  G      869.511  6.8E-622                                                S
+ 21NE  G      874.813  4.0E-514                                                S
+ 21NE  G    3311.9225  6.1E-518                                                 
+ 21NE  L   4684.32 183/2+              11 FS     3                              
+ 21NE  G     1890.4 2  3.6E-611                                                S
+ 21NE  G    4333.1925 1.15E-414                                                 
+ 21NE  G    4683.6225  9.0E-511                                                 
+ 21NE  L    4725.40 63/2-              7 FS      3                              
+ 21NE  G    1931.08 6 0.0059122                                                 
+ 21NE  G    4374.13 6 0.0190522                                                 
+ 21NE  G    4725.1025  5.0E-57                                                  
+ 21NE  L    5689.78 51/2-              6 FS      2                              
+ 21NE  G     964.41 7 0.0002911                                                S
+ 21NE  G    2895.3210 0.00252 7                                                 
+ 21NE  G    5688.97 6 0.00214 3                                                 
+ 21NE  L   5992.62 123/2-              13 FS     LT                             
+ 21NE  G    5641.0025  8.6E-57                                                  
+ 21NE  G    5991.7113 1.58E-411                                                 
+ 21NE  L    6761.19 51/2+                                                      S
+ 21NE  G     768.55 7 0.00025 4                                                S
+ 21NE  G    1071.34 7  0.0054 4                                                S
+ 21NE  G    2035.6720  0.024525                                                 
+ 21NE  G    2077.2320 2.05E-425                                                S
+ 21NE  G    3097.2510  8.3E-522                                                 
+ 21NE  G    3966.5125 1.40E-422                                                 
+ 21NE  G    3971.9815 0.00039 3                                                 
+ 21NE  G    6409.3912  1.8E-411                                                 
+ 21NE  G    6760.06 60.00210425
+

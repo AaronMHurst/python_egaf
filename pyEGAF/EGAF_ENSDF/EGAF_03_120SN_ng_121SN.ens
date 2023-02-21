@@ -1,0 +1,31 @@
+121SN    120SN(N,G) E=THERMAL: {~EGAF}                                          
+121SN c  Evaluated Gamma-ray Activation File (EGAF).
+121SN2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+121SN c  BR$|s{-0}=0.14 3 (1981MuZQ)  
+121SN cG RI$Elemental |s(|g) assuming %Abundance=32.58   9     
+121SN  N 3.069      8 0.14    3
+121SN PN                                                                    C
+121SN2PN Thermal cross section in barns.
+121SN cN NR$Isotopic |s(|g)=NR*RI.
+121SN2cN Divide by |s{-0} for intensity per neutron capture.
+121SN  L       0.0     3/2+             27.06 H  4                              
+121SN  L       6.30 8  11/2-             55 Y    5                              
+121SN  L     60.35 11 1/2+                                                      
+121SN  G      60.6615  0.0052 7                                                 
+121SN  L    663.43 21 (7/2,9/2)-                                                
+121SN  G     657.1319 0.0006112                                                 
+121SN  L     869.37 8 3/2+,5/2+                                                 
+121SN  G      808.9 3 0.0007816                                                 
+121SN  G     869.38 8 0.0032022                                                 
+121SN  L     908.89 8 3/2+,5/2+                                                 
+121SN  G     908.89 8 0.0030719                                                 
+121SN  L     925.90 6 7/2+                                                      
+121SN  G     925.90 6  0.0097 3                                                 
+121SN  L    943.20 12 (7/2-)                                                    
+121SN  G     943.2012 0.0015017                                                 
+121SN  L   1101.65 12 3/2+,5/2+                                                 
+121SN  G    1041.6014 0.0018920                                                 
+121SN  G    1101.2516 0.0032225                                                 
+121SN  L     6170.1 4 1/2+                                                      
+121SN  G     6109.6 4  0.0013 3
+

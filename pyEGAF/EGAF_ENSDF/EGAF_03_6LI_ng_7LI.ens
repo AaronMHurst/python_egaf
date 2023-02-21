@@ -1,0 +1,18 @@
+  7LI    6LI(N,G) E=THERMAL: {~EGAF}                                            
+  7LI c  Evaluated Gamma-ray Activation File (EGAF).
+  7LI2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+  7LI c  BR$|s{-0}=0.039 {I3} (1981MuZQ)
+  7LI c  BR$|s{-0}=0.053 {I2}  
+  7LI cG RI$Elemental |s(|g) assuming %Abundance=7.59  4       
+  7LI  N      13.18 7 0.039   3
+  7LI PN                                                                    C
+  7LI2PN Thermal cross section in barns.
+  7LI cN NR$Isotopic |s(|g)=NR*RI.
+  7LI2cN Divide by |s{-0} for intensity per neutron capture.
+  7LI  L       0.0   3/2-              STABLE                                   
+  7LI  L    477.612 31/2-              73 FS     2                              
+  7LI  G    477.595 3 0.00153 8                                                 
+  7LI  L    7249.94 41/2+,3/2+                                                  
+  7LI  G    6768.81 4 0.00151 9                                                 
+  7LI  G    7245.91 40.00247 14
+

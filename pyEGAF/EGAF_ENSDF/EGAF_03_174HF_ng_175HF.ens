@@ -1,0 +1,46 @@
+175HF    174HF(N,G) E=THERMAL: {~EGAF}                                          
+175HF c  Evaluated Gamma-ray Activation File (EGAF).
+175HF2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+175HF c  BR$|s{-0}=549 7 (1984MuZY)  
+175HF cG RI$Elemental |s(|g) assuming %Abundance=0.16  1       
+175HF  N       625 39 549     7
+175HF PN                                                                    C
+175HF2PN Thermal cross section in barns.
+175HF cN NR$Isotopic |s(|g)=NR*RI.
+175HF2cN Divide by |s{-0} for intensity per neutron capture.
+175HF  L       0.0   5/2-              70 D      2                              
+175HF  L       81.2 87/2-                                                       
+175HF  G       81.5    0.0034 7                                                ?
+175HF  L      125.9 71/2-                                                       
+175HF  G      125.710   0.200 2                                                 
+175HF  L      196.5 73/2-                                                       
+175HF  G      70.5  1 0.025   5                                                 
+175HF  G      115.720 0.0094  9                                                 
+175HF  G      197.020  0.042  4                                                 
+175HF  L      866.9 7(1/2-)                                                     
+175HF  G      670.510  0.056  6                                                 
+175HF  G      866.710  0.024  2                                                 
+175HF  L      910.3 9(3/2-)                                                     
+175HF  G      714.110 0.0096 10                                                 
+175HF  G      784.110  0.011  2                                                 
+175HF  L      997.7 9(1/2-,3/2-)                                                
+175HF  G      997.710  0.012  2                                                 
+175HF  L    1375.1 11(1/2,3/2)                                                  
+175HF  G     1374.915 0.0072  7                                                 
+175HF  L     1455.7 9(1/2,3/2)                                                  
+175HF  G      588.015 0.0059  6                                                 
+175HF  G     1374.915                                                           
+175HF  G     1455.415 0.0095 10                                                 
+175HF  L    1642.8 13(1/2,3/2)                                                  
+175HF  G     1446.015 0.0047  5                                                 
+175HF  G     1644.025  0.011  2                                                 
+175HF  L     6708.9 71/2+                                                      S
+175HF  G     5066.525 0.0098 10                                                 
+175HF  G     5252.615 0.0077  8                                                 
+175HF  G     5333.615 0.0042  4                                                 
+175HF  G     5711.120 0.0033  3                                                 
+175HF  G     5799.120 0.0052  5                                                 
+175HF  G     5842.210  0.059  6                                                 
+175HF  G     6512.110  0.016  2                                                 
+175HF  G     6582.810 0.0099 10
+

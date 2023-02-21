@@ -1,0 +1,42 @@
+ 93ZR    92ZR(N,G) E=THERMAL: {~EGAF}                                           
+ 93ZR c  Evaluated Gamma-ray Activation File (EGAF).
+ 93ZR2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 93ZR c  BR$|s{-0}=0.22 6 (1981MuZQ)  
+ 93ZR cG RI$Elemental |s(|g) assuming %Abundance=17.15  8      
+ 93ZR  N      5.83127 0.22    6
+ 93ZR PN                                                                    C
+ 93ZR2PN Thermal cross section in barns.
+ 93ZR cN NR$Isotopic |s(|g)=NR*RI.
+ 93ZR2cN Divide by |s{-0} for intensity per neutron capture.
+ 93ZR  L       0.0    5/2+              1.53E6 Y 10                             
+ 93ZR  L    266.78 16 3/2+                                                      
+ 93ZR  G    266.78 16  0.0091 5                                                 
+ 93ZR  L      946.6 5 3/2+,5/2+                                                 
+ 93ZR  G      946.6 5  0.0020 5                                                 
+ 93ZR  L     1425.2 4 1/2+                                                      
+ 93ZR  G     1425.2 4 0.0028720                                                 
+ 93ZR  L       1908 3 (1/2,3/2,5/2+)                                            
+ 93ZR  G       1641 3 0.00074 8                                                 
+ 93ZR  L     1916.9 5   1/2+                                                    
+ 93ZR  G     1650.1 5  0.002912                                                 
+ 93ZR  L       2094 3 (1/2+,3/2)                                                
+ 93ZR  G       1827 3 0.0006614                                                 
+ 93ZR  L     2184.0 9 (1/2+,3/2)                                                
+ 93ZR  G     1917.2 9  0.0017 8                                                 
+ 93ZR  L     2457.0 5                                                           
+ 93ZR  G     2190.2 5  0.0044 5                                                 
+ 93ZR  L    2473.4 24 3/2+,5/2                                                  
+ 93ZR  G    2473.4 24 0.0009115                                                 
+ 93ZR  L    2531.3 16 3/2+,5/2+                                                 
+ 93ZR  G    2531.2 16 0.0008612                                                 
+ 93ZR  L    3275.8 151/2+                                                       
+ 93ZR  G    3275.7 15 0.0005210                                                 
+ 93ZR  L     6735.3 7                                                           
+ 93ZR  G    3459.4 15 0.0013717                                                 
+ 93ZR  G    4203.9 16 0.00047 7                                                 
+ 93ZR  G    4261.8 24 0.00032 5                                                 
+ 93ZR  G     4278.1 7 0.0014710                                                 
+ 93ZR  G     5309.9 7  0.0024 4                                                 
+ 93ZR  G     6468.3 7 0.0009115                                                 
+ 93ZR  G     6735.0 7 0.0009115
+

@@ -1,0 +1,21 @@
+207PB    206PB(N,G) E=THERMAL: {~EGAF}                                          
+207PB c  Evaluated Gamma-ray Activation File (EGAF).
+207PB2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+207PB c  BR$|s{-0}=0.0306 8 (1984MuZY)  
+207PB cG RI$Elemental |s(|g) assuming %Abundance=24.1  1       
+207PB  N     4.149 17 0.0306  8
+207PB PN                                                                    C
+207PB2PN Thermal cross section in barns.
+207PB cN NR$Isotopic |s(|g)=NR*RI.
+207PB2cN Divide by |s{-0} for intensity per neutron capture.
+207PB  L       0.0    1/2-                                                      
+207PB  L  569.7028 20 5/2-                                                      
+207PB  G  569.7020 201.06E-04 6                                                 
+207PB  L    897.90 14 3/2-                                                      
+207PB  G    897.90 14 9.9E-05 9                                                 
+207PB  L 1633.4      13/2+             0.806 S   6                           M  
+207PB  G 1063.662   4                                                           
+207PB  L   6737.74 10 1/2+                                                      
+207PB  G   5839.75 16 4.7E-0514                                                 
+207PB  G   6737.62 100.00691 19                                                 
+           

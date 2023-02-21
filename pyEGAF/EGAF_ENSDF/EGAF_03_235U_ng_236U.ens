@@ -1,0 +1,32 @@
+236U     235U(N,G) E=THERMAL: {~EGAF}                                           
+236U  c  Evaluated Gamma-ray Activation File (EGAF).
+236U 2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+236U  c  BR$|s{-0}=98.3 8 (1984MuZY)  
+236U  cG RI$Elemental |s(|g) assuming %Abundance=0.7200 51     
+236U   N 138.9     10 98.3    8
+236U  PN                                                                    C
+236U 2PN Thermal cross section in barns.
+236U  cN NR$Isotopic |s(|g)=NR*RI.
+236U 2cN Divide by |s{-0} for intensity per neutron capture.
+236U   L       0.0    0+                                                        
+236U   L   0+X                                                                  
+236U   G     297.0  1    0.22 2                                                 
+236U   G   1279.01 10    0.20 1                                                 
+236U   L     45.242 6 2+                                                        
+236U   G     45.242 6                                                           
+236U   L    149.475 8 4+                                                        
+236U   G    104.233 5                                                           
+236U   L     687.60 5 1-                                                        
+236U   L     744.15 8 3-                                                        
+236U   L     966.63 9 1-                                                        
+236U   L     988.38 7 2-                                                        
+236U   G     21     1                                                           
+236U   G    243.6   2   0.023 3                                                 
+236U   G    300.0   1   0.016 3                                                 
+236U   G    943.13766   0.08210                                                 
+236U   L    1058.54 6(4+)                                                       
+236U   G    909.06363   0.026 4                                                 
+236U   G    1014.1 10   0.026 4                                                 
+236U   L   6544.73 15 3-,4-                                                    S
+236U   G    6395.1615  0.0032 4
+

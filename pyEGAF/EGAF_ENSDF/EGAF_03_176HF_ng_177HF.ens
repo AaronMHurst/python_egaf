@@ -1,0 +1,21 @@
+177HF    176HF(N,G) E=THERMAL: {~EGAF}                                          
+177HF c  Evaluated Gamma-ray Activation File (EGAF).
+177HF2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+177HF c  BR$|s{-0}=24 3 (1984MuZY)  
+177HF cG RI$Elemental |s(|g) assuming %Abundance=5.26   7      
+177HF  N    19.01  25 24      3
+177HF PN                                                                    C
+177HF2PN Thermal cross section in barns.
+177HF cN NR$Isotopic |s(|g)=NR*RI.
+177HF2cN Divide by |s{-0} for intensity per neutron capture.
+177HF  L       0.0   7/2-              STABLE                                   
+177HF  L     112.90 7  9/2-                                                     
+177HF  G     112.90 7  0.048 12                                                 
+177HF  L     508.29 9  (5/2)-                                                   
+177HF  G    395.39 10  0.104 24                                                 
+177HF  G     508.29 9    1.05 6                                                 
+177HF  L      623.0 7  (3/2-)                                                   
+177HF  G      623.0 7  0.060 18                                                 
+177HF  L     6385.8 8                                                           
+177HF  G     5762.7 4    0.23 4
+

@@ -1,0 +1,31 @@
+119SN    118SN(N,G) E=THERMAL: {~EGAF}                                          
+119SN c  Evaluated Gamma-ray Activation File (EGAF).
+119SN2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+119SN c  BR$|s{-0}=0.22 5 (1981MuZQ)  
+119SN cG RI$Elemental |s(|g) assuming %Abundance=24.22   9     
+119SN  N 4.129     15 0.22    5
+119SN PN                                                                    C
+119SN2PN Thermal cross section in barns.
+119SN cN NR$Isotopic |s(|g)=NR*RI.
+119SN2cN Divide by |s{-0} for intensity per neutron capture.
+119SN  L       0.0    1/2+                                                      
+119SN  L     23.61 10 3/2+                                                      
+119SN  G   23.870   8                                                           
+119SN  L      89.5 10 11/2-              293.1 D 7                              
+119SN  L    786.67 15 7/2+                                                      
+119SN  G     763.0611 0.0013112                                                 
+119SN  L     920.88 7 5/2+                                                      
+119SN  G     897.28 8 0.0036821                                                 
+119SN  G     920.87 7 0.0040421                                                 
+119SN  L   1088.78 17 5/2+                                                      
+119SN  G    1065.1713 0.0021421                                                 
+119SN  L    1249.62 7 1/2+                                                      
+119SN  G     1225.8 4 0.0007524                                                 
+119SN  G    1249.62 7  0.0052 3                                                 
+119SN  L     1617.4 3 (1/2+,3/2,5/2)                                            
+119SN  G     1593.8 3 0.0009524                                                 
+119SN  L     1718.6 3 3/2+,5/2+                                                 
+119SN  G     1695.0 3 0.0013822                                                 
+119SN  L     6483.3 6 1/2+                                                      
+119SN  G     6459.5 6 0.0007224
+

@@ -1,0 +1,14 @@
+  4HE    3HE(N,G) E=THERMAL: {~EGAF}                                            
+  4HE c  Evaluated Gamma-ray Activation File (EGAF).
+  4HE2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+  4HE c  BR$|s{-0}=0.000031 {I9} from 1981MuZQ 
+  4HE cG RI$Elemental |s(|g) assuming %Abundance=0.000137  3   
+  4HE  N 7.30E5    160.000031 9
+  4HE PN                                                                    C
+  4HE2PN Thermal cross section in barns.
+  4HE cN NR$Isotopic |s(|g)=NR*RI.
+  4HE2cN Divide by |s{-0} for intensity per neutron capture.
+  4HE  L 0.0         0+                STABLE                                   
+  4HE  L 20577.62                                                               
+  4HE  G 20520.46    4.2E-11 12
+

@@ -1,0 +1,24 @@
+ 14C     13C(N,G) E=THERMAL: {~EGAF}                                            
+ 14C  c  Evaluated Gamma-ray Activation File (EGAF).
+ 14C 2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 14C  c  BR$|s{-0}=0.00137 {I4} (1981MuZQ)
+ 14C  cG RI$Elemental |s(|g) assuming %Abundance=1.07  8       
+ 14C   N      93.5 70 0.00137 4
+ 14C  PN                                                                    C
+ 14C 2PN Thermal cross section in barns.
+ 14C  cN NR$Isotopic |s(|g)=NR*RI.
+ 14C 2cN Divide by |s{-0} for intensity per neutron capture.
+ 14C   L       0.0   0+                5730 Y    40                             
+ 14C   L   6093.88 171-                7 FS      LT                             
+ 14C   G   6092.46 172.12E-06 9                                                 
+ 14C   L   6589.60 220+                3.0 FS    4                              
+ 14C   G    495.71 171.04E-06 5                                                 
+ 14C   G   6587.93 22                                                           
+ 14C   L   6902.73 210-                25 FS     3                              
+ 14C   G    808.82 15 4.7E-07 3                                                 
+ 14C   L   8176.61 180-,1-                                                      
+ 14C   G   1273.82 13 6.4E-07 9                                                 
+ 14C   G   1586.91 141.10E-06 6                                                 
+ 14C   G   2082.56 13 3.2E-07 5                                                 
+ 14C   G   8174.04 181.09E-05 6
+

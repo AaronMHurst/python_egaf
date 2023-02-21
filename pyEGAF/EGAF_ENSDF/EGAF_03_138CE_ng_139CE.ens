@@ -1,0 +1,25 @@
+139CE    138CE(N,G) E=THERMAL: {~EGAF}                                          
+139CE c  Evaluated Gamma-ray Activation File (EGAF).
+139CE2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+139CE c  BR$|s{-0}=1.1 3 (1981MuZQ)
+139CE cG RI$Elemental |s(|g) assuming %Abundance=0.251  2      
+139CE  N       398  3 1.1     3
+139CE PN                                                                    C
+139CE2PN Thermal cross section in barns.
+139CE cN NR$Isotopic |s(|g)=NR*RI.
+139CE2cN Divide by |s{-0} for intensity per neutron capture.
+139CE  L       0.0   3/2+              137.540 D 23                             
+139CE  L    255.09817 (1/2)+              110 PS 20                             
+139CE  G    255.65  6 0.0082  7                                                 
+139CE  L   1347.33710 7/2+                                                      
+139CE  G   1347.24 13 0.0028  3                                                 
+139CE  L   1596.59020 (3/2)+                                                    
+139CE  G   1341.50 9  0.0002211                                                 
+139CE  G   1596.82 16 0.0016025                                                 
+139CE  L   1630.68118 3/2+                                                      
+139CE  G   1375.56  3 0.0005  2                                                 
+139CE  G   1629.8   3 0.0012  5                                                 
+139CE  L   1818.49  3 3/2+,5/2+                                                 
+139CE  G   1563.58 17 0.0012418                                                 
+139CE  G   1818.5   4 0.0009525
+

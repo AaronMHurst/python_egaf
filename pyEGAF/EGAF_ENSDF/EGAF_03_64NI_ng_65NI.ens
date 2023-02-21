@@ -1,0 +1,54 @@
+ 65NI    64NI(N,G) E=THERMAL: {~EGAF}                                           
+ 65NI c  Evaluated Gamma-ray Activation File (EGAF).
+ 65NI2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 65NI c  BR$|s{-0}=1.52 3 (1981MuZQ)  
+ 65NI cG RI$Elemental |s(|g) assuming %Abundance=0.9256  9     
+ 65NI  N    107.99 12 1.52    3
+ 65NI PN                                                                    C
+ 65NI2PN Thermal cross section in barns.
+ 65NI cN NR$Isotopic |s(|g)=NR*RI.
+ 65NI2cN Divide by |s{-0} for intensity per neutron capture.
+ 65NI  L       0.0   5/2-                                                       
+ 65NI  L     63.38 121/2-              2.0 US    GT                             
+ 65NI  G     63.38 12 0.0034  7                                                 
+ 65NI  L    310.21 193/2-                                                       
+ 65NI  G    246.83 18 1.0E-04 3                                                 
+ 65NI  G     310.58 50.00562 11                                                 
+ 65NI  L    692.23 143/2-                                                       
+ 65NI  G    382.02 18 1.4E-04 4                                                 
+ 65NI  G    628.85 10  0.0013 3                                                 
+ 65NI  G    692.23 14 0.00029 8                                                 
+ 65NI  L     1417.8 31/2-                                                       
+ 65NI  G      725.6 3 4.1E-0511                                                 
+ 65NI  G     1107.6 30.00074 20                                                 
+ 65NI  G     1417.8 3 4.1E-0511                                                 
+ 65NI  L     1920.0 6 5/2+                                                      
+ 65NI  G     1920.0 6                                                           
+ 65NI  L   2146.76 19 3/2-                                                      
+ 65NI  G   2083.34 19 1.2E-04 3                                                 
+ 65NI  G   2146.72 19 1.3E-04 3                                                 
+ 65NI  L     2324.5 3                                                           
+ 65NI  G     2324.4 3                                                           
+ 65NI  L     2711.5 3 3/2+                                                      
+ 65NI  G     2401.2 3 1.2E-04 3                                                 
+ 65NI  G   2648.06 25 4.5E-0511                                                 
+ 65NI  G     2711.4 3                                                           
+ 65NI  L     3009.6 5 3/2+                                                      
+ 65NI  G     3009.5 5                                                           
+ 65NI  L     3278.5 5 3/2+,5/2+                                                 
+ 65NI  G     3278.4 5                                                           
+ 65NI  L     3962.3 8 (3/2+,5/2+)                                               
+ 65NI  G     3651.9 8 1.6E-05 5                                                 
+ 65NI  G     3962.1 8 1.6E-05 5                                                 
+ 65NI  L   6098.28 141/2+                                                       
+ 65NI  G     2819.7 5 3.9E-05 9                                                 
+ 65NI  G     3088.6 5 5.3E-0513                                                 
+ 65NI  G   3386.69 24 1.7E-04 3                                                 
+ 65NI  G     3773.7 3 6.6E-0513                                                 
+ 65NI  G   3951.40 17 2.3E-04 4                                                 
+ 65NI  G     4178.1 6 2.5E-05 6                                                 
+ 65NI  G   4680.29 250.00078 15                                                 
+ 65NI  G    5405.81 9  0.0018 3                                                 
+ 65NI  G   5787.79 16 0.0036 24                                                 
+ 65NI  G   6034.60 11   0.013 3
+

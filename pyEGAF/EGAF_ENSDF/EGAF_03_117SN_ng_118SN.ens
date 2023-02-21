@@ -1,0 +1,45 @@
+118SN    117SN(N,G) E=THERMAL: {~EGAF}                                          
+118SN c  Evaluated Gamma-ray Activation File (EGAF).
+118SN2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+118SN c  BR$|s{-0}=2.3 5 (1981MuZQ)  
+118SN cG RI$Elemental |s(|g) assuming %Abundance=7.68  7       
+118SN  N 13.02     12 2.3     5
+118SN PN                                                                    C
+118SN2PN Thermal cross section in barns.
+118SN cN NR$Isotopic |s(|g)=NR*RI.
+118SN2cN Divide by |s{-0} for intensity per neutron capture.
+118SN  L       0.0    0+                                                        
+118SN  L    1229.65 5 2+                                                        
+118SN  G    1229.64 6  0.067313                                                 
+118SN  L    1758.50 8 0+                                                        
+118SN  G     528.85 6 0.0042514                                                 
+118SN  L    2042.87 7 2+                                                        
+118SN  G     813.26 7  0.0071 3                                                 
+118SN  G    2042.7410  0.0067 4                                                 
+118SN  L   2057.03 10 0+                                                        
+118SN  G     827.37 8 0.0036123                                                 
+118SN  L   2280.32 10 4+                                                        
+118SN  G    1050.66 9 0.0029322                                                 
+118SN  L   2324.84 11 3-                                                        
+118SN  G    1095.1810  0.0067 3                                                 
+118SN  L   2328.03125 1+,2+                                                     
+118SN  L   2403.32 10 2+                                                        
+118SN  G    1173.66 8  0.0050 3                                                 
+118SN  L   2488.89 16 4+                                                        
+118SN  G     208.52   0.00022                                                  S
+118SN  G     445.9820 0.0004211                                                 
+118SN  G    1259.2722 0.0007615                                                 
+118SN  L   2677.00 12 2+                                                        
+118SN  G    1447.0914 0.0021221                                                 
+118SN  G    2677.4720  0.0022 3                                                 
+118SN  L    2733.3 11 4+                                                        
+118SN  G     1503.611 0.0003722                                                 
+118SN  L   2738.09 12 1+,2+                                                     
+118SN  G    1508.4311  0.0058 3                                                 
+118SN  G    2738.10    0.0020                                                  S
+118SN  L   2777.39 19 3-,4,5-                                                   
+118SN  G      449.3 4  2.2E-410                                                 
+118SN  G     452.5515 0.0004210                                                 
+118SN  L    9327.9 11 0+,1+                                                     
+118SN  G     9327.511 0.0020420
+

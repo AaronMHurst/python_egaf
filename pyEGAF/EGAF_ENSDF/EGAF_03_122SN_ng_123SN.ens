@@ -1,0 +1,21 @@
+123SN    122SN(N,G) E=THERMAL: {~EGAF}                                          
+123SN c  Evaluated Gamma-ray Activation File (EGAF).
+123SN2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+123SN c  BR$|s{-0}=0.18 2 (1981MuZQ)  
+123SN cG RI$Elemental |s(|g) assuming %Abundance=4.63  3       
+123SN  N 21.60     14 0.18    2
+123SN PN                                                                    C
+123SN2PN Thermal cross section in barns.
+123SN cN NR$Isotopic |s(|g)=NR*RI.
+123SN2cN Divide by |s{-0} for intensity per neutron capture.
+123SN  L       0.0    11/2-              129.2 D 4                              
+123SN  L       24.6 4 3/2+               40.06 M 1                              
+123SN  L      150.4 4 1/2+                                                      
+123SN  G     125.80 7 0.00178 9                                                 
+123SN  L      870.7 4 (3/2+,5/2+)                                               
+123SN  G     846.0817 0.0010617                                                 
+123SN  L     1071.3 4 (1/2,3/2)+                                                
+123SN  G     920.87 7 0.0040421                                                 
+123SN  G     1047.8 5 0.0003217                                                 
+123SN  L 5946.0    12 1/2+
+

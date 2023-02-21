@@ -1,0 +1,30 @@
+111PD    110PD(N,G) E=THERMAL: {~EGAF}                                          
+111PD c  Evaluated Gamma-ray Activation File (EGAF).
+111PD2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+111PD c  BR$|s{-0}=0.23 3 (1981MuZQ)  
+111PD cG RI$Elemental |s(|g) assuming %Abundance=11.72  9      
+111PD  N 8.53       6 0.23    3
+111PD PN                                                                    C
+111PD2PN Thermal cross section in barns.
+111PD cN NR$Isotopic |s(|g)=NR*RI.
+111PD2cN Divide by |s{-0} for intensity per neutron capture.
+111PD  L       0.0    5/2+                                                      
+111PD  L       72.0 4 1/2+                                                      
+111PD  G     72.0   4 0.0015  4                                                 
+111PD  L 172.2     1 11/2-             5.5 H     1                           M1 
+111PD  G 172.18    8                                                            
+111PD  L      191.3 3                                                           
+111PD  G    191.12 24  0.003911                                                 
+111PD  L      194.8 3                                                           
+111PD  G      122.8 3  0.002515                                                 
+111PD  G      195.0 3  0.002211                                                 
+111PD  L    259.07 24                                                           
+111PD  G      187.1    0.0008                                                  S
+111PD  G     258.8925  0.0018 8                                                 
+111PD  L      384.0 4 3/2+,5/2+                                                 
+111PD  G      189.2    0.0013                                                  S
+111PD  G     312.0011  0.0043 9                                                 
+111PD  L     5726.3 4 1/2+                                                      
+111PD  G     5466.4 5  0.008521                                                 
+111PD  G     5531.9 4  0.012020
+

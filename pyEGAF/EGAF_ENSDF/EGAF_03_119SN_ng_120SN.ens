@@ -1,0 +1,29 @@
+120SN    119SN(N,G) E=THERMAL: {~EGAF}                                          
+120SN c  Evaluated Gamma-ray Activation File (EGAF).
+120SN2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+120SN c  BR$|s{-0}=2.2 5 (1981MuZQ)  
+120SN cG RI$Elemental |s(|g) assuming %Abundance=8.59  4       
+120SN  N 11.64     5  2.2     5
+120SN PN                                                                    C
+120SN2PN Thermal cross section in barns.
+120SN cN NR$Isotopic |s(|g)=NR*RI.
+120SN2cN Divide by |s{-0} for intensity per neutron capture.
+120SN  L       0.0   0+                                                         
+120SN  L    1171.25 52+                                                         
+120SN  G    1171.28 6  0.087913                                                 
+120SN  L    1875.12 90+                                                         
+120SN  G     703.87 7  0.0078 3                                                 
+120SN  L    2097.11 62+                                                         
+120SN  G     925.90 6  0.0097 3                                                 
+120SN  G    2097.01 9  0.0048 3                                                 
+120SN  L    2159.92 90+                                                         
+120SN  G     988.67 7 0.0066822                                                 
+120SN  L   2355.44 102+                                                         
+120SN  G    1184.19 8  0.0051 3                                                 
+120SN  G     2355.3    0.0018                                                  S
+120SN  L   2420.86 151+,2+,3+                                                   
+120SN  G    2420.8315  0.0029 3                                                 
+120SN  L   2587.02 110+                                                         
+120SN  G    1415.7610 0.0029119                                                 
+120SN  L 9107.2    22 0+,1+
+

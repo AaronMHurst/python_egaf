@@ -1,0 +1,14 @@
+163ER    162ER(N,G) E=THERMAL: {~EGAF}                                          
+163ER c  Evaluated Gamma-ray Activation File (EGAF).
+163ER2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+163ER c  BR$|s{-0}=19 2 (1984MuZY)  
+163ER cG RI$Elemental |s(|g) assuming %Abundance=0.14  1       
+163ER  N 714       51 19      2
+163ER PN                                                                    C
+163ER2PN Thermal cross section in barns.
+163ER cN NR$Isotopic |s(|g)=NR*RI.
+163ER2cN Divide by |s{-0} for intensity per neutron capture.
+163ER  L 0            5/2-                75.0 M 4                              
+163ER  L 69.219    3  5/2+                                                      
+163ER  G 69.4      6  0.35   14
+

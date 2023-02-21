@@ -1,0 +1,42 @@
+ 18O     17O(N,G) E=THERMAL: {~EGAF}                                            
+ 18O  c  Evaluated Gamma-ray Activation File (EGAF).
+ 18O 2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 18O  c  BR$|s{-0}=0.00054 {I7} (1981MuZQ)
+ 18O  cG RI$Elemental |s(|g) assuming %Abundance=0.038  1      
+ 18O   N 2.63E3    21 0.00054 7
+ 18O  PN                                                                    C
+ 18O 2PN Thermal cross section in barns.
+ 18O  cN NR$Isotopic |s(|g)=NR*RI.
+ 18O 2cN Divide by |s{-0} for intensity per neutron capture.
+ 18O   L       0.0      0+                                                      
+ 18O   L    1982.07 9   2+               1.94 PS 5                              
+ 18O   G    1981.95 92.0E-07 4                                                  
+ 18O   L    3554.8  4   4+                                                      
+ 18O   G    1572.6  42.2E-09                                                    
+ 18O   L    3633.7611   0+               0.96 PS 11                             
+ 18O   G    1651.61145.6E-08 11                                                 
+ 18O   G    3633.3711                                                          S
+ 18O   L    3920.4414   2+               18.4 FS 20                             
+ 18O   G    1938.26173.4E-08 7                                                  
+ 18O   G    3919.98146.0E-09 12                                                 
+ 18O   L    4455.5410   1-                 45 FS 11                             
+ 18O   G     535.0917 2.0E-09                                                  S
+ 18O   G     821.76155.8E-08 12                                                 
+ 18O   G    2473.29144.2E-08 9                                                  
+ 18O   L    5097.8  5   3-                 43 FS 18                             
+ 18O   G    1177.3  6 6.6E-09                                                  S
+ 18O   G    1542.9  7 2.2E-09                                                  S
+ 18O   G    3115.4  4 2.8E-08 6                                                 
+ 18O   L    5377.8 12   3+                 21 FS LT                             
+ 18O   G    1457.3618 3.0E-09                                                  S
+ 18O   G    3395.39141.9E-08 4                                                  
+ 18O   L    6351.3  6   (2-)               25 FS LT                             
+ 18O   G    1895.76 6 6.4E-09                                                  S
+ 18O   G    2430.68 62.9E-08 6                                                  
+ 18O   G    4369.23 6 1.7E-08                                                  S
+ 18O   L    8044.4  8   2+,3+                                                   
+ 18O   G     1693.1105.2E-08 10                                                 
+ 18O   G    2666.4 17 2.2E-08 4                                                 
+ 18O   G    2946.6  93.8E-08 8                                                  
+ 18O   G    3588.5  87.5E-08 15
+

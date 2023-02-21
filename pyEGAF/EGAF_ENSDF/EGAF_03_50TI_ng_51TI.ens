@@ -1,0 +1,34 @@
+ 51TI    50TI(N,G) E=THERMAL: {~EGAF}                                           
+ 51TI c  Evaluated Gamma-ray Activation File (EGAF).
+ 51TI2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 51TI c  BR$|s{-0}=0.179 3 (1981MuZQ)  
+ 51TI cG RI$Elemental |s(|g) assuming %Abundance=5.18  2       
+ 51TI  N 18.5      3  0.179   3
+ 51TI PN                                                                    C
+ 51TI2PN Thermal cross section in barns.
+ 51TI cN NR$Isotopic |s(|g)=NR*RI.
+ 51TI2cN Divide by |s{-0} for intensity per neutron capture.
+ 51TI  L 0.0         3/2-                                                       
+ 51TI  L   1166.6   41/2-                                                       
+ 51TI  G 1166.6    4 0.0039                                                     
+ 51TI  L   1567.5  3 (5/2)-                                                     
+ 51TI  G   1567.5  4 0.0005                                                     
+ 51TI  L   2198.9   83/2-                                                       
+ 51TI  G  630.7    5 0.0005                                                     
+ 51TI  G 1031.3    5 0.0003                                                     
+ 51TI  G 2198.9    100.0016                                                     
+ 51TI  L     2905.1 81/2-                                                       
+ 51TI  G 707.8     5 0.0006                                                     
+ 51TI  G 1738.9    5 0.0009                                                     
+ 51TI  G 2904.2    100.0005                                                     
+ 51TI  L     3174.9 83/2-                                                       
+ 51TI  G 975.7     5 0.0001                                                     
+ 51TI  G 2007.0    108.0E-05                                                    
+ 51TI  G 3174.5    100.0008                                                     
+ 51TI  L     6372.6 61/2+                                                       
+ 51TI  G 3197.3    100.0009                                                     
+ 51TI  G 3466.6    100.0027                                                     
+ 51TI  G 4173.6    100.0020                                                     
+ 51TI  G 5205.8    100.0033                                                     
+ 51TI  G 6373.1    100.0004
+

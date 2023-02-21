@@ -1,0 +1,30 @@
+105PD    104PD(N,G) E=THERMAL: {~EGAF}                                          
+105PD c  Evaluated Gamma-ray Activation File (EGAF).
+105PD2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+105PD c  BR$|s{-0}=0.6 3 (1981MuZQ)  
+105PD cG RI$Elemental |s(|g) assuming %Abundance=11.14  8      
+105PD  N       8.98 6 0.6     3
+105PD PN                                                                    C
+105PD2PN Thermal cross section in barns.
+105PD cN NR$Isotopic |s(|g)=NR*RI.
+105PD2cN Divide by |s{-0} for intensity per neutron capture.
+105PD  L       0.0    5/2+                                                      
+105PD  L     280.65 6 3/2+                                                      
+105PD  G     280.65 6 0.0158 14                                                 
+105PD  L    306.26 18 1/2+                                                      
+105PD  G    306.26 18  0.0043 9                                                 
+105PD  L    344.11 11 3/2+                                                      
+105PD  G     63.98  3 0.0017  2                                                 
+105PD  G    344.11 11 0.0068 12                                                 
+105PD  L    442.11 21 3/2+                                                      
+105PD  G    442.11 21 0.0052 13                                                 
+105PD  L     560.75 4 1/2+                                                      
+105PD  G     216.1715 0.00021 7                                                 
+105PD  G     560.75 4 0.0053 11                                                 
+105PD  L    673.06 16 1/2+                                                      
+105PD  G    112.43  5 8E-05   2                                                 
+105PD  G    328.61  3 0.0006  3                                                 
+105PD  G    392.41 15 0.0072 17                                                 
+105PD  G    673.21  6 0.0038  9                                                 
+105PD  L     7094.1 3
+

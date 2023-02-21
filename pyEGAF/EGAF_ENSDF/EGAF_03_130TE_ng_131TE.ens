@@ -1,0 +1,32 @@
+131TE    130TE(N,G) E=THERMAL: {~EGAF}                                          
+131TE c  Evaluated Gamma-ray Activation File (EGAF).
+131TE2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+131TE c  BR$|s{-0}=0.270 6 (1981MuZQ)  
+131TE cG RI$Elemental |s(|g) assuming %Abundance=34.08 62      
+131TE  N     2.93   5 0.270   6
+131TE PN                                                                    C
+131TE2PN Thermal cross section in barns.
+131TE cN NR$Isotopic |s(|g)=NR*RI.
+131TE2cN Divide by |s{-0} for intensity per neutron capture.
+131TE  L       0.0   3/2+                                                       
+131TE  L 182.25    2 11/2-             30 H      2                           M  
+131TE  G 182.25    2                                                            
+131TE  L   296.015 16 1/2+                                                      
+131TE  G    296.01716   0.029 3                                                 
+131TE  L    642.09 19 (5/2)+                                                    
+131TE  L     2511.1 4 (3/2)-                                                    
+131TE  G     2511.1 4  0.005013                                                 
+131TE  L   2582.77 11 (3/2)-                                                    
+131TE  G    2286.8812  0.017721                                                 
+131TE  G     2581.8 3  0.004710                                                 
+131TE  L   3001.55 24 (3/2)-                                                    
+131TE  G    2705.5124  0.006813                                                 
+131TE  L     3690.1 4 1/2-,3/2-                                                 
+131TE  L   4072.94 18 1/2-,3/2-                                                 
+131TE  G    3776.8718  0.009013                                                 
+131TE  L     4286.5 3 1/2-,3/2-                                                 
+131TE  G     4286.4 3  0.006210                                                 
+131TE  L     4545.9 4 (1/2+)                                                    
+131TE  L   5930.16 151/2+                                                       
+131TE  G    3347.3510   0.027 3
+

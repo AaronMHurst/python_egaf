@@ -1,0 +1,22 @@
+139LA    138LA(N,G) E=THERMAL: {~EGAF}                                          
+139LA c  Evaluated Gamma-ray Activation File (EGAF).
+139LA2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+139LA c  BR$|s{-0}=57 6 (1981MuZQ)  
+139LA cG RI$Elemental |s(|g) assuming %Abundance=0.090  1      
+139LA  N  1111     12 57      6
+139LA PN                                                                    C
+139LA2PN Thermal cross section in barns.
+139LA cN NR$Isotopic |s(|g)=NR*RI.
+139LA2cN Divide by |s{-0} for intensity per neutron capture.
+139LA  L       0.0    7/2+                                                      
+139LA  L     166.01 7 5/2+                                                      
+139LA  G     166.04 7  0.011912                                                 
+139LA  L   1219.76 17 9/2+                                                      
+139LA  G     1052.8 9  0.0029 3                                                 
+139LA  G    1219.7917   0.026 4                                                 
+139LA  L   1381.39 15 9/2+                                                      
+139LA  G    1215.7222   0.019 4                                                 
+139LA  G     1381.1 2  0.0009 1                                                 
+139LA  L     1537.7 3 (11/2+)                                                   
+139LA  G     1537.7 3   0.009 3
+

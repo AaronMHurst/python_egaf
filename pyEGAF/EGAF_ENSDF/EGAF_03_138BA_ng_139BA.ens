@@ -1,0 +1,43 @@
+139BA    138BA(N,G) E=THERMAL: {~EGAF}                                          
+139BA c  Evaluated Gamma-ray Activation File (EGAF).
+139BA2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+139BA c  BR$|s{-0}=0.36 4 (1981MuZQ)  
+139BA cG RI$Elemental |s(|g) assuming %Abundance=71.698 42     
+139BA  N    1.3947  8 0.36    4
+139BA PN                                                                    C
+139BA2PN Thermal cross section in barns.
+139BA cN NR$Isotopic |s(|g)=NR*RI.
+139BA2cN Divide by |s{-0} for intensity per neutron capture.
+139BA  L       0.0   7/2-                                                       
+139BA  L     627.29 53/2-                                                       
+139BA  G     627.29 5   0.294 6                                                 
+139BA  L    1082.02 71/2-,3/2-                                                  
+139BA  G     454.73 5 0.0853 22                                                 
+139BA  L   1293.27 101/2,3/2,5/2+                                               
+139BA  G     665.98 9  0.0053 3                                                 
+139BA  L    1420.42 95/2-,7/2-                                                  
+139BA  G    1420.41 9  0.0090 5                                                 
+139BA  L     1951.9 5                                                           
+139BA  G     1951.9 5   0.009 6                                                 
+139BA  L    2129.75 91/2-,3/2-                                                  
+139BA  G    1047.73 6 0.0319 10                                                 
+139BA  G    1502.46 8 0.0015 15                                                 
+139BA  L    2157.1 113/2-,5/2+                                                  
+139BA  G    1075.1 11 0.0015 15                                                 
+139BA  G    2157.1 11                                                           
+139BA  L    2185.46 91/2-,3/2-                                                  
+139BA  G    1103.43 8  0.0044 4                                                 
+139BA  G    1558.16 8  0.0078 5                                                 
+139BA  L   2480.60 131/2-,3/2-                                                  
+139BA  G    295.15 14 0.0015 15                                                 
+139BA  G    350.85 14 0.0015 15                                                 
+139BA  G   1853.30 12  0.0074 6                                                 
+139BA  L   4723.20 101/2+                                                       
+139BA  G   2242.58 13 0.0116 13                                                 
+139BA  G   2537.72 10  0.0102 7                                                 
+139BA  G    2566.0 11   0.009 5                                                 
+139BA  G   2593.42 11  0.0187 8                                                 
+139BA  G   3429.88 13 0.0015 15                                                 
+139BA  G    3641.12 9 0.0562 16                                                 
+139BA  G    4095.84 9   0.155 4
+

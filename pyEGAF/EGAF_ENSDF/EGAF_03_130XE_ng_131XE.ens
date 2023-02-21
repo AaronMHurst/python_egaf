@@ -1,0 +1,35 @@
+131XE    130XE(N,G) E=THERMAL: {~EGAF}                                          
+131XE c  Evaluated Gamma-ray Activation File (EGAF).
+131XE2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+131XE c  BR$|s{-0} LT 26 (1981MuZQ)  
+131XE cG RI$Elemental |s(|g) assuming %Abundance=4.08  2       
+131XE  N     24.50 12 5900   20
+131XE PN                                                                    C
+131XE2PN Thermal cross section in barns.
+131XE cN NR$Isotopic |s(|g)=NR*RI.
+131XE2cN Divide by |s{-0} for intensity per neutron capture.
+131XE  L       0.0    3/2+             STABLE                                   
+131XE  L  80.1853  19 1/2+                                                      
+131XE  L  163.931   8 11/2-                                                     
+131XE  L  341.143   9 9/2-                                                      
+131XE  L  364.490   4 5/2+                                                      
+131XE  L  404.815   4 3/2+                                                      
+131XE  G     324.7  1 0.0007  2                                                 
+131XE  G     404.8  3 0.0096 23                                                 
+131XE  L  565.19   15 (1/2,3/2)+                                                
+131XE  G  485.0     2 0.0001 AP                                                 
+131XE  G  566.4     7 0.0010 AP                                                 
+131XE  L  636.991   4 7/2+                                                      
+131XE  G  637.4     3 0.0038 14                                                 
+131XE  L  666.936   9 7/2-                                                      
+131XE  G  325.8     1 0.005   2                                                 
+131XE  G  503.3     3 0.007   3                                                 
+131XE  L  699.90   10 3/2+                                                      
+131XE  G  295.3     2 0.0027  9                                                 
+131XE  G  335.46   16 0.0054 12                                                 
+131XE  G  619.6     2 0.0042  8                                                 
+131XE  G  699.8     2 0.0092 18                                                 
+131XE  L  722.909   4 5/2+                                                      
+131XE  G  642.8     7 0.0020 14                                                 
+131XE  G  723.29   14 0.0074 19
+

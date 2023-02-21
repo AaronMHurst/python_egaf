@@ -1,0 +1,20 @@
+ 17O     16O(N,G) E=THERMAL: {~EGAF}                                            
+ 17O  c  Evaluated Gamma-ray Activation File (EGAF).
+ 17O 2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 17O  c  BR$|s{-0}=0.000190 {I19} (1981MuZQ)
+ 17O  c  BR$|s{-0}=0.000189 {I8}  
+ 17O  cG RI$Elemental |s(|g) assuming %Abundance=99.757 16     
+ 17O   N   1.00239 150.00019019
+ 17O  PN                                                                    C
+ 17O 2PN Thermal cross section in barns.
+ 17O  cN NR$Isotopic |s(|g)=NR*RI.
+ 17O 2cN Divide by |s{-0} for intensity per neutron capture.
+ 17O   L       0.0   5/2+              STABLE                                   
+ 17O   L     870.71 61/2+              179.2 PS  18                             
+ 17O   G     870.68 61.77E-4 11                                                 
+ 17O   L    3055.28 91/2-              0.08 PS   +6-4                           
+ 17O   G    2184.42 71.64E-4 7                                                  
+ 17O   L   4143.06 101/2+                                                       
+ 17O   G    1087.75 61.58E-4 7                                                  
+ 17O   G    3272.02 83.53E-5 23
+

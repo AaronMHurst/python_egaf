@@ -1,0 +1,50 @@
+145ND    144ND(N,G) E=THERMAL: {~EGAF}                                          
+145ND c  Evaluated Gamma-ray Activation File (EGAF).
+145ND2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+145ND c  BR$|s{-0}=3.6 3 (1981MuZQ)  
+145ND cG RI$Elemental |s(|g) assuming %Abundance=23.8   3      
+145ND  N     4.20   5 3.6     3
+145ND PN                                                                    C
+145ND2PN Thermal cross section in barns.
+145ND cN NR$Isotopic |s(|g)=NR*RI.
+145ND2cN Divide by |s{-0} for intensity per neutron capture.
+145ND  L       0.0   7/2-                                                       
+145ND  L      66.42 63/2-                                                       
+145ND  G      66.33 6   0.050 5                                                 
+145ND  L      72.36 55/2-                                                       
+145ND  G      72.42 5   0.079 7                                                 
+145ND  L     779.62 83/2-                                                       
+145ND  G     708.1417   0.09119                                                 
+145ND  G     713.1825   0.05317                                                 
+145ND  G     780.45 3   0.037 8                                                 
+145ND  L     919.24 81/2-                                                       
+145ND  G     139.67 4   0.143 7                                                 
+145ND  G     852.70 7   0.22818                                                 
+145ND  L     1051.3 37/2-,5/2-                                                  
+145ND  L   1213.77 17(1/2)-                                                     
+145ND  L   1249.42 165/2-                                                       
+145ND  L   1285.46 185/2-                                                       
+145ND  L   1316.95 19(3/2)-                                                     
+145ND  L   1404.08 18(5/2-)                                                     
+145ND  L     1592.7 6(1/2)-                                                     
+145ND  L   1714.13 191/2+                                                       
+145ND  L    1744.31 83/2-                                                       
+145ND  L     1884.9 43/2-                                                       
+145ND  G     1812.5 4   0.04620                                                 
+145ND  L     2003.5 33/2-                                                       
+145ND  G     1937.1 3   0.07920                                                 
+145ND  L     2035.7 33/2-                                                       
+145ND  G     2035.7 3    0.12 3                                                 
+145ND  L     2106.5 43/2-                                                       
+145ND  G     2040.1 4   0.09725                                                 
+145ND  L   2270.90 153/2-                                                       
+145ND  G    1057.1717   0.15221                                                 
+145ND  G     2204.3 3   0.07120                                                 
+145ND  G    2270.9123    0.20 3                                                 
+145ND  L     2626.4 51/2,3/2                                                    
+145ND  L     2703.8 43/2-                                                       
+145ND  L     3221.0 51/2-,3/2-                                                  
+145ND  L   5755.26 221/2+                                                       
+145ND  G     4009.8 4    0.16 3                                                 
+145ND  G    4836.3625    0.32 3
+

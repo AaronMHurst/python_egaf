@@ -1,0 +1,27 @@
+117SN    116SN(N,G) E=THERMAL: {~EGAF}                                          
+117SN c  Evaluated Gamma-ray Activation File (EGAF).
+117SN2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+117SN c  BR$|s{-0}=0.14 3 (1981MuZQ)  
+117SN cG RI$Elemental |s(|g) assuming %Abundance=14.54   9     
+117SN  N 6.882      4 0.14    3
+117SN PN                                                                    C
+117SN2PN Thermal cross section in barns.
+117SN cN NR$Isotopic |s(|g)=NR*RI.
+117SN2cN Divide by |s{-0} for intensity per neutron capture.
+117SN  L       0.0    1/2+                                                      
+117SN  L     158.63 6 3/2+                                                      
+117SN  G     158.65 6  0.0145 3                                                 
+117SN  L    711.53 11 7/2+                                                      
+117SN  G     552.90 9 0.0013713                                                 
+117SN  L    1004.53 7 3/2+                                                      
+117SN  G     846.0817 0.0010617                                                 
+117SN  G    1004.49 8 0.0038818                                                 
+117SN  L   1020.02 12 5/2+                                                      
+117SN  G     861.3910 0.0019119                                                 
+117SN  G     1020.6   0.00045                                                  S
+117SN  L     1468.5 5 3/2+,5/2+                                                 
+117SN  G     1309.9 5 0.0003517                                                 
+117SN  G     1468.6   0.00025                                                  S
+117SN  L     6942.9 5 1/2+                                                      
+117SN  G     6942.7 5 0.0009820
+

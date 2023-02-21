@@ -1,0 +1,54 @@
+ 55CR    54CR(N,G) E=THERMAL: {~EGAF}                                           
+ 55CR c  Evaluated Gamma-ray Activation File (EGAF).
+ 55CR2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 55CR c  BR$|s{-0}=0.36 4 (1981MuZQ)  
+ 55CR cG RI$Elemental |s(|g) assuming %Abundance=2.365  7      
+ 55CR  N     42.28 13 0.36    4
+ 55CR PN                                                                    C
+ 55CR2PN Thermal cross section in barns.
+ 55CR cN NR$Isotopic |s(|g)=NR*RI.
+ 55CR2cN Divide by |s{-0} for intensity per neutron capture.
+ 55CR  L       0.0    3/2-                                                      
+ 55CR  L     241.87 4 1/2-                                                      
+ 55CR  G     241.87 4  0.0023 4                                                 
+ 55CR  L      517.7 3 5/2-                                                      
+ 55CR  G      517.7 3 7.3E-0514                                                 
+ 55CR  L     565.90 4 3/2-                                                      
+ 55CR  G     324.03 4 1.6E-04 3                                                 
+ 55CR  G     565.89 40.00123 24                                                 
+ 55CR  L      880.7 6 5/2-                                                      
+ 55CR  G     314.81 7 4E-06   1                                                 
+ 55CR  G     363.05 7 5E-06   1                                                 
+ 55CR  G      880.7 6 6.8E-0513                                                 
+ 55CR  L    1474.18 6 1/2-                                                      
+ 55CR  G     908.28 60.00082 16                                                 
+ 55CR  G    1232.30 6 9.2E-0514                                                 
+ 55CR  G    1474.16 60.00073 14                                                 
+ 55CR  L   2083.83 13 3/2-                                                      
+ 55CR  G   1841.93 13 2.2E-05 4                                                 
+ 55CR  G   2083.79 13 3.7E-05 8                                                 
+ 55CR  L     2269.1 3 1/2+                                                      
+ 55CR  G     1703.2 3  0.0017 3                                                 
+ 55CR  G     2269.1 3 1.9E-05 4                                                 
+ 55CR  L   2686.97 14 1/2-,3/2-                                                 
+ 55CR  G   2121.03 14 3.2E-05 6                                                 
+ 55CR  G   2445.05 14 3.2E-05 6                                                 
+ 55CR  G   2686.90 14 9.4E-0518                                                 
+ 55CR  L   2894.52 13 1/2-                                                      
+ 55CR  G   2328.57 13 5.4E-0510                                                 
+ 55CR  G   2652.59 13 8.6E-0517                                                 
+ 55CR  G   2894.44 13 1.5E-04 3                                                 
+ 55CR  L   4044.23 20 1/2+                                                      
+ 55CR  G   3478.21 20 9.4E-0619                                                 
+ 55CR  G   4044.07 20 3.2E-05 6                                                 
+ 55CR  L   6246.28 17 1/2+                                                      
+ 55CR  G   2202.00 13 7.2E-0514                                                 
+ 55CR  G   3351.64 21 0.00028 6                                                 
+ 55CR  G   3559.18 21 1.5E-04 3                                                 
+ 55CR  G     3977.0 3 3.6E-05 8                                                 
+ 55CR  G   4162.28 21 4.8E-0510                                                 
+ 55CR  G   4771.87 18  0.0014 3                                                 
+ 55CR  G   5680.06 17 2.2E-04 4                                                 
+ 55CR  G   6004.05 180.00147 22                                                 
+ 55CR  G   6245.89 17  0.0056 9
+

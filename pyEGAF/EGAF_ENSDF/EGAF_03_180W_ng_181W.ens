@@ -1,0 +1,17 @@
+181W     180W(N,G) E=THERMAL: {~EGAF}                                           
+181W  c  Evaluated Gamma-ray Activation File (EGAF).
+181W 2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+181W  c  BR$|s{-0}=30 12 (1984MuZY)  
+181W  cG RI$Elemental |s(|g) assuming %Abundance=0.12  1       
+181W   N 833       69 30     12
+181W  PN                                                                    C
+181W 2PN Thermal cross section in barns.
+181W  cN NR$Isotopic |s(|g)=NR*RI.
+181W 2cN Divide by |s{-0} for intensity per neutron capture.
+181W   L  0            9/2+                                                     
+181W   L  113.40   14  11/2+                                                    
+181W   G  113.40   14 0.00011 4                                                 
+181W   L  365.44   11  5/2-                                                     
+181W   G    252.17 16 0.00026 9                                                 
+181W   G    365.44 11 0.0155 15
+

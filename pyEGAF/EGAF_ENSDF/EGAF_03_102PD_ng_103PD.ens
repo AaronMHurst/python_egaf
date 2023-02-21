@@ -1,0 +1,20 @@
+103PD    102PD(N,G) E=THERMAL: {~EGAF}                                          
+103PD c  Evaluated Gamma-ray Activation File (EGAF).
+103PD2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+103PD c  BR$|s{-0}=3.4 3 (1981MuZQ)  
+103PD cG RI$Elemental |s(|g) assuming %Abundance=1.02  1       
+103PD  N      98.0 10 3.4     3
+103PD PN                                                                    C
+103PD2PN Thermal cross section in barns.
+103PD cN NR$Isotopic |s(|g)=NR*RI.
+103PD2cN Divide by |s{-0} for intensity per neutron capture.
+103PD  L       0.0    5/2+                                                      
+103PD  L     118.68 3 3/2+                                                      
+103PD  G     118.68 3 0.0042 11                                                 
+103PD  L    266.856 35 5/2+                                                     
+103PD  G    266.856 3 0.0042 17                                                 
+103PD  L      504.1 4 1/2+                                                      
+103PD  G      385.4 4 0.0041 14                                                 
+103PD  G     504.3021 0.0019  7                                                 
+103PD  L     7625.6 9
+

@@ -1,0 +1,18 @@
+127TE    126TE(N,G) E=THERMAL: {~EGAF}                                          
+127TE c  Evaluated Gamma-ray Activation File (EGAF).
+127TE2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+127TE c  BR$|s{-0}=0.90 15 (1981MuZQ)  
+127TE cG RI$Elemental |s(|g) assuming %Abundance=18.84 25      
+127TE  N 5.31       7 0.90   15
+127TE PN                                                                    C
+127TE2PN Thermal cross section in barns.
+127TE cN NR$Isotopic |s(|g)=NR*RI.
+127TE2cN Divide by |s{-0} for intensity per neutron capture.
+127TE  L       0.0    3/2+                9.35 H 7                              
+127TE  L     61.26 19 1/2+                                                      
+127TE  G      61.2619 0.0006425                                                 
+127TE  L      88.26 8                     109 D  2                              
+127TE  G      88.26 8                                                           
+127TE  L     6287.8 4                                                           
+127TE  G     6287.6 4  0.0023 7
+

@@ -1,0 +1,22 @@
+112CD    111CD(N,G) E=THERMAL: {~EGAF}                                          
+112CD c  Evaluated Gamma-ray Activation File (EGAF).
+112CD2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+112CD c  BR$|s{-0}=24 3 (1981MuZQ)  
+112CD cG RI$Elemental |s(|g) assuming %Abundance=12.80 12      
+112CD  N       7.81 7 24      3
+112CD PN                                                                    C
+112CD2PN Thermal cross section in barns.
+112CD cN NR$Isotopic |s(|g)=NR*RI.
+112CD2cN Divide by |s{-0} for intensity per neutron capture.
+112CD  L       0.0   0+                                                         
+112CD  L    617.58 112+                                                         
+112CD  G     617.5415     2.9 4                                                 
+112CD  L   1224.42 120+                                                         
+112CD  G     606.8515   0.153 6                                                 
+112CD  L   1415.65 184+                                                         
+112CD  G     798.0715   0.177 6                                                 
+112CD  L   1468.83 122+                                                         
+112CD  G     851.2015   0.221 6                                                 
+112CD  G    1468.8715   0.130 3                                                 
+112CD  L 9893.1    22 0+,1+
+

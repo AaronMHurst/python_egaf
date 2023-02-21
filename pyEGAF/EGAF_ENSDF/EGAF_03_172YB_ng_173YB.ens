@@ -1,0 +1,51 @@
+173YB    172YB(N,G) E=THERMAL: {~EGAF}                                          
+173YB c  Evaluated Gamma-ray Activation File (EGAF).
+173YB2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+173YB c  BR$|s{-0}=0.8 4 (1984MuZY)  
+173YB cG RI$Elemental |s(|g) assuming %Abundance=21.83 67      
+173YB  N       4.5814 0.8     4
+173YB PN                                                                    C
+173YB2PN Thermal cross section in barns.
+173YB cN NR$Isotopic |s(|g)=NR*RI.
+173YB2cN Divide by |s{-0} for intensity per neutron capture.
+173YB  L       0.0    5/2-                                                      
+173YB  L       77.1 6 7/2-                                                      
+173YB  G       77.1 6 0.0088 20                                                 
+173YB  L     399.17 4 1/2-                                                      
+173YB  G     399.17 4  0.111 12                                                 
+173YB  L      461.9 6 3/2-                                                      
+173YB  G      62.6  2 0.0014  7                                                 
+173YB  G      461.9 6 0.0105 24                                                 
+173YB  L      482.0 9 5/2-                                                      
+173YB  G       82.9 9  0.0039 9                                                 
+173YB  L      623.6 8 5/2-                                                      
+173YB  G      141.6 8  0.0031 7                                                 
+173YB  G      623.6 80.00071 16                                                 
+173YB  L     632.1 13 5/2-                                                      
+173YB  G     632.1 13 0.0009 10                                                 
+173YB  L     1030.6 6 (1/2-)                                                    
+173YB  G      568.7 7 0.0084 19                                                 
+173YB  G      631.4 6                                                           
+173YB  G     1030.5 6                                                           
+173YB  L     1073.3 6 (3/2)-                                                    
+173YB  G      591.3 9  0.0018 4                                                 
+173YB  G      611.4 7  0.0032 7                                                 
+173YB  G      674.1 6 0.0050 11                                                 
+173YB  G      996.2 7  0.0013 3                                                 
+173YB  L     1231.0 9 (3/2)-                                                    
+173YB  G      769.1 9  0.0029 7                                                 
+173YB  G      831.8 9  0.0019 4                                                 
+173YB  L     1338.6 9 (3/2)-                                                    
+173YB  G     706.5 120.00084 19                                                 
+173YB  G      715.0 80.00076 17                                                 
+173YB  L    1492.3 10 1/2,3/2                                                   
+173YB  G     1030.4 9   0.003 3                                                 
+173YB  L     6367.2 6 1/2+                                                      
+173YB  G    4874.8 10  0.0023 5                                                 
+173YB  G    5028.5 100.00101 23                                                 
+173YB  G     5136.1 9  0.0024 6                                                 
+173YB  G     5293.8 7 0.0093 21                                                 
+173YB  G     5336.5 7 0.0109 25                                                 
+173YB  G     5905.2 6  0.0016 4                                                 
+173YB  G     5967.9 6   0.012 3
+

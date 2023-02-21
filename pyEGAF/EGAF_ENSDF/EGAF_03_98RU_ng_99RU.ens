@@ -1,0 +1,15 @@
+ 99RU    98RU(N,G) E=THERMAL: {~EGAF}                                           
+ 99RU c  Evaluated Gamma-ray Activation File (EGAF).
+ 99RU2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 99RU c  BR$|s{-0}=8 (1981MuZQ)  
+ 99RU cG RI$Elemental |s(|g) assuming %Abundance=1.87  3       
+ 99RU  N 53.5       9 8        
+ 99RU PN                                                                    C
+ 99RU2PN Thermal cross section in barns.
+ 99RU cN NR$Isotopic |s(|g)=NR*RI.
+ 99RU2cN Divide by |s{-0} for intensity per neutron capture.
+ 99RU  L 0           5/2+                                                       
+ 99RU  L 89.69     103/2+                                                       
+ 99RU  G 89.69     10 0.0036  7                                                 
+ 99RU  L 7464       7 1/2+
+

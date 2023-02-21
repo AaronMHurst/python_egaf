@@ -1,0 +1,19 @@
+ 85SR    84SR(N,G) E=THERMAL: {~EGAF}                                           
+ 85SR c  Evaluated Gamma-ray Activation File (EGAF).
+ 85SR2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 85SR c  BR$|s{-0}=0.95 5 (1981MuZQ)  
+ 85SR cG RI$Elemental |s(|g) assuming %Abundance=0.56  1       
+ 85SR  N  179      3  0.95    5
+ 85SR PN                                                                    C
+ 85SR2PN Thermal cross section in barns.
+ 85SR cN NR$Isotopic |s(|g)=NR*RI.
+ 85SR2cN Divide by |s{-0} for intensity per neutron capture.
+ 85SR  L       0.0    9/2+              64.84 D  2                              
+ 85SR  L     231.68 4 7/2+                                                      
+ 85SR  G     231.68 4 0.0017  3                                                 
+ 85SR  L     238.70 7 1/2-              67.63 M  4                              
+ 85SR  G       6.96 6                                                          S
+ 85SR  G     238.70 7                                                           
+ 85SR  L    743.28 20 3/2-                                                      
+ 85SR  G     504.5819 0.0017  3
+

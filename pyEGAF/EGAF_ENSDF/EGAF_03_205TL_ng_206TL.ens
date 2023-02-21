@@ -1,0 +1,28 @@
+206TL    205TL(N,G) E=THERMAL: {~EGAF}                                          
+206TL c  Evaluated Gamma-ray Activation File (EGAF).
+206TL2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+206TL c  BR$|s{-0}=104 17 (1984MuZY)  
+206TL cG RI$Elemental |s(|g) assuming %Abundance=70.476 14     
+206TL  N 1.4189     2 104    17
+206TL PN                                                                    C
+206TL2PN Thermal cross section in barns.
+206TL cN NR$Isotopic |s(|g)=NR*RI.
+206TL2cN Divide by |s{-0} for intensity per neutron capture.
+206TL  L       0.0    0-                  4.199 M 15                            
+206TL  L     265.86 9 2-                                                        
+206TL  G     265.86 9  0.0210 7                                                 
+206TL  L     304.90 9 1-                                                        
+206TL  G     304.86 9  0.022512                                                 
+206TL  L    634.99 12 2-                                                        
+206TL  G     330.09 9  0.026710                                                 
+206TL  G     369.18 7   0.016 3                                                 
+206TL  G     635.0  1 0.0003715                                                 
+206TL  L    649.29 13 1-                                                        
+206TL  G     344.1325  0.002510                                                 
+206TL  G     649.3015  0.010610                                                 
+206TL  L   6502.87 24 0+,1+                                                     
+206TL  G     5852.5 5  0.007215                                                 
+206TL  G     5867.8 4  0.009117                                                 
+206TL  G     6197.8 4  0.010917                                                 
+206TL  G     6504.3 6  0.004010
+

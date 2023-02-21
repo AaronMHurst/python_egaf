@@ -1,0 +1,39 @@
+ 67ZN    66ZN(N,G) E=THERMAL: {~EGAF}                                           
+ 67ZN c  Evaluated Gamma-ray Activation File (EGAF).
+ 67ZN2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 67ZN c  BR$|s{-0}=0.85 20 (1981MuZQ)
+ 67ZN cG RI$Elemental |s(|g) assuming %Abundance=27.90 27      
+ 67ZN  N       3.58 3 0.85   20
+ 67ZN PN                                                                    C
+ 67ZN2PN Thermal cross section in barns.
+ 67ZN cN NR$Isotopic |s(|g)=NR*RI.
+ 67ZN2cN Divide by |s{-0} for intensity per neutron capture.
+ 67ZN  L       0.0   5/2-                                                       
+ 67ZN  L     93.312 51/2-                                                       
+ 67ZN  G     93.311 5  0.0344 8                                                 
+ 67ZN  L    184.578 63/2-                                                       
+ 67ZN  G     91.267 5  0.0046 3                                                 
+ 67ZN  G    184.578 6  0.0321 4                                                 
+ 67ZN  L    393.531 73/2-                                                       
+ 67ZN  G    208.953 80.00275 20                                                 
+ 67ZN  G    300.219 7  0.0201 6                                                 
+ 67ZN  G    393.530 70.00486 22                                                 
+ 67ZN  L      662.6 8                                                           
+ 67ZN  G      662.6 8  0.0014 3                                                 
+ 67ZN  L     979.8 131/2-                                                       
+ 67ZN  G     586.3 13  0.0012 3                                                 
+ 67ZN  G     979.86 8  0.0006 1                                                 
+ 67ZN  L    1142.82 7                                                           
+ 67ZN  G     749.29 7 0.0058 13                                                 
+ 67ZN  G     958.24 7  0.0058 5                                                 
+ 67ZN  G    1142.81 7  0.0014 3                                                 
+ 67ZN  L     1642.6 81/2+                                                       
+ 67ZN  G     1642.6 8                                                           
+ 67ZN  L     7052.5 31/2+                                                       
+ 67ZN  G     5409.6 8                                                           
+ 67ZN  G     5909.4 3 0.0110 11                                                 
+ 67ZN  G     6389.6 8 0.0022 11                                                 
+ 67ZN  G     6658.6 3   0.019 4                                                 
+ 67ZN  G     6867.5 3 0.0254 17                                                 
+ 67ZN  G     6958.8 3   0.043 3
+

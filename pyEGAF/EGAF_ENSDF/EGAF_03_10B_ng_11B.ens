@@ -1,0 +1,25 @@
+ 11B     10B(N,G) E=THERMAL: {~EGAF}                                            
+ 11B  c  Evaluated Gamma-ray Activation File (EGAF).
+ 11B 2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 11B  c  BR$|s{-0}=0.5 2 (1981MuZQ)
+ 11B  cG RI$Elemental |s(|g) assuming %Abundance=19.9  7       
+ 11B   N 5.02      18 0.5     2
+ 11B  PN                                                                    C
+ 11B 2PN Thermal cross section in barns.
+ 11B  cN NR$Isotopic |s(|g)=NR*RI.
+ 11B 2cN Divide by |s{-0} for intensity per neutron capture.
+ 11B   L       0.0   3/2               STABLE                                   
+ 11B   L   4445.00 11 5/2-                                                      
+ 11B   G   4444.03 11 0.039   3                                                 
+ 11B   L   6741.88 17 7/2-                                                      
+ 11B   G   2296.63 13 0.0054 12                                                 
+ 11B   G   6739.67 17 0.0113 10                                                 
+ 11B   L   8920.48 19 5/2-                                                      
+ 11B   G   4474.5  3 0.00045  7                                                S
+ 11B   G   8916.60 19 0.0077  8                                                 
+ 11B   L  11454.15 14 1/2+                                                      
+ 11B   G   2533.35 18 0.0083 12                                                 
+ 11B   G   4711.18 10 0.0155 12                                                 
+ 11B   G    7006.75 9 0.0327 24                                                 
+ 11B   G  11447.75 14 0.0028  3
+

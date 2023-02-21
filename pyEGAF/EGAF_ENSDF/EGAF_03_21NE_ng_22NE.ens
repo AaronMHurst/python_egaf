@@ -1,0 +1,41 @@
+ 22NE    21NE(N,G) E=THERMAL: {~EGAF}                                           
+ 22NE c  Evaluated Gamma-ray Activation File (EGAF).
+ 22NE2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 22NE c  BR$|s{-0}=0.67 11 (1981MUZQ)
+ 22NE cG RI$Elemental |s(|g) assuming %Abundance=0.27  1       
+ 22NE  N       370 14 0.67   11
+ 22NE PN                                                                    C
+ 22NE2PN Thermal cross section in barns.
+ 22NE cN NR$Isotopic |s(|g)=NR*RI.
+ 22NE2cN Divide by |s{-0} for intensity per neutron capture.
+ 22NE  L       0.0     0+                                                       
+ 22NE  L   1274.582 7  2+                                                       
+ 22NE  G   1274.542 7  0.0018 5                                                 
+ 22NE  L     3357.2 3  4+                                                       
+ 22NE  G     2082.5 4  0.0011 3                                                 
+ 22NE  L     4456.5 9  2+                                                       
+ 22NE  G     3181.816 0.0004812                                                 
+ 22NE  G       4456 10.00001510                                                 
+ 22NE  L    5147.5 10  2-                                                       
+ 22NE  L    5326.2 10  1+                                                       
+ 22NE  L    5365.0 10  2+                                                       
+ 22NE  L     5523.2 4  4+                                                       
+ 22NE  G     2165.9 7 0.0008421                                                 
+ 22NE  G     4248.2 60.000013 4                                                 
+ 22NE  L    5641.3 10  3+                                                       
+ 22NE  L    5909.9 10  3-                                                       
+ 22NE  G    4634.83   0.0004211                                                 
+ 22NE  L    6311.4 10  6+                                                       
+ 22NE  L     6345.2 5  4+                                                       
+ 22NE  G     2987.8 5 0.0008622                                                 
+ 22NE  L    6636.0 10  2+                                                       
+ 22NE  L    6853.4 10  1+                                                       
+ 22NE  L    7341.1 10  3+                                                       
+ 22NE  L    7406.0 10                                                           
+ 22NE  L    7423.0 10                                                           
+ 22NE  L    8561.4 10  1+                                                       
+ 22NE  L    10363.9 4                                                           
+ 22NE  G     4018.3 5 0.0009023                                                 
+ 22NE  G     4840.1 5 0.0003810                                                 
+ 22NE  G     9087.3 5 0.00028 7
+

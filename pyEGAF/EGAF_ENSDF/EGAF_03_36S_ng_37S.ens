@@ -1,0 +1,35 @@
+ 37S     36S(N,G) E=THERMAL: {~EGAF}                                            
+ 37S  c  Evaluated Gamma-ray Activation File (EGAF).
+ 37S 2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 37S  c  BR$|s{-0}=0.15 3 (1981MuZQ)  
+ 37S  cG RI$Elemental |s(|g) assuming %Abundance=0.02  1       
+ 37S   N 5.0E3     25 0.15    3
+ 37S  PN                                                                    C
+ 37S 2PN Thermal cross section in barns.
+ 37S  cN NR$Isotopic |s(|g)=NR*RI.
+ 37S 2cN Divide by |s{-0} for intensity per neutron capture.
+ 37S   L        0.0  7/2-              5.05 M    2                              
+ 37S   L   646.177 143/2-                                                       
+ 37S   G    646.17114  4.5E-55                                                  
+ 37S   L   1397.51 18 (3/2+,5/2+)                                               
+ 37S   G     751.3218  3.1E-76                                                  
+ 37S   L    1991.93 53/2-                                                       
+ 37S   G    1345.75 5 1.54E-616                                                 
+ 37S   G     1991.9 5  4.2E-7                                                   
+ 37S   L   2022.87 10 (5/2-,7/2-)                                               
+ 37S   G    1376.9921  2.5E-76                                                  
+ 37S   G     2022.9 5  6.3E-7                                                   
+ 37S   L    2637.86 31/2-                                                       
+ 37S   G   1991.58536 1.14E-515                                                 
+ 37S   L    3261.90 53/2-                                                       
+ 37S   G    1239.1811  6.6E-710                                                 
+ 37S   G    2615.6812 1.27E-621                                                 
+ 37S   L    3492.72 83/2-                                                       
+ 37S   G    1469.5022  3.0E-76                                                  
+ 37S   L    4303.61 4 1/2+                                                      
+ 37S   G     810.85 7  5.1E-76                                                  
+ 37S   G   1041.71335 1.72E-621                                                 
+ 37S   G   1665.69522 1.11E-515                                                 
+ 37S   G    2311.65 8 1.99E-625                                                 
+ 37S   G    3657.28 7  3.4E-54
+

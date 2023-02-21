@@ -1,0 +1,17 @@
+ 49CA    48CA(N,G) E=THERMAL: {~EGAF}                                           
+ 49CA c  Evaluated Gamma-ray Activation File (EGAF).
+ 49CA2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 49CA c  BR$|s{-0}=1.09 {I14} (1981MuZQ)
+ 49CA cG RI$Elemental |s(|g) assuming %Abundance=0.187 21      
+ 49CA  N       535 60 1.09   14
+ 49CA PN                                                                    C
+ 49CA2PN Thermal cross section in barns.
+ 49CA cN NR$Isotopic |s(|g)=NR*RI.
+ 49CA2cN Divide by |s{-0} for intensity per neutron capture.
+ 49CA  L       0.0   3/2-                                                       
+ 49CA  L   2023.08 181/2-                                                       
+ 49CA  G   2023.04 18 2.5E-04 5                                                 
+ 49CA  L   5146.48 211/2+                                                       
+ 49CA  G   3123.29 230.00050 10                                                 
+ 49CA  G   5146.19 210.00147 20
+

@@ -1,0 +1,27 @@
+ 23NE    22NE(N,G) E=THERMAL: {~EGAF}                                           
+ 23NE c  Evaluated Gamma-ray Activation File (EGAF).
+ 23NE2c  Evaluated by R.B. Firestone (LBNL), December 2003.
+ 23NE c  BR$|s{-0}=0.045 6 (1981MUZQ)
+ 23NE cG RI$Elemental |s(|g) assuming %Abundance=9.25  3       
+ 23NE  N 10.81      4 0.045   6
+ 23NE PN                                                                    C
+ 23NE2PN Thermal cross section in barns.
+ 23NE cN NR$Isotopic |s(|g)=NR*RI.
+ 23NE2cN Divide by |s{-0} for intensity per neutron capture.
+ 23NE  L        0.0  5/2+              37.24 S   12                             
+ 23NE  L   1016.97 171/2+              178 PS    10                             
+ 23NE  G     1017.0 2  0.0030 5                                                 
+ 23NE  L     1822.5 2                                                           
+ 23NE  G     1822.4 2 0.00052 5                                                S
+ 23NE  L   3220.66 163/2-              70 FS     LT                             
+ 23NE  G     1398.1 3    9E-54                                                 S
+ 23NE  G    2203.58 6 0.0023823                                                 
+ 23NE  G    3220.4216 0.0005723                                                 
+ 23NE  L   3836.38 231/2-              70 FS     LT                             
+ 23NE  G     2013.8 4 0.00040 5                                                S
+ 23NE  G    2819.2216 0.00052 5                                                 
+ 23NE  L   5200.64 171/2+                                                       
+ 23NE  G     1364.8 3 0.0009112                                                S
+ 23NE  G    1979.89 6 0.0030617                                                 
+ 23NE  G    4183.2025  1.2E-45
+
