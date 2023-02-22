@@ -44,9 +44,9 @@ A `Jupyter` notebook is provided illustrating use of the various methods for acc
 
 Although the `pyEGAF` methods already provide greatly enhanced user access to the EGAF data, the original data sets are also bundled with this software package.  The data sets are provided in the following three formats:
 
-Markup : * ENSDF
-         * RIPL
-	 * JSON
+* ENSDF
+* RIPL
+* JSON
 
 Each of these formats are described below.
 
@@ -54,21 +54,10 @@ Each of these formats are described below.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## References
 <a id="1">[1]</a>
-R.B. Firestone, *et al*., *EGAF: Measurement and Analysis of Gamma-ray Cross Sections*,
+R.B. Firestone, *et al*.,
+*"EGAF: Measurement and Analysis of Gamma-ray Cross Sections"*,
 Nucl. Data Sheets **119**, 79 (2014);
 https://www.doi.org/10.1016/j.nds.2014.08.024
 
