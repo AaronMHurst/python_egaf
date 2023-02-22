@@ -38,11 +38,20 @@ Most methods also require passing the EGAF `JSON` source data set as a list obje
 >>> edata = e.load_egaf()
 ```
 
-A `Jupyter` notebook is provided illustrating use of the various methods for access and manipulation of the EGAF data.  Additionally, a few analysis methods commonly adopted in the analysis of thermal-neutron capture data are also included in the `pyEGAF` software package.
+A `Jupyter` notebook is provided illustrating use of the various methods for access and manipulation of the EGAF data.  Additionally, a few analysis methods commonly adopted in the analysis of thermal-neutron capture data are also included in the `pyEGAF` software package.  Launch the notebook provided in the `notebook` folder and execute the cells to run through the example use cases.  This notebook also has a `matplotlib` Python-packagae dependency.
+
+# Docstrings
+
+All `pyEGAF` classes and functions have supporting docstrings.  Please refer to the individual dosctrings for more information on any particular function including how to use it.  The dosctrings for each method generally follow the following template:
+
+* A short explanation of the function.
+* A list and description of arguments that need to be passed to the function.
+* The return value of the function.
+* An example(s) invoking use of the function.
 
 # EGAF source data sets
 
-Although the `pyEGAF` methods already provide greatly enhanced user access to the EGAF data, the original data sets are also bundled with this software package.  The data sets are provided in the following three formats:
+Although the `pyEGAF` methods already provide greatly enhanced user access to the EGAF data, the original data sets are also bundled with this software package for convenience and to allow users to curate data in a bespoke manner should they prefer.  The data sets are provided in the following three formats:
 
 * ENSDF
 * RIPL
@@ -50,8 +59,11 @@ Although the `pyEGAF` methods already provide greatly enhanced user access to th
 
 Each of these formats are described below.
 
+## ENSDF format
 
+## RIPL format
 
+## JSON format
 
 
 ## References
