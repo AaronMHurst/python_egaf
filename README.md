@@ -68,7 +68,7 @@ $ cd pyEGAF/EGAF_ENSDF
 $ ls
 ```
 
-Alternatively, individual files can also be accessed using `pyEGAF` methods by passing the EGAF data set list object and the residual compound nucleus produced in an (*n*,&gamma;), for example, <sup>28</sup>Si(*n*,&gamma;)<sup>29</sup>Si:
+Alternatively, individual files can also be accessed using `pyEGAF` methods by passing the EGAF data set list object and the *residual compound nucleus* produced in an (*n*,&gamma;), for example, <sup>28</sup>Si(*n*,&gamma;)<sup>29</sup>Si:
 
 ```Bash
 >>> ensdf = e.get_ensdf(edata, "Si29")
@@ -76,12 +76,20 @@ Alternatively, individual files can also be accessed using `pyEGAF` methods by p
 
 ## RIPL format
 
+Because many nuclear reaction codes source decay-scheme information in a particular Reference Input Parameter Library (RIPL) [[4]](#4) format, representative RIPL-translated data sets have also been generated for each corresponding EGAF data set and are bundled with the software.  The RIPL-formatted EGAF data sets are located in the `python_egaf/pyEGAF/EGAF_RIPL`.  These files can also be accessed from the interpreter, for example, <sup>28</sup>Si(*n*,&gamma;)<sup>29</sup>Si:
+
+```Bash
+>>> ripl = e.get_ripl(edata, "Si29")
+```
+
+The proton- and neutron-separation energies in the RIPL headers are taken from the 2020 Atomic Mass Evaluation [[5]](#5).
+
 ## JSON format
 
 
 ## References
 <a id="1">[1]</a>
-R.B. Firestone, *et al*.,
+R.B. Firestone *et al*.,
 *"EGAF: Measurement and Analysis of Gamma-ray Cross Sections"*,
 Nucl. Data Sheets **119**, 79 (2014);
 https://www.doi.org/10.1016/j.nds.2014.08.024
@@ -95,3 +103,11 @@ BNL-NCS-51655-01/02-Rev (2001).
 Evaluated Gamma-ray Activation File (EGAF);
 https://www-nds.iaea.org/pgaa/egaf.html
 
+<a id="4">[4]</a>
+R. Capote *et al*.,
+*Reference Input Parameter Library*
+
+<a id="5">[5]</a>
+M. Wang, W.J. Huang, F.G. Kondev, G. Audi, S. Naimi,
+*The AME2020 atomic mass evaluation*,
+Chin. Phys. C **45**, 030003 (2021).
