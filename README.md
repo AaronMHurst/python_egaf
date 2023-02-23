@@ -61,7 +61,7 @@ Each of these formats are described below.
 
 ## ENSDF format
 
-The original EGAF data sets were prepared in accordance with the mixed-record 80-character column format of the Evaluated Nuclear Structure Data File (ENSDF) [[2]](#2).  The relevant fields of the `Normalization`, `Level`, and `Gamma` records that are commonly adopted in the EGAF data sets are explained in the manual [[2]](#2).  In addition, `Comment` records are also frequently encountered in EGAF data sets.  The ENSDF-formatted EGAF data sets can be accessed from the project folder by changing into the following directory and listing its contents:
+The original EGAF data sets were prepared in accordance with the mixed-record 80-character column format of the Evaluated Nuclear Structure Data File (ENSDF) [[2]](#2).  These ENSDF-formatted files are maintained online by the International Atomic Energy Agency [[3]](#3).  The relevant fields of the `Normalization`, `Level`, and `Gamma` records that are commonly adopted in the EGAF data sets are explained in the manual [[2]](#2).  In addition, `Comment` records are also frequently encountered in EGAF data sets.  The ENSDF-formatted EGAF data sets can be accessed from the project folder by changing into the following directory and listing its contents:
 
 ```Bash
 $ cd pyEGAF/EGAF_ENSDF
@@ -90,4 +90,8 @@ https://www.doi.org/10.1016/j.nds.2014.08.024
 J.K. Tuli,
 *"Evaluated Nuclear Structure Data File"*,
 BNL-NCS-51655-01/02-Rev (2001).
+
+<a id="3">[3]</a>
+Evaluated Gamma-ray Activation File (EGAF);
+https://www-nds.iaea.org/pgaa/egaf.html
 
