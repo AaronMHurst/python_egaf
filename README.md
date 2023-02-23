@@ -53,13 +53,25 @@ All `pyEGAF` classes and functions have supporting docstrings.  Please refer to 
 
 Although the `pyEGAF` methods already provide greatly enhanced user access to the EGAF data, the original data sets are also bundled with this software package for convenience and to allow users to curate data in a bespoke manner should they prefer.  The data sets are provided in the following three formats:
 
-* ENSDF
-* RIPL
-* JSON
+* Evaluated Nuclear Structure Data File (ENSDF)
+* Reference Input Parameter Library (RIPL)
+* JavaScript Object Notation (JSON)
 
 Each of these formats are described below.
 
 ## ENSDF format
+
+The original EGAF data sets were prepared in accordance with the mixed-record 80-character column format of the Evaluated Nuclear Structure Data File (ENSDF) [[2]](#2).  The relevant fields of the `Normalization`, `Level`, and `Gamma` records that are commonly adopted in the EGAF data sets are explained in the manual [[2]](#2).  In addition, `Comment` records are also frequently encountered in EGAF data sets.  The ENSDF-formatted EGAF data sets can be accessed from the project folder by changing into the following directory:
+
+```Bash
+$ cd pyEGAF/EGAF_ENSDF
+```
+
+Alternatively, individual files can also be accessed using `pyEGAF` methods by passing the EGAF data set list object and the residual compound nucleus produced in an (*n*,$\gamma$), for example, <sup>28</sup>Si(*n*,$\gamma$)<sup>29</sup>Si:
+
+```Bash
+>>> ensdf = e.e.get_ensdf(edata, "Si29")
+```
 
 ## RIPL format
 
@@ -72,4 +84,9 @@ R.B. Firestone, *et al*.,
 *"EGAF: Measurement and Analysis of Gamma-ray Cross Sections"*,
 Nucl. Data Sheets **119**, 79 (2014);
 https://www.doi.org/10.1016/j.nds.2014.08.024
+
+<a id="2">[2]</a>
+J.K. Tuli,
+*"Evaluated Nuclear Structure Data File"*,
+BNL-NCS-51655-01/02-Rev (2001).
 
