@@ -111,18 +111,18 @@ All original EGAF data sets have been translated into a representative JavaScrip
 
 The JSON arrays are desbcribed below:
 
-### `recordQ`
+### `recordQ` array
 
 | JSON key | Meaning |
 | --- | --- |
 |           "energyNeutronSeparationAME2020" | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
-            "dEnergyNeutronSeparationAME2020" | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
-            "energyProtonSeparationAME2020" | A number denoting the AME2020 [[5]](#5) proton-separation energy of the compound nucleus |
-            "dEnergyProtonSeparationAME2020" | A number denoting the uncertainty for the AME2020 [[5]](#5) proton-separation energy of the compound nucleus |
-            "energyNeutronSeparationENSDF" | A number denoting the ENSDF neutron-separation energy of the compound nucleus |
-            "energyProtonSeparationENSDF" | A number denoting the ENSDF proton-separation energy of the compound nucleus |
-            "energyNeutronSeparationEGAF" | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
-            "dEnergyNeutronSeparationEGAF" | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
+|            "dEnergyNeutronSeparationAME2020" | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
+|            "energyProtonSeparationAME2020" | A number denoting the AME2020 [[5]](#5) proton-separation energy of the compound nucleus |
+|            "dEnergyProtonSeparationAME2020" | A number denoting the uncertainty for the AME2020 [[5]](#5) proton-separation energy of the compound nucleus |
+|            "energyNeutronSeparationENSDF" | A number denoting the ENSDF neutron-separation energy of the compound nucleus |
+|            "energyProtonSeparationENSDF" | A number denoting the ENSDF proton-separation energy of the compound nucleus |
+|            "energyNeutronSeparationEGAF" | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
+|            "dEnergyNeutronSeparationEGAF" | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
 
 
 ## References
