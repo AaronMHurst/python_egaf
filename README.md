@@ -130,15 +130,28 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 
 | JSON key | Meaning |
 | --- | --- |
-| "multiplierIsotopicCorrection" | A number corresponding to elemental-isotopic conversion factor |
-|   "dMultiplierIsotopicCorrection" | A number corresponding to the uncertainty for the elemental-isotopic conversion factor |
-|   "naturalIsotopicAbundance" | A number corresponding to the isotopic abundance of the EGAF target
-|   "dNaturalIsotopicAbundance" | A number corresponding to the uncertainty for the isotopic abundance of the EGAF target
-|   "adoptedTotalThermalCaptureCrossSection" | A number corresponding to the adopted total thermal neutron capture cross section
-|   "dAdoptedTotalThermalCaptureCrossSection" | A number corresponding to the uncertainty for the adopted total thermal neutron capture cross section 
-|   "unitAdoptedCrossSection" | A string to indicate the units of the cross-section quantities |
-|   "keyNumber" | A string corresponding to the keynumber reference of the adopted cross section |
+| "`multiplierIsotopicCorrection`" | A number corresponding to elemental-isotopic conversion factor |
+|   "`dMultiplierIsotopicCorrection`" | A number corresponding to the uncertainty for the elemental-isotopic conversion factor |
+|   "`naturalIsotopicAbundance`" | A number corresponding to the isotopic abundance of the EGAF target
+|   "`dNaturalIsotopicAbundance`" | A number corresponding to the uncertainty for the isotopic abundance of the EGAF target
+|   "`adoptedTotalThermalCaptureCrossSection`" | A number corresponding to the adopted total thermal neutron capture cross section
+|   "`dAdoptedTotalThermalCaptureCrossSection`" | A number corresponding to the uncertainty for the adopted total thermal neutron capture cross section 
+|   "`unitAdoptedCrossSection`" | A string to indicate the units of the cross-section quantities |
+|   "`keyNumber`" | A string corresponding to the keynumber reference of the adopted cross section |
 
+### `"levelScheme"` array
+
+| JSON key | Meaning |
+| --- | --- |
+|            `"levelIndex"` | A number (integer) corresponding to unique index associated with an energy level |
+|            `"levelEnergy"` | A number (float) corresponding to the level excitation energy |
+|            `"dLevelEnergy"` | A number (float) corresponding to the uncertainty of the level excitation energy |
+|            `"levelIsIsomer"` | A boolean to indicate isomeric nature of level |
+|            `"isomerDecay"` | An array corresponding to the isomer-decay properties of the level |
+|           `"numberOfSpins"`: A number (integer) corresponding to the number of spin-parity permutations of the level |
+|	    `"spins"` | An array corresponding to the spin-parity information associated with the level |
+|           `"numberOfGammas"`: A number (integer) corresponding to the number of deexcitation &gamma; rays belonging to the levels |
+|	    `"gammaDecay"` | An array corresponding to the &gamma;-decay properties of the level |
 
 
 ## References
