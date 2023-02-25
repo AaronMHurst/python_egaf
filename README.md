@@ -146,12 +146,25 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 |            `"levelIndex"` | A number (integer) corresponding to unique index associated with an energy level |
 |            `"levelEnergy"` | A number (float) corresponding to the level excitation energy |
 |            `"dLevelEnergy"` | A number (float) corresponding to the uncertainty of the level excitation energy |
-|            `"levelIsIsomer"` | A boolean to indicate isomeric nature of level |
+|            `"levelIsIsomer"` | A boolean type to flag levels with isomeric properties |
 |            `"isomerDecay"` | An array corresponding to the isomer-decay properties of the level |
-|           `"numberOfSpins"`: A number (integer) corresponding to the number of spin-parity permutations of the level |
+|           `"numberOfSpins"` | A number (integer) corresponding to the number of spin-parity permutations of the level |
 |	    `"spins"` | An array corresponding to the spin-parity information associated with the level |
-|           `"numberOfGammas"`: A number (integer) corresponding to the number of deexcitation &gamma; rays belonging to the levels |
+|           `"numberOfGammas"` | A number (integer) corresponding to the number of deexcitation &gamma; rays belonging to the levels |
 |	    `"gammaDecay"` | An array corresponding to the &gamma;-decay properties of the level |
+
+### `"isomerDecay"` array
+
+| JSON key | Meaning |
+| --- | --- |
+|  "spinIndex"| A number type (integer) associated with the indexed sequence of the spin-parity perumations|
+|  "spinReal"| A number type (float) corresponding to the real spin value of the level |
+|  "spinIsTentative" | A boolean type to flag tentative spin assignments |
+|  "spinIsLimit" | A boolean type to flag levels with spin values expressed as limits |
+|  "spinLimits" | A string type representing the associated spin limits of the level; a `null` value is given if the level does not have any spin limits |
+|  "parity" | A number type (integer) that represents the parity of the level: -1 (negative &pi;), 1 (positive &pi;), 0 (no &pi; assignment) |
+|  "paritySign" | A string type referring to the parity of the level |
+|  "parityIsTentative" | A boolean type to flag tentative parity assignments |
 
 
 ## References
