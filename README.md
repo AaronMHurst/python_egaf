@@ -105,7 +105,24 @@ All original EGAF data sets have been translated into a representative JavaScrip
 |    `"totalNumberLevels"` | A number denoting the total number of levels in the decay scheme |
 |    `"totalNumberGammas"` | A number denoting the total number of &gamma; raysin the decay scheme |
 |    `"unitEnergy"` | A string to indicate the units of the energy quantities |
-| `"neutronCaptureNormalization"` | An array containing normalization information |
+| `"recordQ"` | An array containing information from the *Q*-value record for the compound nucleus
+| `"neutronCaptureNormalization"` | An array containing normalization information for the compound nucleus |
+| `"levelScheme"` | An array contating decay-scheme information for the compound nucleus |
+
+The JSON arrays are desbcribed below:
+
+### `recordQ`
+
+| JSON key | Meaning |
+| --- | --- |
+|           "energyNeutronSeparationAME2020" | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
+            "dEnergyNeutronSeparationAME2020" | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
+            "energyProtonSeparationAME2020" | A number denoting the AME2020 [[5]](#5) proton-separation energy of the compound nucleus |
+            "dEnergyProtonSeparationAME2020" | A number denoting the uncertainty for the AME2020 [[5]](#5) proton-separation energy of the compound nucleus |
+            "energyNeutronSeparationENSDF" | A number denoting the ENSDF neutron-separation energy of the compound nucleus |
+            "energyProtonSeparationENSDF" | A number denoting the ENSDF proton-separation energy of the compound nucleus |
+            "energyNeutronSeparationEGAF" | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
+            "dEnergyNeutronSeparationEGAF" | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
 
 
 ## References
