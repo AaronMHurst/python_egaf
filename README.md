@@ -111,7 +111,7 @@ All original EGAF data sets have been translated into a representative JavaScrip
 
 The JSON arrays are desbcribed below:
 
-### `recordQ` array
+### `"recordQ"` array
 
 | JSON key | Meaning |
 | --- | --- |
@@ -123,6 +123,22 @@ The JSON arrays are desbcribed below:
 |            "energyProtonSeparationENSDF" | A number denoting the ENSDF proton-separation energy of the compound nucleus |
 |            "energyNeutronSeparationEGAF" | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
 |            "dEnergyNeutronSeparationEGAF" | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
+
+### `"neutronCaptureNormalization"` array
+
+This array contains the `"normalizationRecord"` JSON object, an array with the following contents:
+
+| JSON key | Meaning |
+| --- | --- |
+| "multiplierIsotopicCorrection" | A number corresponding to elemental-isotopic conversion factor |
+|   "dMultiplierIsotopicCorrection" | A number corresponding to the uncertainty for the elemental-isotopic conversion factor |
+|   "naturalIsotopicAbundance" | A number corresponding to the isotopic abundance of the EGAF target
+|   "dNaturalIsotopicAbundance" | A number corresponding to the uncertainty for the isotopic abundance of the EGAF target
+|   "adoptedTotalThermalCaptureCrossSection" | A number corresponding to the adopted total thermal neutron capture cross section
+|   "dAdoptedTotalThermalCaptureCrossSection" | A number corresponding to the uncertainty for the adopted total thermal neutron capture cross section 
+|   "unitAdoptedCrossSection" | A string to indicate the units of the cross-section quantities |
+|   "keyNumber" | A string corresponding to the keynumber reference of the adopted cross section |
+
 
 
 ## References
