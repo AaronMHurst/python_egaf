@@ -86,26 +86,26 @@ The proton- and neutron-separation energies in the RIPL headers are taken from t
 
 ## JSON format
 
-All original EGAF data sets have been translated into a representative JavaScript Object Notation (JSON) format using an intuitive syntax to describe the quantities sourced from the primary and continuation records of the ENSDF-formatted data sets.  The JSON objects are explained in the table below:
+All original EGAF data sets have been translated into a representative JavaScript Object Notation (JSON) format using an intuitive syntax to describe the quantities sourced from the primary and continuation records of the ENSDF-formatted data sets.  The JSON data structure is explained in the table below:
 
-| JSON object | Meaning |
+| JSON key | Meaning |
 | --- | --- |
-|    "nucleusID" | A string describing the compound nucleus <symbol><mass> |
-|    "datasetType": | A string to identify the data set |
-|    "nucleusZ" | A number denoting the atomic number of the compound nucleus |
-|    "nucleusA" | A number denoting the mass number of the compound nucleus |
-|    "nucleusN" | A number denoting the neutron number of the compound nucleus |
-|    "nucleusTargetZ" | A number denoting the atomic number of the target nucleus |
-|    "nucleusTargetA" | A number denoting the mass number of the target nucleus |
-|    "nucleusTargetN" | A number denoting the neutron number of the target nucleus |
-|    "nucleusTargetElement" | A one- or two-character string denoting the chemical element ID |
-|    "nucleusTargetID" | A string describing the target nucleus <symbol><mass> |
-|    "numberPrimaryGammas" | A number denoting the number of primary &gamma; rays |
-|    "numberSecondaryGammas" | A number denoting the number of secondary &gamma; rays |
-|    "totalNumberLevels" | A number denoting the total number of levels in the decay scheme |
-|    "totalNumberGammas" | A number denoting the total number of &gamma; raysin the decay scheme |
-|    "unitEnergy" | A string to indicate the units of the energy quantities |
-
+|    `"nucleusID"` | A string describing the compound nucleus <symbol><mass> |
+|    `"datasetType"` | A string to identify the data set |
+|    `"nucleusZ"` | A number denoting the atomic number of the compound nucleus |
+|    `"nucleusA"` | A number denoting the mass number of the compound nucleus |
+|    `"nucleusN"` | A number denoting the neutron number of the compound nucleus |
+|    `"nucleusTargetZ"` | A number denoting the atomic number of the target nucleus |
+|    `"nucleusTargetA"` | A number denoting the mass number of the target nucleus |
+|    `"nucleusTargetN"` | A number denoting the neutron number of the target nucleus |
+|    `"nucleusTargetElement"` | A one- or two-character string denoting the chemical element ID |
+|    `"nucleusTargetID"` | A string describing the target nucleus <symbol><mass> |
+|    `"numberPrimaryGammas"` | A number denoting the number of primary &gamma; rays |
+|    `"numberSecondaryGammas"` | A number denoting the number of secondary &gamma; rays |
+|    `"totalNumberLevels"` | A number denoting the total number of levels in the decay scheme |
+|    `"totalNumberGammas"` | A number denoting the total number of &gamma; raysin the decay scheme |
+|    `"unitEnergy"` | A string to indicate the units of the energy quantities |
+| `"neutronCaptureNormalization"` | An array containing normalization information |
 
 
 ## References
