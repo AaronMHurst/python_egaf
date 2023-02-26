@@ -157,26 +157,53 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 
 | JSON key | Meaning |
 | --- | --- |
-| "halfLifeBest" | A number type representing the halflife in *best* units from original data set.|
-| "dHalfLifeBest" | A number type representing the associated uncertainty on the halflife in *best* units. |
-| "unitHalfLifeBest"| A string type to indicate the *best* halflife units.|
-| "halfLifeConverted"| A number type representing the halflife converted to units of seconds.|
-| "dHalfLifeConverted"| A number type representing the associated uncertainty on the halflife converted to seconds.|
-| "unitHalfLifeConverted" | A string type to indicate the *converted* halflife units.|
+| `"halfLifeBest"` | A number type representing the halflife in *best* units from original data set.|
+| `"dHalfLifeBest"` | A number type representing the associated uncertainty on the halflife in *best* units. |
+| `"unitHalfLifeBest"` | A string type to indicate the *best* halflife units.|
+| `"halfLifeConverted"` | A number type representing the halflife *converted* to units of seconds.|
+| `"dHalfLifeConverted"` | A number type representing the associated uncertainty on the halflife *converted* to seconds.|
+| `"unitHalfLifeConverted"` | A string type to indicate the *converted* halflife units.|
 
 
 ### `"spins"` array
 
 | JSON key | Meaning |
 | --- | --- |
-|  "spinIndex"| A number type (integer) associated with the indexed sequence of the spin-parity perumations.|
-|  "spinReal"| A number type (float) corresponding to the real spin value of the level. |
-|  "spinIsTentative" | A boolean type to flag tentative spin assignments. |
-|  "spinIsLimit" | A boolean type to flag levels with spin values expressed as limits. |
-|  "spinLimits" | A string type representing the associated spin limits of the level; a `null` value is given if the level does not have any spin limits. |
-|  "parity" | A number type (integer) that represents the parity of the level: -1 (negative &pi;), 1 (positive &pi;), 0 (no &pi; assignment). |
-|  "paritySign" | A string type referring to the parity of the level. |
-|  "parityIsTentative" | A boolean type to flag tentative parity assignments. |
+|  `"spinIndex"`| A number type (integer) associated with the indexed sequence of the spin-parity perumations.|
+|  `"spinReal"`| A number type (float) corresponding to the real spin value of the level. |
+|  `"spinIsTentative"` | A boolean type to flag tentative spin assignments. |
+|  `"spinIsLimit"` | A boolean type to flag levels with spin values expressed as limits. |
+|  `"spinLimits"` | A string type representing the associated spin limits of the level; a `null` value is given if the level does not have any spin limits. |
+|  `"parity"` | A number type (integer) that represents the parity of the level: -1 (negative &pi;), 1 (positive &pi;), 0 (no &pi; assignment). |
+|  `"paritySign"` | A string type referring to the parity of the level. |
+|  `"parityIsTentative"` | A boolean type to flag tentative parity assignments. |
+
+### `"gammaDecay"` array
+
+| JSON key | Meaning |
+| --- | --- |
+|  "gammaEnergy" | 159.61,
+|  "dGammaEnergy" | 0.17,
+|  "levelIndexInitial" | 1,
+|  "levelIndexFinal" | 0,
+|  "levelEnergyInitial" | 159.65,
+|  "levelEnergyFinal" | 0.0,
+|  "gammaTransitionType" | "secondary",
+|  "gammaFeedsGroundState" | true,
+|  "gammaAbsoluteIntensities" | An array type |
+
+|                   "multipolarity": null,
+|                    "multipolarityIsTentative": false,
+|                    "multipolarityIsAssumed": false,
+|                    "mixingRatio": null,
+|                    "dMixingRatio": null,
+|                    "mixingRatioSign": null,
+|                    "calculatedTotalInternalConversionCoefficient": 0.0,
+|                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
+|                    "calculatedAtomicShellConversionCoefficients" | An array type |
+
+
+
 
 
 ## References
