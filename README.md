@@ -199,11 +199,11 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 |  `"gammaTransitionType"` | A string type denoting *"primary"* or *"secondary"* &gamma;-ray transition types.|
 |  `"gammaFeedsGroundState"` | A boolean type to flag &gamma;-ray transitions that feed the ground state.|
 |  `"gammaAbsoluteIntensities"` | An array type containing &gamma;-ray intensity information associated with the transition.|
-|  `"multipolarity"` | A string type (or *null*) describing the multipolarity (*"M1", "E1", "M2", "E2", "M1+E2",* etc.) of the transition.|
+|  `"multipolarity"` | A string type (or *null*) describing the multipolarity (*"M1", "E1", "M2", "E2", "M1+E2",* etc.) of the &gamma;-ray transition.|
 |  `"multipolarityIsTentative"`| A boolean type to flag tentative multipolarity assignments.|
 |  `"multipolarityIsAssumed"`| A boolean type to indicate evaluator-assumed multipolarity assignments.|
 |  `"mixingRatio"`| A number type (or *null*) corresponding to the &gamma;-ray mixing ratio where known.|
-|  `"dMixingRatio"`| A number type (or *null*) corresponding to the associated uncertainty of the &gamma;-ray mixing ratio where known.|
+|  `"dMixingRatio"`| A number type (or *null*) corresponding to the associated uncertainty of the &gamma;-ray mixing ratio.|
 |  `"mixingRatioSign"`| A string type (or *null*) corresponding to the sign (*"positive"* or *"negative"*) of the &gamma;-ray mixing ratio.
 |  `"calculatedTotalInternalConversionCoefficient"`| A number type corresponding to the total internal-conversion coefficient associated with the &gamma;-ray transition.|
 |  `"dCalculatedTotalInternalConversionCoefficient"`| A number type corresponding to the associated uncertainty of the total internal-conversion coefficient.|
