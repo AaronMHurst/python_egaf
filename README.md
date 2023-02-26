@@ -2,7 +2,7 @@
 
 Python package that allows for the extraction and manipulation of thermal-neutron capture gamma-ray data from the Evaluated Gamma-ray Activation File (EGAF) library [[1]](#1).
 
-![EGAF Nuclides](EGAF_nuclides.png?raw=true)
+![EGAF Nuclides](EGAF_nuclides.png?raw=true "Schematic of nuclear chart relevant to EGAF nuclides")
 
 # Building and installation
 
@@ -78,7 +78,7 @@ Alternatively, individual files can also be accessed using `pyEGAF` methods by p
 
 ## RIPL format
 
-Because many nuclear reaction codes source decay-scheme information in a particular Reference Input Parameter Library (RIPL) [[4]](#4) format, representative RIPL-translated data sets have also been generated for each corresponding EGAF data set and are bundled with the software.  The RIPL-formatted EGAF data sets are located in the `python_egaf/pyEGAF/EGAF_RIPL`.  These files can also be accessed from the interpreter, for example, <sup>28</sup>Si(*n*,&gamma;)<sup>29</sup>Si:
+Because many nuclear reaction codes source decay-scheme information in a particular Reference Input Parameter Library (RIPL) [[4]](#4) format, representative RIPL-translated data sets have also been generated for each corresponding EGAF data set and are bundled with the software.  The RIPL-formatted EGAF data sets are located in the `python_egaf/pyEGAF/EGAF_RIPL` directory.  These files can also be accessed from the interpreter, for example, <sup>28</sup>Si(*n*,&gamma;)<sup>29</sup>Si:
 
 ```Bash
 >>> ripl = e.get_ripl(edata, "Si29")
@@ -88,7 +88,13 @@ The proton- and neutron-separation energies in the RIPL headers are taken from t
 
 ## JSON format
 
-All original EGAF data sets have been translated into a representative JavaScript Object Notation (JSON) format using an intuitive syntax to describe the quantities sourced from the primary and continuation records of the ENSDF-formatted data sets.  The JSON data structure is explained in the table below:
+All original EGAF data sets have been translated into a representative JavaScript Object Notation (JSON) format using an intuitive syntax to describe the quantities sourced from the primary and continuation records of the ENSDF-formatted data sets.  The JSON-formatted data sets are also bundled with the software package and are located in `python_egaf/pyEGAF/EGAF_JSON`.  Again, individual data sets can be accessed through the interpreter, for example, <sup>28</sup>Si(*n*,&gamma;)<sup>29</sup>Si:
+
+```Bash
+>>> jfile = e.get_json(edata, "Si29")
+```
+
+The JSON data structure is explained in the tables below:
 
 | JSON key | Meaning |
 | --- | --- |
@@ -184,15 +190,15 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 
 | JSON key | Meaning |
 | --- | --- |
-|  "gammaEnergy" | 159.61,
-|  "dGammaEnergy" | 0.17,
-|  "levelIndexInitial" | 1,
-|  "levelIndexFinal" | 0,
-|  "levelEnergyInitial" | 159.65,
-|  "levelEnergyFinal" | 0.0,
-|  "gammaTransitionType" | "secondary",
-|  "gammaFeedsGroundState" | true,
-|  "gammaAbsoluteIntensities" | An array type |
+|  `"gammaEnergy"` | A number type corresponding to the &gamma;-ray energy.|
+|  `"dGammaEnergy"` | A number type corresponding to the associated uncertainty of the &gamma;-ray energy.|
+|  `"levelIndexInitial"` | A number type (integer) corresponding to the index of the initial level associated with the &gamma;-ray transition.|
+|  `"levelIndexFinal"` | A number type (integer) corresponding to the index of the final level associated with the &gamma;-ray transition.|
+|  `"levelEnergyInitial"` | A number type (float) corresponding to the excitation energy of the initial level associated with the &gamma;-ray transition.|
+|  `"levelEnergyFinal"` | A number type (float) corresponding to the excitation energy of the final level associated with the &gamma;-ray transition.|
+|  `"gammaTransitionType"` | A string type denoting *"primary"* or *"secondary"* &gamma;-ray transition types.|
+|  `"gammaFeedsGroundState"` | A boolean type to flag &gamma;-ray transitions that feed the ground state.|
+|  `"gammaAbsoluteIntensities"` | An array type containing &gamma;-ray intensity information associated with the transition.|
 
 |                   "multipolarity": null,
 |                    "multipolarityIsTentative": false,
