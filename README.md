@@ -123,14 +123,14 @@ The JSON arrays are desbcribed below:
 
 | JSON key | Meaning |
 | --- | --- |
-|           "energyNeutronSeparationAME2020" | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
-|            "dEnergyNeutronSeparationAME2020" | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
-|            "energyProtonSeparationAME2020" | A number denoting the AME2020 [[5]](#5) proton-separation energy of the compound nucleus |
-|            "dEnergyProtonSeparationAME2020" | A number denoting the uncertainty for the AME2020 [[5]](#5) proton-separation energy of the compound nucleus |
-|            "energyNeutronSeparationENSDF" | A number denoting the ENSDF neutron-separation energy of the compound nucleus |
-|            "energyProtonSeparationENSDF" | A number denoting the ENSDF proton-separation energy of the compound nucleus |
-|            "energyNeutronSeparationEGAF" | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
-|            "dEnergyNeutronSeparationEGAF" | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
+|           `"energyNeutronSeparationAME2020"` | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
+|           `"dEnergyNeutronSeparationAME2020"` | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
+|            `"energyProtonSeparationAME2020"` | A number denoting the AME2020 [[5]](#5) proton-separation energy of the compound nucleus |
+|            `"dEnergyProtonSeparationAME2020"` | A number denoting the uncertainty for the AME2020 [[5]](#5) proton-separation energy of the compound nucleus |
+|            `"energyNeutronSeparationENSDF"` | A number denoting the ENSDF neutron-separation energy of the compound nucleus |
+|            `"energyProtonSeparationENSDF"` | A number denoting the ENSDF proton-separation energy of the compound nucleus |
+|            `"energyNeutronSeparationEGAF"` | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
+|            `"dEnergyNeutronSeparationEGAF"` | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
 
 ### `"neutronCaptureNormalization"` array
 
@@ -138,14 +138,14 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 
 | JSON key | Meaning |
 | --- | --- |
-| "`multiplierIsotopicCorrection`" | A number type corresponding to elemental-isotopic conversion factor. |
-|   "`dMultiplierIsotopicCorrection`" | A number type corresponding to the uncertainty for the elemental-isotopic conversion factor. |
-|   "`naturalIsotopicAbundance`" | A number type corresponding to the isotopic abundance of the EGAF target.|
-|   "`dNaturalIsotopicAbundance`" | A number type corresponding to the uncertainty for the isotopic abundance of the EGAF target.|
-|   "`adoptedTotalThermalCaptureCrossSection`" | A number type corresponding to the adopted total thermal neutron capture cross section. |
-|   "`dAdoptedTotalThermalCaptureCrossSection`" | A number type corresponding to the uncertainty for the adopted total thermal neutron capture cross section. |
-|   "`unitAdoptedCrossSection`" | A string type to indicate the units of the cross-section quantities. |
-|   "`keyNumber`" | A string type corresponding to the keynumber reference of the adopted cross section. |
+| `"multiplierIsotopicCorrection"` | A number type corresponding to elemental-isotopic conversion factor. |
+|   `"dMultiplierIsotopicCorrection"` | A number type corresponding to the uncertainty for the elemental-isotopic conversion factor. |
+|   `"naturalIsotopicAbundance"` | A number type corresponding to the isotopic abundance of the EGAF target.|
+|   `"dNaturalIsotopicAbundance"` | A number type corresponding to the uncertainty for the isotopic abundance of the EGAF target.|
+|   `"adoptedTotalThermalCaptureCrossSection"` | A number type corresponding to the adopted total thermal neutron capture cross section. |
+|   `"dAdoptedTotalThermalCaptureCrossSection"` | A number type corresponding to the uncertainty for the adopted total thermal neutron capture cross section. |
+|   `"unitAdoptedCrossSection"` | A string type to indicate the units of the cross-section quantities. |
+|   `"keyNumber"` | A string type corresponding to the keynumber reference of the adopted cross section. |
 
 ### `"levelScheme"` array
 
@@ -183,7 +183,7 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 |  `"spinIsLimit"` | A boolean type to flag levels with spin values expressed as limits. |
 |  `"spinLimits"` | A string type representing the associated spin limits of the level; a `null` value is given if the level does not have any spin limits. |
 |  `"parity"` | A number type (integer) that represents the parity of the level: -1 (negative &pi;), 1 (positive &pi;), 0 (no &pi; assignment). |
-|  `"paritySign"` | A string type referring to the parity of the level. |
+|  `"paritySign"` | A string type referring to the parity (*"negative"*, ""positive"*, or *null*) of the level. |
 |  `"parityIsTentative"` | A boolean type to flag tentative parity assignments. |
 
 ### `"gammaDecay"` array
@@ -199,16 +199,15 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 |  `"gammaTransitionType"` | A string type denoting *"primary"* or *"secondary"* &gamma;-ray transition types.|
 |  `"gammaFeedsGroundState"` | A boolean type to flag &gamma;-ray transitions that feed the ground state.|
 |  `"gammaAbsoluteIntensities"` | An array type containing &gamma;-ray intensity information associated with the transition.|
-
-|                   "multipolarity": null,
-|                    "multipolarityIsTentative": false,
-|                    "multipolarityIsAssumed": false,
-|                    "mixingRatio": null,
-|                    "dMixingRatio": null,
-|                    "mixingRatioSign": null,
-|                    "calculatedTotalInternalConversionCoefficient": 0.0,
-|                    "dCalculatedTotalInternalConversionCoefficient": 0.0,
-|                    "calculatedAtomicShellConversionCoefficients" | An array type |
+|  `"multipolarity"` | A string type (or *null*) describing the multipolarity (*"M1", "E1", "M2", "E2", "M1+E2",* etc.) of the transition.|
+|  `"multipolarityIsTentative"`: A boolean type to flag tentative multipolarity assignments.|
+|  `"multipolarityIsAssumed"`: A boolean type to indicate evaluator-assumed multipolarity assignments.|
+|  `"mixingRatio"`: A number type (or *null*) corresponding to the &gamma;-ray mixing ratio where known.|
+|  `"dMixingRatio"`: A number type (or *null*) corresponding to the associated uncertainty of the &gamma;-ray mixing ratio where known.|
+|  `"mixingRatioSign"`: A string type (or *null*) corresponding to the sign (*"positive"* or *"negative"*) of the &gamma;-ray mixing ratio.
+|  `"calculatedTotalInternalConversionCoefficient"`| A number type corresponding to the total internal-conversion coefficient associated with the &gamma;-ray transition.|
+|  `"dCalculatedTotalInternalConversionCoefficient"`| A number type corresponding to the associated uncertainty of the total internal-conversion coefficient.|
+|  `"calculatedAtomicShellConversionCoefficients"` | An array type containing the atomic subshell internal-conversion coefficient data.|
 
 
 
