@@ -205,13 +205,39 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 |  `"mixingRatio"`| A number type (or *null*) corresponding to the &gamma;-ray mixing ratio where known.|
 |  `"dMixingRatio"`| A number type (or *null*) corresponding to the associated uncertainty of the &gamma;-ray mixing ratio.|
 |  `"mixingRatioSign"`| A string type (or *null*) corresponding to the sign (*"positive"* or *"negative"*) of the &gamma;-ray mixing ratio.
-|  `"calculatedTotalInternalConversionCoefficient"`| A number type corresponding to the total internal-conversion coefficient associated with the &gamma;-ray transition.|
-|  `"dCalculatedTotalInternalConversionCoefficient"`| A number type corresponding to the associated uncertainty of the total internal-conversion coefficient.|
+|  `"calculatedTotalInternalConversionCoefficient"`| A number type corresponding to the BrIcc-calculated [[6]](#6) total internal-conversion coefficient associated with the &gamma;-ray transition.|
+|  `"dCalculatedTotalInternalConversionCoefficient"`| A number type corresponding to the associated uncertainty of the BrIcc-calculated [[6]](#6) total internal-conversion coefficient.|
 |  `"calculatedAtomicShellConversionCoefficients"` | An array type containing the atomic subshell internal-conversion coefficient data.|
 
+### `"gammaAbsoluteIntensities"` array
 
+| JSON key | Meaning |
+| --- | --- |
+| "partialElementalCrossSection" | A number type corresponding to the *elemental* partial &gamma;-ray cross section.|
+|  "dPartialElementalCrossSection" | A number type corresponding to the associated uncertainty of the *elemental* partial &gamma;-ray cross section.|
+|  "partialIsotopicCrossSection"| A number type corresponding to the partial &gamma;-ray cross section corrected for *isotopic* abundance.|
+|  "dPartialIsotopicCrossSection"| A number type corresponding to the associated uncertainty of the *isotopically-corrected* partial &gamma;-ray cross section.|
+|  "populationPerNeutronCapture"| A number type corresponding to the population per neutron capture for the &gamma;-ray transition.|
+|  "dPopulationPerNeutronCapture"| A number type corresponding to the associated uncertainty of the population per neutron capture for the &gamma;-ray transition.|
 
+### `"calculatedAtomicShellConversionCoefficients"` array
 
+| JSON key | Meaning |
+| --- | --- |
+|  `"calculatedInternalConversionCoefficientAtomicShellK"`|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellK"`|
+|  `"calculatedInternalConversionCoefficientAtomicShellL"`|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellL"`|
+|  `"calculatedInternalConversionCoefficientAtomicShellM"`|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellM"`|
+|  `"calculatedInternalConversionCoefficientAtomicShellN"`|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellN"`|
+|  `"calculatedInternalConversionCoefficientAtomicShellO"`|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellO"`|
+|  `"calculatedInternalConversionCoefficientAtomicShellP"`|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellP"`|
+|  `"calculatedInternalConversionCoefficientAtomicShellQ"`|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellQ"`|
 
 ## References
 <a id="1">[1]</a>
