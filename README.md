@@ -2,7 +2,7 @@
 
 Python package that allows for the extraction and manipulation of thermal-neutron capture gamma-ray data from the Evaluated Gamma-ray Activation File (EGAF) library [[1]](#1).
 
-![EGAF Nuclides](http://EGAF_nuclides.png)
+![EGAF Nuclides](relative%20EGAF_nuclides.png?raw=true)
 
 # Building and installation
 
