@@ -2,6 +2,8 @@
 
 Python package that allows for the extraction and manipulation of thermal-neutron capture gamma-ray data from the Evaluated Gamma-ray Activation File (EGAF) library [[1]](#1).
 
+![EGAF Nuclides](http://EGAF_nuclides.png)
+
 # Building and installation
 
 This project should be built and installed by executing the `installation.sh` script at the terminal command line of the project directory:
@@ -103,7 +105,7 @@ All original EGAF data sets have been translated into a representative JavaScrip
 |    `"numberPrimaryGammas"` | A number denoting the number of primary &gamma; rays |
 |    `"numberSecondaryGammas"` | A number denoting the number of secondary &gamma; rays |
 |    `"totalNumberLevels"` | A number denoting the total number of levels in the decay scheme |
-|    `"totalNumberGammas"` | A number denoting the total number of &gamma; raysin the decay scheme |
+|    `"totalNumberGammas"` | A number denoting the total number of &gamma; rays in the decay scheme |
 |    `"unitEnergy"` | A string to indicate the units of the energy quantities |
 | `"recordQ"` | An array containing information from the *Q*-value record for the compound nucleus
 | `"neutronCaptureNormalization"` | An array containing normalization information for the compound nucleus |
