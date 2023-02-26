@@ -213,12 +213,12 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 
 | JSON key | Meaning |
 | --- | --- |
-| "partialElementalCrossSection" | A number type corresponding to the *elemental* partial &gamma;-ray cross section.|
-|  "dPartialElementalCrossSection" | A number type corresponding to the associated uncertainty of the *elemental* partial &gamma;-ray cross section.|
-|  "partialIsotopicCrossSection"| A number type corresponding to the partial &gamma;-ray cross section corrected for *isotopic* abundance.|
-|  "dPartialIsotopicCrossSection"| A number type corresponding to the associated uncertainty of the *isotopically-corrected* partial &gamma;-ray cross section.|
-|  "populationPerNeutronCapture"| A number type corresponding to the population per neutron capture for the &gamma;-ray transition.|
-|  "dPopulationPerNeutronCapture"| A number type corresponding to the associated uncertainty of the population per neutron capture for the &gamma;-ray transition.|
+| `"partialElementalCrossSection"` | A number type corresponding to the *elemental* partial &gamma;-ray cross section.|
+|  `"dPartialElementalCrossSection"` | A number type corresponding to the associated uncertainty of the *elemental* partial &gamma;-ray cross section.|
+|  `"partialIsotopicCrossSection"`| A number type corresponding to the partial &gamma;-ray cross section corrected for *isotopic* abundance.|
+|  `"dPartialIsotopicCrossSection"`| A number type corresponding to the associated uncertainty of the *isotopically-corrected* partial &gamma;-ray cross section.|
+|  `"populationPerNeutronCapture"`| A number type corresponding to the population per neutron capture for the &gamma;-ray transition.|
+|  `"dPopulationPerNeutronCapture"`| A number type corresponding to the associated uncertainty of the population per neutron capture for the &gamma;-ray transition.|
 
 ### `"calculatedAtomicShellConversionCoefficients"` array
 
@@ -262,5 +262,10 @@ Nucl. Data Sheets **110**, 3107 (2009).
 
 <a id="5">[5]</a>
 M. Wang, W.J. Huang, F.G. Kondev, G. Audi, S. Naimi,
-*The AME2020 atomic mass evaluation*,
+*"The AME2020 atomic mass evaluation"*,
 Chin. Phys. C **45**, 030003 (2021).
+
+<a id="6">[6]</a>
+T. Kibedi, T.W. Burrows, M.B. Trzhaskovskaya, P.M. Davidson, C.W. Nestor Jr.,
+*"Evaluation of theoretical conversion coefficients using BrIcc"*,
+Nucl. Intrum. Methods Phys. Res. Sect. A **589**, 202 (2008).
