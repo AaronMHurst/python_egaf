@@ -40,7 +40,7 @@ Most methods also require passing the EGAF `JSON` source data set as a list obje
 >>> edata = e.load_egaf()
 ```
 
-A `Jupyter` notebook is provided illustrating use of the various methods for access and manipulation of the EGAF data.  Additionally, a few analysis methods commonly adopted in the analysis of thermal-neutron capture data are also included in the `pyEGAF` software package.  Launch the notebook provided in the `notebook` folder and execute the cells to run through the example use cases.  This notebook also has a `matplotlib` Python-packagae dependency.
+A `Jupyter` notebook is provided illustrating use of the various methods for access and manipulation of the EGAF data.  Additionally, a few analysis methods commonly adopted in the analysis of thermal-neutron capture data are also included in the `pyEGAF` software package.  Launch the notebook provided in the `notebook` folder and execute the cells to run through the example use cases.  This notebook also has a `matplotlib` Python-package dependency.
 
 # Docstrings
 
@@ -96,7 +96,7 @@ All original EGAF data sets have been translated into a representative JavaScrip
 
 The JSON data structure is explained in the tables below:
 
-| JSON key | Meaning |
+| JSON key | Explanation |
 | --- | --- |
 |    `"nucleusID"` | A string describing the compound nucleus <symbol><mass> |
 |    `"datasetType"` | A string to identify the data set |
@@ -115,13 +115,13 @@ The JSON data structure is explained in the tables below:
 |    `"unitEnergy"` | A string to indicate the units of the energy quantities |
 | `"recordQ"` | An array containing information from the *Q*-value record for the compound nucleus
 | `"neutronCaptureNormalization"` | An array containing normalization information for the compound nucleus |
-| `"levelScheme"` | An array contating decay-scheme information for the compound nucleus |
+| `"levelScheme"` | An array containing decay-scheme information for the compound nucleus |
 
-The JSON arrays are desbcribed below:
+The JSON arrays are described below:
 
 ### `"recordQ"` array
 
-| JSON key | Meaning |
+| JSON key | Explanation |
 | --- | --- |
 |           `"energyNeutronSeparationAME2020"` | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
 |           `"dEnergyNeutronSeparationAME2020"` | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
@@ -136,7 +136,7 @@ The JSON arrays are desbcribed below:
 
 This array contains the `"normalizationRecord"` JSON object, an array with the following contents:
 
-| JSON key | Meaning |
+| JSON key | Explanation |
 | --- | --- |
 | `"multiplierIsotopicCorrection"` | A number type corresponding to elemental-isotopic conversion factor. |
 |   `"dMultiplierIsotopicCorrection"` | A number type corresponding to the uncertainty for the elemental-isotopic conversion factor. |
@@ -149,7 +149,7 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 
 ### `"levelScheme"` array
 
-| JSON key | Meaning |
+| JSON key | Explanation |
 | --- | --- |
 |            `"levelIndex"` | A number type (integer) corresponding to unique index associated with an energy level. |
 |            `"levelEnergy"` | A number type (float) corresponding to the level excitation energy. |
@@ -163,7 +163,7 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 
 ### `"isomerDecay"` array
 
-| JSON key | Meaning |
+| JSON key | Explanation |
 | --- | --- |
 | `"halfLifeBest"` | A number type representing the halflife in *best* units from original data set.|
 | `"dHalfLifeBest"` | A number type representing the associated uncertainty on the halflife in *best* units. |
@@ -175,9 +175,9 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 
 ### `"spins"` array
 
-| JSON key | Meaning |
+| JSON key | Explanation |
 | --- | --- |
-|  `"spinIndex"`| A number type (integer) associated with the indexed sequence of the spin-parity perumations.|
+|  `"spinIndex"`| A number type (integer) associated with the indexed sequence of the spin-parity permutations.|
 |  `"spinReal"`| A number type (float) corresponding to the real spin value of the level. |
 |  `"spinIsTentative"` | A boolean type to flag tentative spin assignments. |
 |  `"spinIsLimit"` | A boolean type to flag levels with spin values expressed as limits. |
@@ -188,7 +188,9 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 
 ### `"gammaDecay"` array
 
-| JSON key | Meaning |
+In this version of the EGAF database internal conversion coefficients have not, in general, been included in the source data sets and have consequently been set to zero for both total and individual-shell contributions.  A future release of the database will include BrIcc-calculated [[6]](#6) values for both total conversion as well as contributions from individual shells.
+
+| JSON key | Explanation |
 | --- | --- |
 |  `"gammaEnergy"` | A number type corresponding to the &gamma;-ray energy.|
 |  `"dGammaEnergy"` | A number type corresponding to the associated uncertainty of the &gamma;-ray energy.|
@@ -205,13 +207,13 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 |  `"mixingRatio"`| A number type (or *null*) corresponding to the &gamma;-ray mixing ratio where known.|
 |  `"dMixingRatio"`| A number type (or *null*) corresponding to the associated uncertainty of the &gamma;-ray mixing ratio.|
 |  `"mixingRatioSign"`| A string type (or *null*) corresponding to the sign (*"positive"* or *"negative"*) of the &gamma;-ray mixing ratio.
-|  `"calculatedTotalInternalConversionCoefficient"`| A number type corresponding to the BrIcc-calculated [[6]](#6) total internal-conversion coefficient associated with the &gamma;-ray transition.|
-|  `"dCalculatedTotalInternalConversionCoefficient"`| A number type corresponding to the associated uncertainty of the BrIcc-calculated [[6]](#6) total internal-conversion coefficient.|
+|  `"calculatedTotalInternalConversionCoefficient"`| A number type corresponding to the calculated total internal-conversion coefficient associated with the &gamma;-ray transition.|
+|  `"dCalculatedTotalInternalConversionCoefficient"`| A number type corresponding to the associated uncertainty of the calculated total internal-conversion coefficient.|
 |  `"calculatedAtomicShellConversionCoefficients"` | An array type containing the atomic subshell internal-conversion coefficient data.|
 
 ### `"gammaAbsoluteIntensities"` array
 
-| JSON key | Meaning |
+| JSON key | Explanation |
 | --- | --- |
 | `"partialElementalCrossSection"` | A number type corresponding to the *elemental* partial &gamma;-ray cross section.|
 |  `"dPartialElementalCrossSection"` | A number type corresponding to the associated uncertainty of the *elemental* partial &gamma;-ray cross section.|
@@ -222,22 +224,22 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 
 ### `"calculatedAtomicShellConversionCoefficients"` array
 
-| JSON key | Meaning |
+| JSON key | Explanation |
 | --- | --- |
-|  `"calculatedInternalConversionCoefficientAtomicShellK"`|
-|  `"dCalculatedInternalConversionCoefficientAtomicShellK"`|
-|  `"calculatedInternalConversionCoefficientAtomicShellL"`|
-|  `"dCalculatedInternalConversionCoefficientAtomicShellL"`|
-|  `"calculatedInternalConversionCoefficientAtomicShellM"`|
-|  `"dCalculatedInternalConversionCoefficientAtomicShellM"`|
-|  `"calculatedInternalConversionCoefficientAtomicShellN"`|
-|  `"dCalculatedInternalConversionCoefficientAtomicShellN"`|
-|  `"calculatedInternalConversionCoefficientAtomicShellO"`|
-|  `"dCalculatedInternalConversionCoefficientAtomicShellO"`|
-|  `"calculatedInternalConversionCoefficientAtomicShellP"`|
-|  `"dCalculatedInternalConversionCoefficientAtomicShellP"`|
-|  `"calculatedInternalConversionCoefficientAtomicShellQ"`|
-|  `"dCalculatedInternalConversionCoefficientAtomicShellQ"`|
+|  `"calculatedInternalConversionCoefficientAtomicShellK"`| A number type corresponding to the calculated *K*-shell internal-conversion coefficient.|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellK"`| A number type corresponding to the associated uncertainty of the calculated *K*-shell internal-conversion coefficient.|
+|  `"calculatedInternalConversionCoefficientAtomicShellL"`| A number type corresponding to the calculated *L*-shell internal-conversion coefficient.|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellL"`| A number type corresponding to the associated uncertainty of the calculated *L*-shell internal-conversion coefficient.|
+|  `"calculatedInternalConversionCoefficientAtomicShellM"`| A number type corresponding to the calculated *M*-shell internal-conversion coefficient.|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellM"`| A number type corresponding to the associated uncertainty of the calculated *M*-shell internal-conversion coefficient.|
+|  `"calculatedInternalConversionCoefficientAtomicShellN"`| A number type corresponding to the calculated *N*-shell internal-conversion coefficient.|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellN"`| A number type corresponding to the associated uncertainty of the calculated *N*-shell internal-conversion coefficient.|
+|  `"calculatedInternalConversionCoefficientAtomicShellO"`| A number type corresponding to the calculated *O*-shell internal-conversion coefficient.|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellO"`| A number type corresponding to the associated uncertainty of the calculated *O*-shell internal-conversion coefficient.|
+|  `"calculatedInternalConversionCoefficientAtomicShellP"`| A number type corresponding to the calculated *P*-shell internal-conversion coefficient.|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellP"`| A number type corresponding to the associated uncertainty of the calculated *P*-shell internal-conversion coefficient.|
+|  `"calculatedInternalConversionCoefficientAtomicShellQ"`| A number type corresponding to the calculated *Q*-shell internal-conversion coefficient.|
+|  `"dCalculatedInternalConversionCoefficientAtomicShellQ"`| A number type corresponding to the associated uncertainty of the calculated *Q*-shell internal-conversion coefficient.|
 
 ## References
 <a id="1">[1]</a>
@@ -257,7 +259,7 @@ https://www-nds.iaea.org/pgaa/egaf.html
 
 <a id="4">[4]</a>
 R. Capote *et al*.,
-*"Reference Input Parameter Library"*,
+*"RIPL - Reference Input Parameter Library for Calculation of Nuclear Reactions and Nuclear Data Evaluations"*,
 Nucl. Data Sheets **110**, 3107 (2009).
 
 <a id="5">[5]</a>
