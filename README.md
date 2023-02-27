@@ -221,7 +221,7 @@ where *M* is the photon intensity multiplier from the `NR` field of the `Normali
 
 $$ P_{\gamma} = \frac{\sigma_{\gamma_{i}}}{\sigma_{0}}. \quad (2) $$
 
-where 
+where &sigma;<sub>0</sub> is the adopted total thermal neutron capture cross section (JSON key: `"adoptedTotalThermalCaptureCrossSection"` from the `"normalizationRecord"` JSON object).
 
 | JSON key | Explanation |
 | --- | --- |
