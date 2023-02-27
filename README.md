@@ -4,7 +4,7 @@ This project is a Python package that allows for the extraction and manipulation
 
 ![EGAF Nuclides](EGAF_nuclides.png?raw=true "Schematic of nuclear chart relevant to EGAF nuclides")
 
-The `pyEGAF` package provides users with a convenient means for access and analysis of the thermal neutron-capture data in EGAF including decay schemes and associated properties for all compound nuclides as well as a capability to search for by &gamma;-ray energy for forensics applications.  After building, installation, and testing of the project, refer to the examples provided in the `Jupyter` notebook for an overview regarding some of the available methods.
+The `pyEGAF` package provides users with a convenient means for access and analysis of the thermal neutron-capture data in EGAF including decay schemes and associated properties for all compound nuclides, as well as a capability to search for by &gamma;-ray energy for forensics applications.  After building, installation, and testing of the project, refer to the examples provided in the `Jupyter` notebook for an overview regarding some of the available methods.
 
 # Building and installation
 
@@ -256,7 +256,7 @@ where &sigma;<sub>0</sub> is the adopted total thermal neutron capture cross sec
 ## References
 <a id="1">[1]</a>
 R.B. Firestone *et al*.,
-*"Database of Prompt Gamma Rays from Slow Thermal Neutron Capture for Elemental Analysis"*
+*"Database of Prompt Gamma Rays from Slow Thermal Neutron Capture for Elemental Analysis"*,
 IAEA STI/PUB/1263, 251 (2007).
 
 <a id="2">[2]</a>
