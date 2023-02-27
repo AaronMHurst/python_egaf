@@ -215,9 +215,13 @@ In this version of the EGAF database internal conversion coefficients have not, 
 
 The source EGAF data sets contain partial elemental &gamma;-ray cross sections &sigma;<sub>&gamma;<sub>*e*</sub></sub> (JSON key: `"partialElementalCrossSection"`) in the `RI` field of the `Gamma` record [[2]](#2).  The isotopically-corrected partial &gamma;-ray cross sections &sigma;<sub>&gamma;<sub>*i*</sub></sub> (JSON key: `"partialIsotopicCrossSection"`) are according to
 
-$$ \sigma_{\gamma_{i}} = \sigma_{\gamma_{e}} * M, \quad (1)$$
+$$ \sigma_{\gamma_{i}} = \sigma_{\gamma_{e}} * M, \quad (1) $$
 
-where *M* is the photon intensity multiplier from the `NR` field of the `Normalization` record (JSON key: `"multiplierIsotopicCorrection"` from the `"normalizationRecord"` JSON object).  The populations per neutron capture *P* are then deduced from
+where *M* is the photon intensity multiplier from the `NR` field of the `Normalization` record (JSON key: `"multiplierIsotopicCorrection"` from the `"normalizationRecord"` JSON object).  The &gamma;-ray populations per neutron capture *P*<sub>&gamma;</sub> are then deduced from
+
+$$ P_{\gamma} = \frac{\sigma_{\gamma_{i}}}{\sigma_{0}}. \quad (2) $$
+
+where 
 
 | JSON key | Explanation |
 | --- | --- |
