@@ -1,6 +1,6 @@
 # pyEGAF
 
-This project is a Python package that allows for the extraction and manipulation of thermal-neutron capture gamma-ray data from the Evaluated Gamma-ray Activation File (EGAF) library [[1]](#1).  The EGAF library is a database of &gamma;-ray energies and their corresponding partial &gamma;-ray cross sections from thermal-neutron capture measurements carried out with a guided neutron beam at the Budapest Research Reactor for 245 isotopes encompassing measurements of natural elemental samples for targets from *Z* = 1-82, 90, and 92, except for He (*Z* = 2) and Pm (*Z* = 61) [[1]](#1).  The (*n*,&gamma;) targets and corresponding residual compound nuclides relevant to the EGAF project are summarized in the schematic of the nuclear chart shown in the figure below.
+This project is a Python package that allows for the extraction and manipulation of thermal-neutron capture gamma-ray data from the Evaluated Gamma-ray Activation File (EGAF) library [[1]](#1).  The EGAF library is a database of &gamma;-ray energies and their corresponding partial &gamma;-ray cross sections from thermal-neutron capture measurements carried out with a guided neutron beam at the Budapest Research Reactor for 245 isotopes encompassing measurements of natural elemental samples for targets from *Z* = 1-83, 90, and 92, except for Tc (*Z* = 43) and Pm (*Z* = 61) [[1]](#1).  The database comprises a total of 8172 primary &gamma; rays and 29605 secondary &gamma; rays (a total of 37777 &gamma; rays) associated with 12564 levels.  The (*n*,&gamma;) targets and corresponding residual compound nuclides relevant to the EGAF project are summarized in the schematic of the nuclear chart shown in the figure below.
 
 ![EGAF Nuclides](EGAF_nuclides.png?raw=true "Schematic of nuclear chart relevant to EGAF nuclides")
 
@@ -217,7 +217,7 @@ In this version of the EGAF database internal conversion coefficients have not, 
 
 The source EGAF data sets contain partial elemental &gamma;-ray cross sections &sigma;<sub>&gamma;<sub>*e*</sub></sub> (JSON key: `"partialElementalCrossSection"`) in the `RI` field of the `Gamma` record [[2]](#2).  The isotopically-corrected partial &gamma;-ray cross sections &sigma;<sub>&gamma;<sub>*i*</sub></sub> (JSON key: `"partialIsotopicCrossSection"`) are derived according to
 
-$$ \sigma_{\gamma_{i}} = \sigma_{\gamma_{e}} * M, \quad (1) $$
+$$ \sigma_{\gamma_{i}} = \sigma_{\gamma_{e}} M, \quad (1) $$
 
 where *M* is the photon intensity multiplier from the `NR` field of the `Normalization` record [[2]](#2) (JSON key: `"multiplierIsotopicCorrection"` from the `"normalizationRecord"` JSON object).  The &gamma;-ray populations per neutron capture *P*<sub>&gamma;</sub> are then deduced from
 
