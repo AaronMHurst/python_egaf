@@ -1,8 +1,10 @@
 # pyEGAF
 
-Python package that allows for the extraction and manipulation of thermal-neutron capture gamma-ray data from the Evaluated Gamma-ray Activation File (EGAF) library [[1]](#1).
+This project is a Python package that allows for the extraction and manipulation of thermal-neutron capture gamma-ray data from the Evaluated Gamma-ray Activation File (EGAF) library [[1]](#1).  The EGAF library is a database of &gamma;-ray energies and their corresponding partial &gamma;-ray cross sections from thermal-neutron capture measurements carried out with a guided neutron beam at the Budapest Research Reactor for 245 isotopes encompassing measurements of natural elemental samples for targets from *Z* = 1-82, 90, and 92, except for He (*Z* = 2) and Pm (*Z* = 61) [[1]](#1).  The (*n*,&gamma;) targets and corresponding residual compound nuclides relevant to the EGAF project are summarized in the schematic of the nuclear chart shown in the figure below.
 
 ![EGAF Nuclides](EGAF_nuclides.png?raw=true "Schematic of nuclear chart relevant to EGAF nuclides")
+
+The `pyEGAF` package provides users with a convenient means for access and analysis of the thermal neutron-capture data in EGAF including decay schemes and associated properties for all compound nuclides as well as a capability to search for by &gamma;-ray energy for forensics applications.  After building, installation, and testing of the project, refer to the examples provided in the `Jupyter` notebook for an overview regarding some of the available methods.
 
 # Building and installation
 
@@ -254,9 +256,8 @@ where &sigma;<sub>0</sub> is the adopted total thermal neutron capture cross sec
 ## References
 <a id="1">[1]</a>
 R.B. Firestone *et al*.,
-*"EGAF: Measurement and Analysis of Gamma-ray Cross Sections"*,
-Nucl. Data Sheets **119**, 79 (2014);
-https://www.doi.org/10.1016/j.nds.2014.08.024
+*"Database of Prompt Gamma Rays from Slow Thermal Neutron Capture for Elemental Analysis"*
+IAEA STI/PUB/1263, 251 (2007).
 
 <a id="2">[2]</a>
 J.K. Tuli,
