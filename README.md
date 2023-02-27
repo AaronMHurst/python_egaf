@@ -213,7 +213,9 @@ In this version of the EGAF database internal conversion coefficients have not, 
 
 ### `"gammaAbsoluteIntensities"` array
 
-The source EGAF data sets contain partial elemental &gamma;-ray cross sections &sigma;<sub>&gamma;<sub>*e*</sub></sub> (JSON key: `"partialElementalCrossSection"`) in the `RI` field of the `Gamma` record [[2]](#2).
+The source EGAF data sets contain partial elemental &gamma;-ray cross sections &sigma;<sub>&gamma;<sub>*e*</sub></sub> (JSON key: `"partialElementalCrossSection"`) in the `RI` field of the `Gamma` record [[2]](#2).  The isotopically-corrected partial &gamma;-ray cross sections &sigma;<sub>&gamma;<sub>*i*</sub></sub> (JSON key: `"partialIsotopicCrossSection"`) have been derived according to:
+
+$$ \sigma_{\gamma_{i}} = \sigma_{\gamma_{e}} * M, $$
 
 | JSON key | Explanation |
 | --- | --- |
