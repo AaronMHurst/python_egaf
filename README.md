@@ -98,24 +98,24 @@ The JSON data structure is explained in the tables below:
 
 | JSON key | Explanation |
 | --- | --- |
-|    `"nucleusID"` | A string describing the compound nucleus <symbol><mass> |
-|    `"datasetType"` | A string to identify the data set |
-|    `"nucleusZ"` | A number denoting the atomic number of the compound nucleus |
-|    `"nucleusA"` | A number denoting the mass number of the compound nucleus |
-|    `"nucleusN"` | A number denoting the neutron number of the compound nucleus |
-|    `"nucleusTargetZ"` | A number denoting the atomic number of the target nucleus |
-|    `"nucleusTargetA"` | A number denoting the mass number of the target nucleus |
-|    `"nucleusTargetN"` | A number denoting the neutron number of the target nucleus |
-|    `"nucleusTargetElement"` | A one- or two-character string denoting the chemical element ID |
-|    `"nucleusTargetID"` | A string describing the target nucleus <symbol><mass> |
-|    `"numberPrimaryGammas"` | A number denoting the number of primary &gamma; rays |
-|    `"numberSecondaryGammas"` | A number denoting the number of secondary &gamma; rays |
-|    `"totalNumberLevels"` | A number denoting the total number of levels in the decay scheme |
-|    `"totalNumberGammas"` | A number denoting the total number of &gamma; rays in the decay scheme |
-|    `"unitEnergy"` | A string to indicate the units of the energy quantities |
-| `"recordQ"` | An array containing information from the *Q*-value record for the compound nucleus
-| `"neutronCaptureNormalization"` | An array containing normalization information for the compound nucleus |
-| `"levelScheme"` | An array containing decay-scheme information for the compound nucleus |
+|    `"nucleusID"` | A string type describing the compound nucleus <symbol><mass>.|
+|    `"datasetType"` | A string type to identify the data set.|
+|    `"nucleusZ"` | A number type denoting the atomic number of the compound nucleus.|
+|    `"nucleusA"` | A number type denoting the mass number of the compound nucleus.|
+|    `"nucleusN"` | A number type denoting the neutron number of the compound nucleus.|
+|    `"nucleusTargetZ"` | A number type denoting the atomic number of the target nucleus.|
+|    `"nucleusTargetA"` | A number type denoting the mass number of the target nucleus.|
+|    `"nucleusTargetN"` | A number type denoting the neutron number of the target nucleus.|
+|    `"nucleusTargetElement"` | A string type (one- or two-character) denoting the chemical element ID.|
+|    `"nucleusTargetID"` | A string type describing the target nucleus <symbol><mass>.|
+|    `"numberPrimaryGammas"` | A number type denoting the number of primary &gamma; rays.|
+|    `"numberSecondaryGammas"` | A number type denoting the number of secondary &gamma; rays.|
+|    `"totalNumberLevels"` | A number type denoting the total number of levels in the decay scheme.|
+|    `"totalNumberGammas"` | A number type denoting the total number of &gamma; rays in the decay scheme.|
+|    `"unitEnergy"` | A string type to indicate the units of the energy quantities.|
+| `"recordQ"` | An array type containing information from the *Q*-value record for the compound nucleus.|
+| `"neutronCaptureNormalization"` | An array type containing normalization information for the compound nucleus.|
+| `"levelScheme"` | An array type containing decay-scheme information for the compound nucleus.|
 
 The JSON arrays are described below:
 
@@ -123,14 +123,14 @@ The JSON arrays are described below:
 
 | JSON key | Explanation |
 | --- | --- |
-|           `"energyNeutronSeparationAME2020"` | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
-|           `"dEnergyNeutronSeparationAME2020"` | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
-|            `"energyProtonSeparationAME2020"` | A number denoting the AME2020 [[5]](#5) proton-separation energy of the compound nucleus |
-|            `"dEnergyProtonSeparationAME2020"` | A number denoting the uncertainty for the AME2020 [[5]](#5) proton-separation energy of the compound nucleus |
-|            `"energyNeutronSeparationENSDF"` | A number denoting the ENSDF neutron-separation energy of the compound nucleus |
-|            `"energyProtonSeparationENSDF"` | A number denoting the ENSDF proton-separation energy of the compound nucleus |
-|            `"energyNeutronSeparationEGAF"` | A number denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
-|            `"dEnergyNeutronSeparationEGAF"` | A number denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus |
+|           `"energyNeutronSeparationAME2020"` | A number type denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus.|
+|           `"dEnergyNeutronSeparationAME2020"` | A number type denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus.|
+|            `"energyProtonSeparationAME2020"` | A number type denoting the AME2020 [[5]](#5) proton-separation energy of the compound nucleus.|
+|            `"dEnergyProtonSeparationAME2020"` | A number type denoting the uncertainty for the AME2020 [[5]](#5) proton-separation energy of the compound nucleus.|
+|            `"energyNeutronSeparationENSDF"` | A number type denoting the ENSDF neutron-separation energy of the compound nucleus.|
+|            `"energyProtonSeparationENSDF"` | A number type denoting the ENSDF proton-separation energy of the compound nucleus.|
+|            `"energyNeutronSeparationEGAF"` | A number type denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus.|
+|            `"dEnergyNeutronSeparationEGAF"` | A number type denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus.|
 
 ### `"neutronCaptureNormalization"` array
 
@@ -212,6 +212,8 @@ In this version of the EGAF database internal conversion coefficients have not, 
 |  `"calculatedAtomicShellConversionCoefficients"` | An array type containing the atomic subshell internal-conversion coefficient data.|
 
 ### `"gammaAbsoluteIntensities"` array
+
+The source EGAF data sets contain partial elemental &gamma;-ray cross sections (&sigma;<sub>&gamma;<sub>*e*</sub></sub>) (JSON key: `"partialElementalCrossSection"`) in the `RI` field of the `Gamma` record [[2]](#2).
 
 | JSON key | Explanation |
 | --- | --- |
