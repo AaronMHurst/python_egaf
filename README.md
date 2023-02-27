@@ -109,7 +109,7 @@ The JSON-formatted EGAF schema is explained in the tables below:
 
 | JSON key | Explanation |
 | --- | --- |
-|    `"nucleusID"` | A string type describing the compound nucleus <symbol><mass>.|
+|    `"nucleusID"` | A string type describing the compound nucleus `<symbol><mass>`.|
 |    `"datasetType"` | A string type to identify the data set.|
 |    `"nucleusZ"` | A number type denoting the atomic number of the compound nucleus.|
 |    `"nucleusA"` | A number type denoting the mass number of the compound nucleus.|
@@ -118,7 +118,7 @@ The JSON-formatted EGAF schema is explained in the tables below:
 |    `"nucleusTargetA"` | A number type denoting the mass number of the target nucleus.|
 |    `"nucleusTargetN"` | A number type denoting the neutron number of the target nucleus.|
 |    `"nucleusTargetElement"` | A string type (one- or two-character) denoting the chemical element ID.|
-|    `"nucleusTargetID"` | A string type describing the target nucleus <symbol><mass>.|
+|    `"nucleusTargetID"` | A string type describing the target nucleus `<symbol><mass>`.|
 |    `"numberPrimaryGammas"` | A number type denoting the number of primary &gamma; rays.|
 |    `"numberSecondaryGammas"` | A number type denoting the number of secondary &gamma; rays.|
 |    `"totalNumberLevels"` | A number type denoting the total number of levels in the decay scheme.|
