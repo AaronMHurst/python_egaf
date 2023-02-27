@@ -185,7 +185,7 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 |  `"spinIsLimit"` | A boolean type to flag levels with spin values expressed as limits. |
 |  `"spinLimits"` | A string type representing the associated spin limits of the level; a `null` value is given if the level does not have any spin limits. |
 |  `"parity"` | A number type (integer) that represents the parity of the level: -1 (negative &pi;), 1 (positive &pi;), 0 (no &pi; assignment). |
-|  `"paritySign"` | A string type referring to the parity (*"negative"*, ""positive"*, or *null*) of the level. |
+|  `"paritySign"` | A string type referring to the parity (*"negative"*, *"positive"*, or *null*) of the level. |
 |  `"parityIsTentative"` | A boolean type to flag tentative parity assignments. |
 
 ### `"gammaDecay"` array
