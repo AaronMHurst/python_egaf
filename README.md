@@ -96,7 +96,16 @@ All original EGAF data sets have been translated into a representative JavaScrip
 >>> jfile = e.get_json(edata, "Si29")
 ```
 
-The JSON data structure is explained in the tables below:
+The JSON data structures support the following data types:
+
+** string
+** number
+** boolean
+** null
+** object (JSON object)
+** array
+
+The JSON-formatted EGAF schema is explained in the tables below:
 
 | JSON key | Explanation |
 | --- | --- |
