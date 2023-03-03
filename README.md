@@ -32,13 +32,15 @@ After the installation the `pyEGAF` scripts can be ran from any location by impo
 
 ```Bash
 $ python
+```
+```python
 >>> import pyEGAF as egaf
 >>> e = egaf.EGAF()
 ```
 
 Most methods also require passing the EGAF `JSON` source data set as a list object:
 
-```
+```python
 >>> edata = e.load_egaf()
 ```
 
@@ -74,7 +76,7 @@ $ ls
 
 Alternatively, individual files can also be accessed using `pyEGAF` methods by passing the EGAF data set list object and the *residual compound nucleus* produced in an (*n*,&gamma;), for example, <sup>28</sup>Si(*n*,&gamma;)<sup>29</sup>Si:
 
-```Bash
+```python
 >>> ensdf = e.get_ensdf(edata, "Si29")
 ```
 
@@ -82,7 +84,7 @@ Alternatively, individual files can also be accessed using `pyEGAF` methods by p
 
 Because many nuclear reaction codes source decay-scheme information in a particular Reference Input Parameter Library (RIPL) [[4]](#4) format, representative RIPL-translated data sets have also been generated for each corresponding EGAF data set and are bundled with the software.  The RIPL-formatted EGAF data sets are located in the `python_egaf/pyEGAF/EGAF_RIPL` directory.  These files can also be accessed from the interpreter, for example, <sup>28</sup>Si(*n*,&gamma;)<sup>29</sup>Si:
 
-```Bash
+```python
 >>> ripl = e.get_ripl(edata, "Si29")
 ```
 
@@ -92,7 +94,7 @@ The proton- and neutron-separation energies in the RIPL headers are taken from t
 
 All original EGAF data sets have been translated into a representative JavaScript Object Notation (JSON) format using an intuitive syntax to describe the quantities sourced from the primary and continuation records of the ENSDF-formatted data sets.  The JSON-formatted data sets are also bundled with the software package and are located in `python_egaf/pyEGAF/EGAF_JSON`.  Again, individual data sets can be accessed through the interpreter, for example, <sup>28</sup>Si(*n*,&gamma;)<sup>29</sup>Si:
 
-```Bash
+```python
 >>> jfile = e.get_json(edata, "Si29")
 ```
 
