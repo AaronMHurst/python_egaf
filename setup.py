@@ -10,7 +10,8 @@ setuptools.setup(
     author_email="amhurst@berkeley.edu",
     description="Allows for extraction and manipulation of thermal-neutron capture gamma-ray data from the EGAF library.",
     long_description=open('README.md').read(),
-    packages=setuptools.find_packages(),
+    #packages=setuptools.find_packages(),
+    packages=setuptools.find_namespace_packages(),
     #install_requires=[],
     install_requires=requirements,
     classifiers=[
