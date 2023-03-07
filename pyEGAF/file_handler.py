@@ -57,8 +57,10 @@ class RIPL(CapGam):
             to file :
             get_ripl(edata, "Si29", True)
         """
-        # Load the RIPL files to list:
-        ripl_egaf_list = [r for r in glob.glob("/home/amhurst/Physics/ENSDF/parse_records/xml_translator/adopted_test/testing_function/v14_EGAF/PyPI/pyEGAF/EGAF_RIPL/*.dat")]
+        # Load the RIPL files to a list:
+        from . import get_data
+        EGAF_RIPL_PATH = get_data('EGAF_RIPL')
+        ripl_egaf_list = [r for r in glob.glob("%s/*.dat"%EGAF_RIPL_PATH)]
         RIPL_COUNT = len(ripl_egaf_list)
         
         self.list = list
@@ -141,7 +143,10 @@ class JSONFile(RIPL):
             "EGAF_JSON_Si28_NG_Si29.json" to file :
             get_json(edata, "Si29", True)
         """
-        json_egaf_list = [j for j in glob.glob("/home/amhurst/Physics/ENSDF/parse_records/xml_translator/adopted_test/testing_function/v14_EGAF/PyPI/pyEGAF/EGAF_JSON/*.json")]
+        # Load the JSON files to a list:
+        from . import get_data
+        EGAF_JSON_PATH = get_data('EGAF_JSON')
+        json_egaf_list = [j for j in glob.glob("%s/*.json"%EGAF_JSON_PATH)]
         JSON_COUNT = len(json_egaf_list)
 
         self.list = list
@@ -200,7 +205,10 @@ class ENSDF(JSONFile):
             "EGAF_ENSDF_28SI_NG_29SI.ens" to file :
             get_ensdf(edata, "Si29", True)
         """
-        ensdf_egaf_list = [j for j in glob.glob("/home/amhurst/Physics/ENSDF/parse_records/xml_translator/adopted_test/testing_function/v14_EGAF/PyPI/pyEGAF/EGAF_ENSDF/*.ens")]
+        # Load the ENSDF files to a list:
+        from . import get_data
+        EGAF_ENSDF_PATH = get_data('EGAF_ENSDF')
+        ensdf_egaf_list = [j for j in glob.glob("%s/*.ens"%EGAF_ENSDF_PATH)]
         ENSDF_COUNT = len(ensdf_egaf_list)
 
         self.list = list
