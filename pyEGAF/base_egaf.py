@@ -3,6 +3,7 @@ import pandas as pd
 import json
 import glob
 import re
+import os
 
 class BaseEGAF(object):
     __doc__="""Base class to handle EGAF data sets."""
@@ -29,7 +30,9 @@ class BaseEGAF(object):
         """
         print("Loading EGAF data sets, please wait...")
         
-        json_egaf_list = [j for j in glob.glob("/home/amhurst/Physics/ENSDF/parse_records/xml_translator/adopted_test/testing_function/v14_EGAF/PyPI/pyEGAF/EGAF_JSON/*.json")]
+        from . import get_data
+        EGAF_JSON_PATH = get_data('EGAF_JSON')
+        json_egaf_list = [j for j in glob.glob("%s/*.json"%EGAF_JSON_PATH)]
         json_egaf_data = []
 
         JSON_COUNT = 0
@@ -40,7 +43,14 @@ class BaseEGAF(object):
                 json_egaf_data.append(json_egaf_dict)
             jf.close()
 
-        print("All {0} JSON-formatted EGAF data sets loaded.".format(JSON_COUNT))
+        if JSON_COUNT == 245:
+            print("All {0} JSON-formatted EGAF data sets loaded.".format(JSON_COUNT))
+        elif (JSON_COUNT > 0) and (JSON_COUNT < 245):
+            print("{0} JSON-formatted EGAF data sets loaded.".format(JSON_COUNT))
+            print("{0} JSON-formatted EGAF data sets are missing.".format(245-int(JSON_COUNT)))
+        else:
+            if JSON_COUNT == 0:
+                print("{0} JSON-formatted EGAF data sets loaded.".format(JSON_COUNT))
         return json_egaf_data
     
     def sort_by_json_key(list,str='nucleusTargetID'):
