@@ -1,6 +1,6 @@
 # pyEGAF
 
-This project is a Python package that allows for the extraction and manipulation of thermal-neutron capture gamma-ray data from the Evaluated Gamma-ray Activation File (EGAF) library [[1]](#1).  The EGAF library is a database of &gamma;-ray energies and their corresponding partial &gamma;-ray cross sections from thermal-neutron capture measurements carried out with a guided neutron beam at the Budapest Research Reactor for 245 isotopes encompassing measurements of natural elemental samples for targets from *Z* = 1-83, 90, and 92, except for Tc (*Z* = 43) and Pm (*Z* = 61).  The database comprises a total of 8172 primary &gamma; rays and 29605 secondary &gamma; rays (a total of 37777 &gamma; rays) associated with 12564 levels.  The (*n*,&gamma;) targets and corresponding residual compound nuclides relevant to the EGAF project are summarized in the schematic of the nuclear chart shown in the figure below.
+This project is a Python package that allows for the extraction and manipulation of thermal-neutron capture gamma-ray data from the Evaluated Gamma-ray Activation File (EGAF) library [[1]](#1), [[2]](#2).  The EGAF library is a database of &gamma;-ray energies and their corresponding partial &gamma;-ray cross sections from thermal-neutron capture measurements carried out with a guided neutron beam at the Budapest Research Reactor for 245 isotopes encompassing measurements of natural elemental samples for targets from *Z* = 1-83, 90, and 92, except for Tc (*Z* = 43) and Pm (*Z* = 61).  The database comprises a total of 8172 primary &gamma; rays and 29605 secondary &gamma; rays (a total of 37777 &gamma; rays) associated with 12564 levels.  The (*n*,&gamma;) targets and corresponding residual compound nuclides relevant to the EGAF project are summarized in the schematic of the nuclear chart shown in the figure below.
 
 ![EGAF Nuclides](EGAF_nuclides.png?raw=true "Schematic of nuclear chart relevant to EGAF nuclides")
 
@@ -67,7 +67,7 @@ Each of these formats are described below.
 
 ## ENSDF format
 
-The original EGAF data sets were prepared in accordance with the mixed-record 80-character column format of the Evaluated Nuclear Structure Data File (ENSDF) [[2]](#2).  These ENSDF-formatted files are maintained online by the International Atomic Energy Agency [[3]](#3).  The relevant fields of the `Normalization`, `Level`, and `Gamma` records that are commonly adopted in the EGAF data sets are explained in the manual [[2]](#2).  In addition, `Comment` records are also frequently encountered in EGAF data sets.  The ENSDF-formatted EGAF data sets can be accessed from the project folder by changing into the following directory and listing its contents:
+The original EGAF data sets were prepared in accordance with the mixed-record 80-character column format of the Evaluated Nuclear Structure Data File (ENSDF) [[3]](#3).  These ENSDF-formatted files are maintained online by the International Atomic Energy Agency [[4]](#4).  The relevant fields of the `Normalization`, `Level`, and `Gamma` records that are commonly adopted in the EGAF data sets are explained in the manual [[3]](#3).  In addition, `Comment` records are also frequently encountered in EGAF data sets.  The ENSDF-formatted EGAF data sets can be accessed from the project folder by changing into the following directory and listing its contents:
 
 ```Bash
 $ cd pyEGAF/EGAF_ENSDF
@@ -82,13 +82,13 @@ Alternatively, individual files can also be accessed using `pyEGAF` methods by p
 
 ## RIPL format
 
-Because many nuclear reaction codes source decay-scheme information in a particular Reference Input Parameter Library (RIPL) [[4]](#4) format, representative RIPL-translated data sets have also been generated for each corresponding EGAF data set and are bundled with the software.  The RIPL-formatted EGAF data sets are located in the `python_egaf/pyEGAF/EGAF_RIPL` directory.  These files can also be accessed from the interpreter, for example, <sup>28</sup>Si(*n*,&gamma;)<sup>29</sup>Si:
+Because many nuclear reaction codes source decay-scheme information in a particular Reference Input Parameter Library (RIPL) [[5]](#5) format, representative RIPL-translated data sets have also been generated for each corresponding EGAF data set and are bundled with the software.  The RIPL-formatted EGAF data sets are located in the `python_egaf/pyEGAF/EGAF_RIPL` directory.  These files can also be accessed from the interpreter, for example, <sup>28</sup>Si(*n*,&gamma;)<sup>29</sup>Si:
 
 ```python
 >>> ripl = e.get_ripl(edata, "Si29")
 ```
 
-The proton- and neutron-separation energies in the RIPL headers are taken from the 2020 Atomic Mass Evaluation [[5]](#5).
+The proton- and neutron-separation energies in the RIPL headers are taken from the 2020 Atomic Mass Evaluation [[6]](#6).
 
 ## JSON format
 
@@ -136,14 +136,14 @@ The JSON arrays are described below:
 
 | JSON key | Explanation |
 | --- | --- |
-|           `"energyNeutronSeparationAME2020"` | A number type denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus.|
-|           `"dEnergyNeutronSeparationAME2020"` | A number type denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus.|
-|            `"energyProtonSeparationAME2020"` | A number type denoting the AME2020 [[5]](#5) proton-separation energy of the compound nucleus.|
-|            `"dEnergyProtonSeparationAME2020"` | A number type denoting the uncertainty for the AME2020 [[5]](#5) proton-separation energy of the compound nucleus.|
+|           `"energyNeutronSeparationAME2020"` | A number type denoting the AME2020 [[6]](#6) neutron-separation energy of the compound nucleus.|
+|           `"dEnergyNeutronSeparationAME2020"` | A number type denoting the uncertainty for the AME2020 [[6]](#6) neutron-separation energy of the compound nucleus.|
+|            `"energyProtonSeparationAME2020"` | A number type denoting the AME2020 [[6]](#6) proton-separation energy of the compound nucleus.|
+|            `"dEnergyProtonSeparationAME2020"` | A number type denoting the uncertainty for the AME2020 [[6]](#6) proton-separation energy of the compound nucleus.|
 |            `"energyNeutronSeparationENSDF"` | A number type denoting the ENSDF neutron-separation energy of the compound nucleus.|
 |            `"energyProtonSeparationENSDF"` | A number type denoting the ENSDF proton-separation energy of the compound nucleus.|
-|            `"energyNeutronSeparationEGAF"` | A number type denoting the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus.|
-|            `"dEnergyNeutronSeparationEGAF"` | A number type denoting the uncertainty for the AME2020 [[5]](#5) neutron-separation energy of the compound nucleus.|
+|            `"energyNeutronSeparationEGAF"` | A number type denoting the AME2020 [[6]](#6) neutron-separation energy of the compound nucleus.|
+|            `"dEnergyNeutronSeparationEGAF"` | A number type denoting the uncertainty for the AME2020 [[6]](#6) neutron-separation energy of the compound nucleus.|
 
 ### `"neutronCaptureNormalization"` array
 
@@ -201,7 +201,7 @@ This array contains the `"normalizationRecord"` JSON object, an array with the f
 
 ### `"gammaDecay"` array
 
-In this version of the EGAF database internal conversion coefficients have not, in general, been included in the source data sets and have consequently been set to zero for both total and individual-shell contributions.  A future release of the database will include BrIcc-calculated [[6]](#6) values for both total conversion as well as contributions from individual shells.
+In this version of the EGAF database internal conversion coefficients have not, in general, been included in the source data sets and have consequently been set to zero for both total and individual-shell contributions.  A future release of the database will include BrIcc-calculated [[7]](#7) values for both total conversion as well as contributions from individual shells.
 
 | JSON key | Explanation |
 | --- | --- |
@@ -226,11 +226,11 @@ In this version of the EGAF database internal conversion coefficients have not, 
 
 ### `"gammaAbsoluteIntensities"` array
 
-The source EGAF data sets contain partial elemental &gamma;-ray cross sections &sigma;<sub>&gamma;<sub>*e*</sub></sub> (JSON key: `"partialElementalCrossSection"`) in the `RI` field of the `Gamma` record [[2]](#2).  The isotopically-corrected partial &gamma;-ray cross sections &sigma;<sub>&gamma;<sub>*i*</sub></sub> (JSON key: `"partialIsotopicCrossSection"`) are derived according to
+The source EGAF data sets contain partial elemental &gamma;-ray cross sections &sigma;<sub>&gamma;<sub>*e*</sub></sub> (JSON key: `"partialElementalCrossSection"`) in the `RI` field of the `Gamma` record [[3]](#3).  The isotopically-corrected partial &gamma;-ray cross sections &sigma;<sub>&gamma;<sub>*i*</sub></sub> (JSON key: `"partialIsotopicCrossSection"`) are derived according to
 
 $$ \sigma_{\gamma_{i}} = \sigma_{\gamma_{e}} M, \quad (1) $$
 
-where *M* is the photon intensity multiplier from the `NR` field of the `Normalization` record [[2]](#2) (JSON key: `"multiplierIsotopicCorrection"` from the `"normalizationRecord"` JSON object).  The &gamma;-ray populations per neutron capture *P*<sub>&gamma;</sub> are then deduced from
+where *M* is the photon intensity multiplier from the `NR` field of the `Normalization` record [[3]](#3) (JSON key: `"multiplierIsotopicCorrection"` from the `"normalizationRecord"` JSON object).  The &gamma;-ray populations per neutron capture *P*<sub>&gamma;</sub> are then deduced from
 
 $$ P_{\gamma} = \frac{\sigma_{\gamma_{i}}}{\sigma_{0}}. \quad (2) $$
 
@@ -271,25 +271,31 @@ R.B. Firestone *et al*.,
 IAEA STI/PUB/1263, 251 (2007).
 
 <a id="2">[2]</a>
+Z. Revay, R.B. Firestone, T. Belgya, G.L. Molnar,
+*"Handbook of Prompt Gamma Activation Analysis"*,
+edited by G.L. Molnar (Kluwer Academic Dordrecht, 2004),
+Chap. Prompt Gamma-Ray Spectrum Catalog, p. 173.
+
+<a id="3">[3]</a>
 J.K. Tuli,
 *"Evaluated Nuclear Structure Data File"*,
 BNL-NCS-51655-01/02-Rev (2001).
 
-<a id="3">[3]</a>
+<a id="4">[4]</a>
 Evaluated Gamma-ray Activation File (EGAF);
 https://www-nds.iaea.org/pgaa/egaf.html
 
-<a id="4">[4]</a>
+<a id="5">[5]</a>
 R. Capote *et al*.,
 *"RIPL - Reference Input Parameter Library for Calculation of Nuclear Reactions and Nuclear Data Evaluations"*,
 Nucl. Data Sheets **110**, 3107 (2009).
 
-<a id="5">[5]</a>
+<a id="6">[6]</a>
 M. Wang, W.J. Huang, F.G. Kondev, G. Audi, S. Naimi,
 *"The AME2020 atomic mass evaluation"*,
 Chin. Phys. C **45**, 030003 (2021).
 
-<a id="6">[6]</a>
+<a id="7">[7]</a>
 T. Kibedi, T.W. Burrows, M.B. Trzhaskovskaya, P.M. Davidson, C.W. Nestor Jr.,
 *"Evaluation of theoretical conversion coefficients using BrIcc"*,
 Nucl. Intrum. Methods Phys. Res. Sect. A **589**, 202 (2008).
