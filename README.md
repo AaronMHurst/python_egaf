@@ -80,6 +80,14 @@ Alternatively, individual files can also be accessed using `pyEGAF` methods by p
 >>> ensdf = e.get_ensdf(edata, "Si29")
 ```
 
+File printing is set to `False` by default.  To print the file to your `pwd` pass the boolean `True` to the function:
+
+```python
+>>> ensdf = e.get_ensdf(edata, "Si29", True)
+```
+
+This will create the file `EGAF_ENSDF_28SI_NG_29SI.ens` in the current working directory.
+
 ## RIPL format
 
 Because many nuclear reaction codes source decay-scheme information in a particular Reference Input Parameter Library (RIPL) [[5]](#5) format, representative RIPL-translated data sets have also been generated for each corresponding EGAF data set and are bundled with the software.  The RIPL-formatted EGAF data sets are located in the `python_egaf/pyEGAF/EGAF_RIPL` directory.  These files can also be accessed from the interpreter, for example, <sup>28</sup>Si(*n*,&gamma;)<sup>29</sup>Si:
@@ -88,7 +96,7 @@ Because many nuclear reaction codes source decay-scheme information in a particu
 >>> ripl = e.get_ripl(edata, "Si29")
 ```
 
-The proton- and neutron-separation energies in the RIPL headers are taken from the 2020 Atomic Mass Evaluation [[6]](#6).
+To print this information to file as `EGAF_RIPL_Si28_NG_Si29.dat` in the current working directory, simply pass `True` to the above function as an additional final parameter.  The proton- and neutron-separation energies in the RIPL headers are taken from the 2020 Atomic Mass Evaluation [[6]](#6).
 
 ## JSON format
 
@@ -97,6 +105,7 @@ All original EGAF data sets have been translated into a representative JavaScrip
 ```python
 >>> jfile = e.get_json(edata, "Si29")
 ```
+The corresponding JSON data structure can be printed to file by passing `True` to the above function to create `EGAF_JSON_Si28_NG_Si29.json` in the current working directory.
 
 The JSON data structures support the following data types:
 
