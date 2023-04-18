@@ -105,7 +105,7 @@ All original EGAF data sets have been translated into a representative JavaScrip
 ```python
 >>> jfile = e.get_json(edata, "Si29")
 ```
-The corresponding JSON data structure can be printed to file by passing `True` to the above function to create `EGAF_JSON_Si28_NG_Si29.json` in the current working directory.
+The corresponding JSON data structure can also be printed to file by passing `True` to the above function to create `EGAF_JSON_Si28_NG_Si29.json` in the current working directory.
 
 The JSON data structures support the following data types:
 
