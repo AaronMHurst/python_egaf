@@ -565,7 +565,7 @@ class Analysis(Gammas):
 
         Arguments:
             list: A list of EGAF-data JSON objects.
-            args: Takes either 1, 2, 3, or 4 additional arguments:
+            args: Takes either 1, 2, 4, or 5 additional arguments:
             
                   (i) 1 args:
                   residual: The residual ID must be passed as a string argument.
@@ -575,23 +575,26 @@ class Analysis(Gammas):
                   A: Atomic mass of the residual compound nucleus passed as an 
                      integer argument.
 
-                  (iii) 3 args:
+                  (iii) 4 args:
                   residual: The residual ID must be passed as a string argument.
                   float1: Population per neutron capture feeding the ground 
                           state from the quasicontinuum according to a 
                           statistical-model calculation.
                   float2: Associated uncertainty on the calculated population 
                           per neutron capture.
+                  int: TBD
 
-                  (iv) 4 args:
+                  (iv) 5 args:
                   Z: Atomic number passed as an integer argument.
                   A: Atomic mass of the residual compound nucleus passed as an 
                      integer argument.
+                  int: TBD
                   float1: Population per neutron capture feeding the ground 
                           state from the quasicontinuum according to a 
                           statistical-model calculation.
                   float2: Associated uncertainty on the calculated population 
                           per neutron capture.
+                  int: TBD
 
         Returns:
             A list containing the following elements:
@@ -624,7 +627,7 @@ class Analysis(Gammas):
         DECAY_SCHEME_EXISTS = False
         UNSPECIFIED_UNIT = False
         WRONG_INPUTS = False
-        if len(args) == 0 or len(args) > 4:
+        if len(args) == 0 or len(args) > 5:
             WRONG_INPUTS = True
 
         levels = []
@@ -682,17 +685,21 @@ class Analysis(Gammas):
                         levels.append([level_index, level_energy, d_level_energy, sum_level_cs, d_sum_level_cs, normalised_cs, d_normalised_cs])
 
 
-                elif (len(args)==3 and str(args[0]) == jdict["nucleusID"]) or (len(args)==4 and int(args[0]) == jdict["nucleusZ"] and int(args[1]) == jdict["nucleusA"]):
+                elif (len(args)==4 and str(args[0]) == jdict["nucleusID"]) or (len(args)==5 and int(args[0]) == jdict["nucleusZ"] and int(args[1]) == jdict["nucleusA"]):
 
                     DECAY_SCHEME_EXISTS = True
 
                     P0, dP0 = None, None
+                    Ecut = None
                     if len(args) == 3:
                         P0 = float(args[1])
                         dP0 = float(args[2])
+                        Ecut = int(args[3])
+                        
                     elif len(args) == 4:
                         P0 = float(args[2])
                         dP0 = float(args[3])
+                        Ecut = int(args[4])
 
                     for each_l in jdict["levelScheme"]:
                         level_index = each_l["levelIndex"]
@@ -723,8 +730,11 @@ class Analysis(Gammas):
                         d_sum_level_cs = np.sqrt(d_sum_level_cs)
 
                         a = Analysis()
-                        sigma_0 = a.sum_feeding_gs(self.list, False, jdict["nucleusID"],intensity='isotopic')[0]/(1-P0)
-                        d_sigma_0 = Uncertainties.quad_error(self, sigma_0, a.sum_feeding_gs(self.list, False, jdict["nucleusID"],intensity='isotopic')[0], a.sum_feeding_gs(self.list, False, jdict["nucleusID"],intensity='isotopic')[1], P0, dP0)
+                        #sigma_0 = a.sum_feeding_gs(self.list, False, jdict["nucleusID"],intensity='isotopic')[0]/(1-P0)
+                        #d_sigma_0 = Uncertainties.quad_error(self, sigma_0, a.sum_feeding_gs(self.list, False, jdict["nucleusID"],intensity='isotopic')[0], a.sum_feeding_gs(self.list, False, jdict["nucleusID"],intensity='isotopic')[1], P0, dP0)
+
+                        sigma_0 = a.modeled_sigma0_ecrit(self.list, Ecut, P0, dP0, jdict["nucleusID"])[3]
+                        d_sigma_0 = a.modeled_sigma0_ecrit(self.list, Ecut, P0, dP0, jdict["nucleusID"])[4]
                         
                         normalised_cs = sum_level_cs/sigma_0
                         d_normalised_cs = Uncertainties.quad_error(self,normalised_cs, sum_level_cs, d_sum_level_cs, sigma_0, d_sigma_0)
