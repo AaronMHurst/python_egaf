@@ -200,6 +200,8 @@ class Analysis(Gammas):
                                 d_expt_feeding_gs.append(d_converted_cs**2)
 
                         # Check for primary gamma to ground state:
+                        # Removing the primary otherwise double counting if using experimental populations per neutron capture.
+                        # Primary contribution removed by not appending the list.
                         primaries = g.get_gamma_types(self.list, compound_nucleus, intensity="isotopic", gammas="primary")
                         if len(primaries) > 0:
                             if DIRECT_FEEDING_GS == True:
@@ -210,8 +212,8 @@ class Analysis(Gammas):
                                             a = Analysis()
                                             converted_primary = a.intensity_conversion(pgamma[6],pgamma[7],pgamma[8],pgamma[9])[0]
                                             d_converted_primary = a.intensity_conversion(pgamma[6],pgamma[7],pgamma[8],pgamma[9])[1]
-                                            expt_feeding_gs.append(converted_primary)
-                                            d_expt_feeding_gs.append(d_converted_primary**2)
+                                            #expt_feeding_gs.append(converted_primary)
+                                            #d_expt_feeding_gs.append(d_converted_primary**2)
 
                             
                     if len(expt_feeding_gs) > 0:
