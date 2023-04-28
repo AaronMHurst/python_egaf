@@ -252,7 +252,7 @@ class Analysis(Gammas):
             return modeled_expt_cs[0]
         
     
-    def sum_feeding_gs(self,list,*args,**kwargs):
+    def sum_feeding_gs(self,list,bool=True,*args,**kwargs):
         """Calculates the sum of all internal-conversion-corrected intensities
         (defined as isotopic partial gamma-ray cross sections or populations 
         per neutron capture) corresponding to all transitions that 
@@ -301,6 +301,7 @@ class Analysis(Gammas):
             sum_feeding_gs(edata, 6, 13, intensity='population')
         """
         self.list = list
+        self.bool = bool
         self.args = args
         UNSPECIFIED_INTENSITY = False
         DECAY_SCHEME_EXISTS = False
@@ -308,6 +309,10 @@ class Analysis(Gammas):
         WRONG_INPUTS = False
         if len(args) == 0 or len(args) > 2:
             WRONG_INPUTS = True
+
+        USE_PRIMARY = True
+        if self.bool == False:
+            USE_PRIMARY = False
             
         feeding_gs = []
         d_feeding_gs = []
@@ -318,32 +323,63 @@ class Analysis(Gammas):
                     for each_l in jdict["levelScheme"]:
                         if each_l["numberOfGammas"] > 0:
                             for each_g in each_l["gammaDecay"]:
-                                if each_g["gammaFeedsGroundState"] == True:
-                                    DIRECT_FEEDING_GS = True
-                                    alpha = each_g["calculatedTotalInternalConversionCoefficient"]
-                                    d_alpha = each_g["dCalculatedTotalInternalConversionCoefficient"]
-                                    cs, d_cs = None, None
-                                    for each_i in each_g["gammaAbsoluteIntensities"]:
-                                        for intensity in kwargs.values():
-                                            if intensity.lower() == str("isotopic"):
-                                                cs = each_i["partialIsotopicCrossSection"]
-                                                d_cs = each_i["dPartialIsotopicCrossSection"]
-                                            elif intensity.lower() == str("population"):
-                                                cs = each_i["populationPerNeutronCapture"]
-                                                d_cs = each_i["dPopulationPerNeutronCapture"]
-                                            else:
-                                                UNSPECIFIED_INTENSITY = True
+                                if USE_PRIMARY == True:
+                                    if each_g["gammaFeedsGroundState"] == True:
+                                        DIRECT_FEEDING_GS = True
+                                        alpha = each_g["calculatedTotalInternalConversionCoefficient"]
+                                        d_alpha = each_g["dCalculatedTotalInternalConversionCoefficient"]
+                                        cs, d_cs = None, None
+                                        for each_i in each_g["gammaAbsoluteIntensities"]:
+                                            for intensity in kwargs.values():
+                                                if intensity.lower() == str("isotopic"):
+                                                    cs = each_i["partialIsotopicCrossSection"]
+                                                    d_cs = each_i["dPartialIsotopicCrossSection"]
+                                                elif intensity.lower() == str("population"):
+                                                    cs = each_i["populationPerNeutronCapture"]
+                                                    d_cs = each_i["dPopulationPerNeutronCapture"]
+                                                else:
+                                                    UNSPECIFIED_INTENSITY = True
 
-                                    if alpha == None: alpha = 0.0
-                                    if d_alpha == None: d_alpha = 0.0
-                                    if cs == None: cs = 0.0
-                                    if d_cs == None: d_cs = 0.0
+                                        if alpha == None: alpha = 0.0
+                                        if d_alpha == None: d_alpha = 0.0
+                                        if cs == None: cs = 0.0
+                                        if d_cs == None: d_cs = 0.0
 
-                                    converted_cs = float(cs)*(1+float(alpha))
-                                    d_converted_cs = Uncertainties.quad_error(self,converted_cs, cs, d_cs, (1+alpha), d_alpha)
+                                        converted_cs = float(cs)*(1+float(alpha))
+                                        d_converted_cs = Uncertainties.quad_error(self,converted_cs, cs, d_cs, (1+alpha), d_alpha)
 
-                                    feeding_gs.append(converted_cs)
-                                    d_feeding_gs.append(d_converted_cs)
+                                        feeding_gs.append(converted_cs)
+                                        d_feeding_gs.append(d_converted_cs)
+                                elif USE_PRIMARY == False:
+                                    if each_g["gammaFeedsGroundState"] == True and each_g["gammaTransitionType"] != "primary":
+                                        # Don't include the primary
+                                        DIRECT_FEEDING_GS = True
+                                        alpha = each_g["calculatedTotalInternalConversionCoefficient"]
+                                        d_alpha = each_g["dCalculatedTotalInternalConversionCoefficient"]
+                                        cs, d_cs = None, None
+                                        for each_i in each_g["gammaAbsoluteIntensities"]:
+                                            for intensity in kwargs.values():
+                                                if intensity.lower() == str("isotopic"):
+                                                    cs = each_i["partialIsotopicCrossSection"]
+                                                    d_cs = each_i["dPartialIsotopicCrossSection"]
+                                                elif intensity.lower() == str("population"):
+                                                    cs = each_i["populationPerNeutronCapture"]
+                                                    d_cs = each_i["dPopulationPerNeutronCapture"]
+                                                else:
+                                                    UNSPECIFIED_INTENSITY = True
+
+                                        if alpha == None: alpha = 0.0
+                                        if d_alpha == None: d_alpha = 0.0
+                                        if cs == None: cs = 0.0
+                                        if d_cs == None: d_cs = 0.0
+
+                                        converted_cs = float(cs)*(1+float(alpha))
+                                        d_converted_cs = Uncertainties.quad_error(self,converted_cs, cs, d_cs, (1+alpha), d_alpha)
+
+                                        feeding_gs.append(converted_cs)
+                                        d_feeding_gs.append(d_converted_cs)
+
+                                    
             except ValueError:
                 WRONG_INPUTS = True
                                     
@@ -687,8 +723,8 @@ class Analysis(Gammas):
                         d_sum_level_cs = np.sqrt(d_sum_level_cs)
 
                         a = Analysis()
-                        sigma_0 = a.sum_feeding_gs(self.list, jdict["nucleusID"],intensity='isotopic')[0]/(1-P0)
-                        d_sigma_0 = Uncertainties.quad_error(self, sigma_0, a.sum_feeding_gs(self.list, jdict["nucleusID"],intensity='isotopic')[0], a.sum_feeding_gs(self.list, jdict["nucleusID"],intensity='isotopic')[1], P0, dP0)
+                        sigma_0 = a.sum_feeding_gs(self.list, False, jdict["nucleusID"],intensity='isotopic')[0]/(1-P0)
+                        d_sigma_0 = Uncertainties.quad_error(self, sigma_0, a.sum_feeding_gs(self.list, False, jdict["nucleusID"],intensity='isotopic')[0], a.sum_feeding_gs(self.list, False, jdict["nucleusID"],intensity='isotopic')[1], P0, dP0)
                         
                         normalised_cs = sum_level_cs/sigma_0
                         d_normalised_cs = Uncertainties.quad_error(self,normalised_cs, sum_level_cs, d_sum_level_cs, sigma_0, d_sigma_0)
