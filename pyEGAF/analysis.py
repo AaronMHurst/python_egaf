@@ -588,7 +588,6 @@ class Analysis(Gammas):
                   Z: Atomic number passed as an integer argument.
                   A: Atomic mass of the residual compound nucleus passed as an 
                      integer argument.
-                  int: TBD
                   float1: Population per neutron capture feeding the ground 
                           state from the quasicontinuum according to a 
                           statistical-model calculation.
@@ -691,12 +690,12 @@ class Analysis(Gammas):
 
                     P0, dP0 = None, None
                     Ecut = None
-                    if len(args) == 3:
+                    if len(args) == 4:
                         P0 = float(args[1])
                         dP0 = float(args[2])
                         Ecut = int(args[3])
                         
-                    elif len(args) == 4:
+                    elif len(args) == 5:
                         P0 = float(args[2])
                         dP0 = float(args[3])
                         Ecut = int(args[4])
