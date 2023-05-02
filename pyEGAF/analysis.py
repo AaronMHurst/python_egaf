@@ -85,7 +85,7 @@ class Analysis(Gammas):
             nuclear LD model.  The corresponding value of the total thermal
             neutron capture cross section is determined as:
 
-            modeled_sigma0(0.187, 0.0033, 0.02314, 0.00080)
+            modeled_sigma0(0.1827, 0.0027, 0.02314, 0.00080)
         """
         self.float1 = float(float1)
         self.float2 = float(float2)
@@ -248,11 +248,11 @@ class Analysis(Gammas):
             return
 
         if len(modeled_expt_cs) > 0:
-            print("Ecrit = {0}".format(Ecrit))
+            #print("Ecrit = {0}".format(Ecrit))
             return modeled_expt_cs[0]
         
     
-    def sum_feeding_gs(self,list,bool=True,*args,**kwargs):
+    def sum_feeding_gs(self,list,bool,*args,**kwargs):
         """Calculates the sum of all internal-conversion-corrected intensities
         (defined as isotopic partial gamma-ray cross sections or populations 
         per neutron capture) corresponding to all transitions that 
@@ -262,10 +262,14 @@ class Analysis(Gammas):
         respectively, only those transitions with an associated final-level 
         index of 0 are included in the summation, i.e., 1->0, 2->0, 3->0, etc.  
         Primary gamma-ray transitions feeding the ground state directly (i.e., 
-        capture state -> 0) are also included in the summation.
+        capture state -> 0) may be included or removed from the summation 
+        according to input arguments.
 
         Arguments:
             list: A list of EGAF-data JSON objects.
+            bool: A boolean value to indicate whether the primary gamma-ray 
+                  transition is included (`True`) or not (`False`) in the 
+                  summation.
             args: Takes either 1 or 2 additional arguments:
             
                   (i) 1 args:
@@ -292,13 +296,25 @@ class Analysis(Gammas):
             [1]: Associated uncertainty on the summed cross sections (float).
 
         Examples:
-            For 12C(n,g)13C summed isotopic parttial gamma-ray cross sections:
-            sum_feeding_gs(edata,"C13", intensity='iostopic')
-            sum_feeding_gs(edata, 6, 13, intensity='isotopic')
+            For 56Fe(n,g)57Fe summed isotopic parttial gamma-ray cross sections
+            including the primary:
+            sum_feeding_gs(edata, True, "Fe57", intensity='iostopic')
+            sum_feeding_gs(edata, True, 26, 57, intensity='isotopic')
 
-            For 12C(n,g)13C summed populations per neutron capture:
-            sum_feeding_gs(edata,"C13", intensity='population')
-            sum_feeding_gs(edata, 6, 13, intensity='population')
+            For 56Fe(n,g)57Fe summed isotopic parttial gamma-ray cross sections
+            NOT including the primary:
+            sum_feeding_gs(edata, False, "Fe57", intensity='iostopic')
+            sum_feeding_gs(edata, False, 26, 57, intensity='isotopic')
+
+            For 56Fe(n,g)57Fe summed populations per neutron capture:
+            including the primary:
+            sum_feeding_gs(edata, True, "Fe57", intensity='population')
+            sum_feeding_gs(edata, True, 26, 57, intensity='population')
+
+            For 56Fe(n,g)57Fe summed populations per neutron capture:
+            NOT including the primary:
+            sum_feeding_gs(edata, False, "Fe57", intensity='population')
+            sum_feeding_gs(edata, False, 26, 57, intensity='population')
         """
         self.list = list
         self.bool = bool
@@ -313,6 +329,8 @@ class Analysis(Gammas):
         USE_PRIMARY = True
         if self.bool == False:
             USE_PRIMARY = False
+        elif self.bool == True:
+            USE_PRIMARY = True
             
         feeding_gs = []
         d_feeding_gs = []
@@ -388,10 +406,10 @@ class Analysis(Gammas):
 
         if WRONG_INPUTS == True:
             print("Incorrect input sequence.")
-            print("Pass arguments to function as:")
-            print(" sum_feeding_gs(edata, \"C13\")")
+            print("Pass arguments to function as, for example:")
+            print(" sum_feeding_gs(edata, True, \"Fe57\", intensity=\"isotopic\")")
             print("or:")
-            print(" sum_feeding_gs(edata, 6, 13)")
+            print(" sum_feeding_gs(edata, False, 26, 57, intensity=\"population\")")
             return
 
         if kwargs == {} or kwargs == None:
@@ -582,7 +600,8 @@ class Analysis(Gammas):
                           statistical-model calculation.
                   float2: Associated uncertainty on the calculated population 
                           per neutron capture.
-                  int: TBD
+                  int: Level index corresponding to the critical energy (i.e. 
+                       cut-off energy).
 
                   (iv) 5 args:
                   Z: Atomic number passed as an integer argument.
@@ -593,7 +612,8 @@ class Analysis(Gammas):
                           statistical-model calculation.
                   float2: Associated uncertainty on the calculated population 
                           per neutron capture.
-                  int: TBD
+                  int: Level index corresponding to the critical energy (i.e. 
+                       cut-off energy).
 
         Returns:
             A list containing the following elements:
@@ -618,8 +638,8 @@ class Analysis(Gammas):
 
             To calculate normalised level-depopulation intensities using the 
             value of P0 obtained from a statistical-model calculation:
-            normalise_intensities(edata, "Si29", 0.02217, 0.00051)
-            normalise_intensities(edata, 14, 29, 0.02217, 0.00051)
+            normalise_intensities(edata, "Si29", 0.02217, 0.00051, 12)
+            normalise_intensities(edata, 14, 29, 0.02217, 0.00051, 12)
         """
         self.list = list
         self.args = args
@@ -629,6 +649,9 @@ class Analysis(Gammas):
         if len(args) == 0 or len(args) > 5:
             WRONG_INPUTS = True
 
+        if type(args[-1]) != int:
+            WRONG_INPUTS = True
+            
         levels = []
         for jdict in self.list:
             try:
@@ -689,16 +712,20 @@ class Analysis(Gammas):
                     DECAY_SCHEME_EXISTS = True
 
                     P0, dP0 = None, None
-                    Ecut = None
+                    Ecrit = None
                     if len(args) == 4:
                         P0 = float(args[1])
                         dP0 = float(args[2])
-                        Ecut = int(args[3])
+                        Ecrit = int(args[3])
                         
                     elif len(args) == 5:
                         P0 = float(args[2])
                         dP0 = float(args[3])
-                        Ecut = int(args[4])
+                        Ecrit = int(args[4])
+
+                    a = Analysis()
+                    sigma_0 = a.modeled_sigma0_ecrit(self.list, Ecrit, P0, dP0, jdict["nucleusID"])[3]
+                    d_sigma_0 = a.modeled_sigma0_ecrit(self.list, Ecrit, P0, dP0, jdict["nucleusID"])[4]
 
                     for each_l in jdict["levelScheme"]:
                         level_index = each_l["levelIndex"]
@@ -728,12 +755,8 @@ class Analysis(Gammas):
 
                         d_sum_level_cs = np.sqrt(d_sum_level_cs)
 
-                        a = Analysis()
                         #sigma_0 = a.sum_feeding_gs(self.list, False, jdict["nucleusID"],intensity='isotopic')[0]/(1-P0)
                         #d_sigma_0 = Uncertainties.quad_error(self, sigma_0, a.sum_feeding_gs(self.list, False, jdict["nucleusID"],intensity='isotopic')[0], a.sum_feeding_gs(self.list, False, jdict["nucleusID"],intensity='isotopic')[1], P0, dP0)
-
-                        sigma_0 = a.modeled_sigma0_ecrit(self.list, Ecut, P0, dP0, jdict["nucleusID"])[3]
-                        d_sigma_0 = a.modeled_sigma0_ecrit(self.list, Ecut, P0, dP0, jdict["nucleusID"])[4]
                         
                         normalised_cs = sum_level_cs/sigma_0
                         d_normalised_cs = Uncertainties.quad_error(self,normalised_cs, sum_level_cs, d_sum_level_cs, sigma_0, d_sigma_0)
@@ -749,8 +772,8 @@ class Analysis(Gammas):
             print("Pass arguments to function using one of the below methods:")
             print(" normalise_intensities(edata, \"C13\")")
             print(" normalise_intensities(edata, 6, 13)")
-            print(" normalise_intensities(edata, \"C13\", <float>, <float>)")
-            print(" normalise_intensities(edata, 6, 13, <float>, <float>)")
+            print(" normalise_intensities(edata, \"C13\", <float>, <float>, <int>)")
+            print(" normalise_intensities(edata, 6, 13, <float>, <float>, <int>)")
             return
 
         if UNSPECIFIED_UNIT == True:
