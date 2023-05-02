@@ -116,57 +116,85 @@ class AnalysisTests(unittest.TestCase):
             
     # GS-feeding summation tests
     def test_sum_feeding_gs_for_29Si_returns_array(self):
-        sf_str = e.sum_feeding_gs(edata, "Si29", intensity="isotopic")
+        sf_str = e.sum_feeding_gs(edata, True, "Si29", intensity="isotopic")
         self.assertIsInstance(sf_str, tuple)
-        sf_str = e.sum_feeding_gs(edata, "Si29", intensity="population")
+        sf_str = e.sum_feeding_gs(edata, True, "Si29", intensity="population")
         self.assertIsInstance(sf_str, tuple)
-        assert isinstance(sf_str, Iterable)
+        sf_str = e.sum_feeding_gs(edata, False, "Si29", intensity="isotopic")
+        self.assertIsInstance(sf_str, tuple)
+        sf_str = e.sum_feeding_gs(edata, False, "Si29", intensity="population")
+        self.assertIsInstance(sf_str, tuple)
+        assert isinstance(sf_str, Iterable)        
 
-        sf_ints = e.sum_feeding_gs(edata, 14, 29, intensity="isotopic")
+        sf_ints = e.sum_feeding_gs(edata, True, 14, 29, intensity="isotopic")
         self.assertIsInstance(sf_ints, tuple)
-        sf_ints = e.sum_feeding_gs(edata, 14, 29, intensity="population")
+        sf_ints = e.sum_feeding_gs(edata, True, 14, 29, intensity="population")
+        self.assertIsInstance(sf_ints, tuple)
+        sf_ints = e.sum_feeding_gs(edata, False, 14, 29, intensity="isotopic")
+        self.assertIsInstance(sf_ints, tuple)
+        sf_ints = e.sum_feeding_gs(edata, False, 14, 29, intensity="population")
         self.assertIsInstance(sf_ints, tuple)
         assert isinstance(sf_ints, Iterable)
 
     def test_sum_feeding_gs_for_illegal_string_returns_None(self):
-        sf_str = e.get_gammas(edata, "THisIsB@LL@CK$", intensity="isotopic")
+        sf_str = e.get_gammas(edata, True, "THisIsB@LL@CK$", intensity="isotopic")
+        self.assertIsNone(sf_str)
+        sf_str = e.get_gammas(edata, False, "THisIsB@LL@CK$", intensity="isotopic")
         self.assertIsNone(sf_str)
 
     def test_sum_feeding_gs_for_wrong_kwargs_returns_None(self):
-        sf_str = e.sum_feeding_gs(edata, "Si29", intensity="elemental")
+        sf_str = e.sum_feeding_gs(edata, True, "Si29", intensity="elemental")
         self.assertIsNone(sf_str)
-        sf_ints = e.sum_feeding_gs(edata, 14, 29, intensity="elemental")
+        sf_str = e.sum_feeding_gs(edata, False, "Si29", intensity="elemental")
+        self.assertIsNone(sf_str)        
+        sf_ints = e.sum_feeding_gs(edata, True, 14, 29, intensity="elemental")
         self.assertIsNone(sf_ints)
+        sf_ints = e.sum_feeding_gs(edata, False, 14, 29, intensity="elemental")
+        self.assertIsNone(sf_ints)        
 
     def test_sum_feeding_gs_for_missing_kwargs_returns_None(self):
-        sf_str = e.sum_feeding_gs(edata, "Si29")
+        sf_str = e.sum_feeding_gs(edata, True, "Si29")
         self.assertIsNone(sf_str)
-        sf_ints = e.sum_feeding_gs(edata, 14, 29)
+        sf_ints = e.sum_feeding_gs(edata, True, 14, 29)
         self.assertIsNone(sf_ints)
+        sf_str = e.sum_feeding_gs(edata, False, "Si29")
+        self.assertIsNone(sf_str)
+        sf_ints = e.sum_feeding_gs(edata, False, 14, 29)
+        self.assertIsNone(sf_ints)        
 
     def test_sum_feeding_gs_raises_TypeError_if_first_arg_not_list(self):
         with self.assertRaises(TypeError):
-            e.sum_feeding_gs(14, 29, edata, intensity="elemental")
+            e.sum_feeding_gs(True, 14, 29, edata, intensity="elemental")
         with self.assertRaises(TypeError):
-            e.sum_feeding_gs("Si29", edata, intensity="elemental")
+            e.sum_feeding_gs(True, "Si29", edata, intensity="elemental")
+        with self.assertRaises(TypeError):
+            e.sum_feeding_gs(False, 14, 29, edata, intensity="elemental")
+        with self.assertRaises(TypeError):
+            e.sum_feeding_gs(False, "Si29", edata, intensity="elemental")            
 
     def test_sum_feeding_gs_raises_NameError_if_wrong_list_name(self):
         with self.assertRaises(NameError):
-            e.sum_feeding_gs(XXXedata, "Si29", intensity="population")
+            e.sum_feeding_gs(XXXedata, True, "Si29", intensity="population")
         with self.assertRaises(NameError):
-            e.sum_feeding_gs(XXXedata, 14, 29, intensity="population")
+            e.sum_feeding_gs(XXXedata, True, 14, 29, intensity="population")
+        with self.assertRaises(NameError):
+            e.sum_feeding_gs(XXXedata, False, "Si29", intensity="population")
+        with self.assertRaises(NameError):
+            e.sum_feeding_gs(XXXedata, False, 14, 29, intensity="population")            
 
     def test_sum_feeding_gs_raises_KeyError_if_bad_dict_items_in_list(self):
         bad_dict_items_in_list = [{'a':0, 'b':1, 'c':2}]
         with self.assertRaises(KeyError):
-            e.sum_feeding_gs(bad_dict_items_in_list, "Si29", intensity="isotopic")
+            e.sum_feeding_gs(bad_dict_items_in_list, True, "Si29", intensity="isotopic")
+        with self.assertRaises(KeyError):
+            e.sum_feeding_gs(bad_dict_items_in_list, False, "Si29", intensity="isotopic")            
             
     def test_sum_feeding_gs_in_all_EGAF_returned_contents_of_tuple(self):
         res = e.egaf_residual_list(edata)
         self.assertEqual(len(res), 245)
         list_sum_feeding_gs = []
         for r in res:
-            sf = e.sum_feeding_gs(edata, r, intensity="isotopic")
+            sf = e.sum_feeding_gs(edata, True, r, intensity="isotopic")
             list_sum_feeding_gs.append(sf)
             try:
                 self.assertIsInstance(sf, tuple)
@@ -245,42 +273,42 @@ class AnalysisTests(unittest.TestCase):
 
     # Tests for normalising intensities using P0 from model
     def test_normalise_intensities_returns_list(self):
-        norm = e.normalise_intensities(edata, "Si29", 0.02217, 0.00051)
+        norm = e.normalise_intensities(edata, "Si29", 0.02217, 0.00051, 12)
         self.assertIsInstance(norm, list)
-        norm = e.normalise_intensities(edata, 14, 29, 0.02217, 0.00051)
+        norm = e.normalise_intensities(edata, 14, 29, 0.02217, 0.00051, 12)
         self.assertIsInstance(norm, list)
 
     def test_normalise_intensities_returns_None_if_residual_not_in_EGAF(self):
-        norm = e.normalise_intensities(edata, "Si55", 0.02217, 0.00051)
+        norm = e.normalise_intensities(edata, "Si55", 0.02217, 0.00051, 12)
         self.assertIsNone(norm)
-        norm = e.normalise_intensities(edata, 14, 55, 0.02217, 0.00051)
+        norm = e.normalise_intensities(edata, 14, 55, 0.02217, 0.00051, 12)
         self.assertIsNone(norm)
 
     def test_normalise_intensities_returns_None_for_illegal_string(self):
-        norm = e.normalise_intensities(edata, "THisIsB@LL@CK$", 0.02217, 0.00051)
+        norm = e.normalise_intensities(edata, "THisIsB@LL@CK$", 0.02217, 0.00051, 12)
         self.assertIsNone(norm)
 
     def test_normalise_intensities_raises_TypeError_if_first_arg_not_list(self):
         with self.assertRaises(TypeError):
-            norm = e.normalise_intensities("Si29", edata, 0.02217, 0.00051)
+            norm = e.normalise_intensities("Si29", edata, 0.02217, 0.00051, 12)
         with self.assertRaises(TypeError):
-            norm = e.normalise_intensities(14, 29, edata, 0.02217, 0.00051)
+            norm = e.normalise_intensities(14, 29, edata, 0.02217, 0.00051, 12)
         
     def test_normalise_intensities_raises_NameError_if_wrong_list_name(self):
         with self.assertRaises(NameError):
-            norm = e.normalise_intensities(XXXedataX, "Si29", 0.02217, 0.00051)
+            norm = e.normalise_intensities(XXXedataX, "Si29", 0.02217, 0.00051, 12)
         with self.assertRaises(NameError):
-            norm = e.normalise_intensities(XXXedataX, 14, 29, 0.02217, 0.00051)
+            norm = e.normalise_intensities(XXXedataX, 14, 29, 0.02217, 0.00051, 12)
 
     def test_normalise_intensities_raises_KeyError_if_bad_dict_items_in_list(self):
         bad_dict_items_in_list = [{'a':0, 'b':1, 'c':2}]
         with self.assertRaises(KeyError):
-            e.normalise_intensities(bad_dict_items_in_list, "Si29", 0.02217, 0.00051)
+            e.normalise_intensities(bad_dict_items_in_list, "Si29", 0.02217, 0.00051, 12)
         with self.assertRaises(KeyError):
-            e.normalise_intensities(bad_dict_items_in_list, 14, 29, 0.02217, 0.00051)
+            e.normalise_intensities(bad_dict_items_in_list, 14, 29, 0.02217, 0.00051, 12)
 
     def test_normalise_intensities_returned_contents_of_list(self):
-        norm = e.normalise_intensities(edata, "Si29", 0.02217, 0.00051)
+        norm = e.normalise_intensities(edata, "Si29", 0.02217, 0.00051, 12)
         for n in norm:
             self.assertEqual(len(n), 7)
             self.assertIsInstance(n[0], int)
