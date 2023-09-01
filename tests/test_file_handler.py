@@ -9,6 +9,11 @@ edata = e.load_egaf()
 
 class FileHandlerTests(unittest.TestCase):
 
+    __doc__ = """Unit tests for the `get_ripl` method of the RIPL class, the 
+    `get_json` method of the JSONFile class, and the `get_ensdf` method of the
+    ENSDF class.
+    """
+
     # RIPL file tests:
     def test_get_ripl_returns_list_for_all_EGAF_residuals(self):
         res = e.egaf_residual_list(edata)

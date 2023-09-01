@@ -84,6 +84,14 @@ def test_all_AME2020_Sp_are_floats():
 
 # Test exceptions thrown by separation-energy functions
 class SeparationEnergyTests(unittest.TestCase):
+
+    __doc__ = """Unit tests for the following methods of the Separation class:
+
+    `get_residual_Sn_AME`;
+    `get_residual_Sp_AME`;
+    `get_residual_Sn_EGAF`.
+    """
+    
     # Throw TypeError exception if no parameters are passed
     def test_residual_Sn_EGAF_throws_TypeError_without_parameters(self):
         self.assertRaises(TypeError,e.get_residual_Sn_EGAF)

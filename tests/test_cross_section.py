@@ -110,6 +110,15 @@ def test_all_abundances_dict_data_types():
 
 # Test exception errors thrown by cross-section methods
 class CrossSectionTests(unittest.TestCase):
+
+    __doc__ = """Unit tests for the following methods of the CrossSection class:
+    
+    `get_total_cross_section`;
+    `get_abundance`;
+    `get_all_total_cross_sections`;
+    `get_all_abundances`.
+    """
+    
     # Throw TypeError exception if no parameters are passed
     def test_total_cross_section_throws_TypeError_without_parameters(self):
         self.assertRaises(TypeError,e.get_total_cross_section)

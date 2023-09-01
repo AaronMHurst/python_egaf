@@ -9,6 +9,14 @@ edata = e.load_egaf()
 
 class LevelsTests(unittest.TestCase):
 
+    __doc__ = """Unit tests for the following methods of the Levels class:
+
+    `get_residual_levels`;
+    `find_multiple_jpi`;
+    `find_unique_jpi`;
+    `find_isomers`.
+    """
+
     # Level scheme tests:
     def test_get_residual_levels_for_29Si_returns_list(self):
         levels_pass_str = e.get_residual_levels(edata,"Si29")

@@ -9,6 +9,15 @@ edata = e.load_egaf()
 
 class GammasTests(unittest.TestCase):
 
+    __doc__ = """Unit tests for the following methods of the Gammas class:
+
+    `get_gammas`;
+    `find_all_gammas_feeding_gs`;
+    `get_gamma_types`;
+    `find_gamma`;
+    `get_strongest_gammas`.
+    """
+
     # Gamma array tests
     def test_get_gammas_for_29Si_returns_array(self):
         gammas_str = e.get_gammas(edata, "Si29", intensity="elemental")

@@ -12,6 +12,8 @@ def test_capgam_returns_DataFrame():
     assert type(e.capgam(edata,"La140","more")) is pd.core.frame.DataFrame
 
 class CapGamTests(unittest.TestCase):
+
+    __doc__ = """Unit tests for the `capgam` method of the CapGam class."""
     
     def test_capgam_returns_NoneType_if_no_gammaspe_data(self):
         return_value_capgam = e.capgam(edata,"Si28")
