@@ -886,3 +886,398 @@ class Analysis(Gammas):
         else:
             print("No depopulation data available.")
             return
+
+
+    def intensity_balance(self,list,*args,**kwargs):
+        """Gamma-ray intensity balance corrected for internal conversion for 
+        all transitions feeding and deexciting each level in the residual 
+        compound nucleus.
+
+        Arguments:
+            list: A list of EGAF-data JSON objects.
+            args: Takes either 1 or 2 additional arguments:
+            
+                  (i) 1 args:
+                  residual: The residual ID must be passed as a string argument.
+
+                  (ii) 2 args:
+                  Z: Atomic number passed as an integer argument.
+                  A: Atomic mass of the residual compound nucleus passed as an 
+                     integer argument.
+
+            kwargs: An additional keyword arguments is required for the 
+                    gamma-ray intensity units:
+
+                    intensity='elemental'  : Elemental partial gamma-ray cross 
+                                             sections.
+                    intensity='isotopic'   : Isotopic partial gamma-ray cross 
+                                             sections.
+
+        
+        Returns:
+            A numpy array containing the following elements associated with the
+            intensity balance for each level in the residual compound nucleus:
+
+            [0]: Level index (float);
+            [1]: Level energy in keV (float);
+            [2]: Total internal-conversion corrected gamma-ray intensity 
+                 deexciting the level (float);
+            [3]: Associated uncertainty on the total-level deexcitation 
+                 intensity (float);
+            [4]: Total internal-conversion corrected gamma-ray intensity 
+                 feeding the level (float);
+            [5]: Associated uncertainty on the total-level feeding 
+                 intensity (float);
+            [6]: Intensity difference for each level given by  
+                 `population - depopulation` (float);
+            [7]: Associated uncertainty on the intensity difference (float);
+            [8]: Residual intensity difference for each level in units of 
+                 standard deviation `sigma` (float).
+
+        Examples:
+            Intesnity balance for isotopic partial gamma-ray cross sections:
+            intensity_balance(edata, "S35", intensity="isotopic") 
+            intensity_balance(edata, 16, 35, intensity="isotopic")
+ 
+            Intensity balance for elemental partial gamma-ray cross sections:
+            intensity_balance(edata, "Si29", intensity="elemental") 
+            intensity_balance(edata, 14, 29, intensity="elemental")
+        """
+        self.list = list
+        self.args = args
+        DECAY_SCHEME_EXISTS = False
+        UNSPECIFIED_INTENSITY = True
+        intensity_units = None
+        WRONG_INPUTS = False
+        CAPTURE_STATE = False
+        highest_level_if_no_cs = None
+        if len(args) == 0 or len(args)> 2:
+            WRONG_INPUTS = True
+        
+        if kwargs == {} or kwargs == None:
+            print("A keyword argument is required for the desired intensity units.")
+            print("Please pass one of the following arguments:")
+            print("intensity='elemental'")
+            print("intensity='isotopic'")
+            return
+        else:
+            for intensity in kwargs.values():
+                if intensity.lower() == str("elemental"):
+                    UNSPECIFIED_INTENSITY = False
+                    intensity_units = "ELEMENTAL"
+                elif intensity.lower() == str("isotopic"):
+                    UNSPECIFIED_INTENSITY = False
+                    intensity_units = "ISOTOPIC"
+                else:
+                    UNSPECIFIED_INTENSITY = True
+
+        if UNSPECIFIED_INTENSITY == True:
+            print("Incorrect intensity argument.")
+            print("Please pass one of the following keyword arguments:")
+            print("intensity='elemental'")
+            print("intensity='isotopic'")
+            return
+        
+        intensity_balance = []
+        for jdict in self.list:
+            try:
+                if (len(args)==1 and str(args[0]) == jdict["nucleusID"]) or (len(args)==2 and int(args[0]) == jdict["nucleusZ"] and int(args[1]) == jdict["nucleusA"]):        
+
+                    DECAY_SCHEME_EXISTS = True
+                    target = jdict["nucleusTargetID"]
+                    residual = jdict["nucleusID"]
+
+                    for eachq in jdict["recordQ"]:
+                        if eachq["energyNeutronSeparationEGAF"] == None:
+                            CAPTURE_STATE = False
+                        else:
+                            try:
+                                if float(eachq["energyNeutronSeparationEGAF"]) > 0.0:
+                                    CAPTURE_STATE = True
+                            except ValueError:
+                                print("Check Sn data type in {0}(n,g){1} dataset".format(target, residual))
+                                raise
+                            
+                    g = Gammas()
+                    gammas_array = None
+                    if intensity_units == "ELEMENTAL":
+                        gammas_array = g.get_gammas(self.list, residual, intensity="elemental")
+                    elif intensity_units == "ISOTOPIC":
+                        gammas_array = g.get_gammas(self.list, residual, intensity="isotopic")
+                    else:
+                        break
+
+                    gammas = gammas_array.tolist()
+                    #max_level = max(list(set([int(gamma[0]) for gamma in gammas])))
+                    max_level = max(set([int(gamma[0]) for gamma in gammas]))
+
+                    if CAPTURE_STATE == False:
+                        highest_level_if_no_cs = set([gamma[2] for gamma in gammas if int(gamma[0]) == max_level])
+
+                    for level in range(0,max_level+1,1):
+                        level_energy = None
+                        level_depop = 0.0
+                        d_level_depop = 0.0
+                        LEVEL_IS_DEPOPULATED = False
+                        for gamma in gammas:
+                            if int(gamma[0]) == level:
+                                LEVEL_IS_DEPOPULATED = True
+                                level_energy = float(gamma[2])
+                                depop = float(gamma[6]) * (1+float(gamma[8]))
+                                level_depop += depop
+            
+                                #f,x,dx,y,dy
+                                d_depop = Uncertainties().quad_error(depop, float(gamma[6]), float(gamma[7]), (1+float(gamma[8])), float(gamma[9]))
+                                d_level_depop += float(d_depop)**2
+                        d_level_depop = np.sqrt(d_level_depop)
+
+                        level_pop = 0.0
+                        d_level_pop = 0.0
+                        for gamma in gammas:
+                            if int(gamma[1]) == level:
+                                pop = float(gamma[6]) * (1+float(gamma[8]))
+                                level_pop += pop
+                                if LEVEL_IS_DEPOPULATED == False:
+                                    level_energy = float(gamma[3])
+            
+                                #f,x,dx,y,dy
+                                d_pop = Uncertainties().quad_error(pop, float(gamma[6]), float(gamma[7]), (1+float(gamma[8])), float(gamma[9]))
+                                d_level_pop += float(d_pop)**2
+                        d_level_pop = np.sqrt(d_level_pop)
+
+                        diff = level_pop - level_depop
+                        d_diff = np.sqrt(d_level_depop**2 + d_level_pop**2)
+                        if d_diff > 0:
+                            res = diff / d_diff
+                            if level > 0 and level < max_level:
+                                intensity_balance.append([level, level_energy, level_depop, d_level_depop, level_pop, d_level_pop, diff, d_diff, res])
+
+            except ValueError:
+                WRONG_INPUTS = True
+
+        if WRONG_INPUTS == True:
+            print("Incorrect input sequence.")
+            print("Pass arguments to function as:")
+            print(" intensity_balance(edata, \"S35\", intensity=<str>)")
+            print("or:")
+            print(" intensity_balance(edata, 16, 35, intensity=<str>)")
+            return
+
+        if DECAY_SCHEME_EXISTS == False:
+            print("No residual compound-nucleus decay scheme in EGAF for input arguments provided.")
+            return
+        if len(intensity_balance) == 0:
+            print("No gammas in decay scheme")
+            return
+        else:
+            if CAPTURE_STATE == True:
+                return np.array(intensity_balance)
+            else:
+                print("Warning! Neutron-capture state not measured in EGAF.")
+                print("Highest level observed in residual nucleus: {0} keV.".format(highest_level_if_no_cs))
+                return np.array(intensity_balance)
+
+
+    def dead_ends(self,list,*args,**kwargs):
+        """Finds difference between total internal-conversion corrected 
+        intensity deexciting the neutron-capture state and the total internal-
+        conversion corrected intensity feeding the ground state.
+
+        Arguments:
+            list: A list of EGAF-data JSON objects.
+            args: Takes either 1 or 2 additional arguments:
+            
+                  (i) 1 args:
+                  residual: The residual ID must be passed as a string argument.
+
+                  (ii) 2 args:
+                  Z: Atomic number passed as an integer argument.
+                  A: Atomic mass of the residual compound nucleus passed as an 
+                     integer argument.
+
+            kwargs: An additional keyword arguments is required for the 
+                    gamma-ray intensity units:
+
+                    intensity='elemental'  : Elemental partial gamma-ray cross 
+                                             sections.
+                    intensity='isotopic'   : Isotopic partial gamma-ray cross 
+                                             sections.
+
+        Returns:
+            A list containing the following elements associated with the 
+            intensities of the neutron capture state and ground state in the 
+            residual compound nucleus:
+
+            [0]: Level index of the ground state (int);
+            [1]: Level energy of the ground state in keV (float);
+            [2]: Total internal-conversion corrected gamma-ray intensity 
+                 feeding the ground state (float);
+            [3]: Associated uncertainty on the total-feeding intensity of the 
+                 ground state (float);
+            [4]: Level index of the neutron-capture state (int);
+            [5]: Level energy of the neutron-capture state in keV (float);
+            [6]: Total internal-conversion corrected gamma-ray intensity 
+                 deexciting the neutron-capture state (float);
+            [7]: Associated uncertainty on the total-deexcitation intensity of 
+                 the neutron-capture state (float);
+            [8]: Intensity difference: 
+                 `(ground state intensity) - (capture state intensity)` 
+                 This is a signed value depending on missing (negative) or 
+                 excess (positive) observed intensity feeding the ground 
+                 state (float);
+            [9]: Associated uncertainty on the intensity difference (float); 
+            [10]: Residual intensity difference between ground and capture 
+                  states in units of standard deviation `sigma` (float).
+            [11]: Percentage intensity difference relative to the total 
+                  deexcitation of the neutron-capture state.  This is a signed 
+                  value depending on missing (negative) or excess (positive) 
+                  observed intensity feeding the ground state (float).
+
+        Examples:
+            Missing intensity to the ground state in 34S(n,g)35S
+            dead_ends(edata, "S35", intensity="isotopic")
+            dead_ends(edata, 16, 35, intensity="isotopic")
+
+            Excess intensity observed feeding the ground state in 186W(n,g)187W
+            dead_ends(edata, "W187", intensity="elemental")
+            dead_ends(edata, 74, 187, intensity="elemental")
+        """
+        self.list = list
+        self.args = args
+        DECAY_SCHEME_EXISTS = False
+        UNSPECIFIED_INTENSITY = True
+        intensity_units = None
+        WRONG_INPUTS = False
+        CAPTURE_STATE = False
+        highest_level_if_no_cs = None
+        if len(args) == 0 or len(args)> 2:
+            WRONG_INPUTS = True
+        
+        if kwargs == {} or kwargs == None:
+            print("A keyword argument is required for the desired intensity units.")
+            print("Please pass one of the following arguments:")
+            print("intensity='elemental'")
+            print("intensity='isotopic'")
+            return
+        else:
+            for intensity in kwargs.values():
+                if intensity.lower() == str("elemental"):
+                    UNSPECIFIED_INTENSITY = False
+                    intensity_units = "ELEMENTAL"
+                elif intensity.lower() == str("isotopic"):
+                    UNSPECIFIED_INTENSITY = False
+                    intensity_units = "ISOTOPIC"
+                else:
+                    UNSPECIFIED_INTENSITY = True
+
+        if UNSPECIFIED_INTENSITY == True:
+            print("Incorrect intensity argument.")
+            print("Please pass one of the following keyword arguments:")
+            print("intensity='elemental'")
+            print("intensity='isotopic'")
+            return
+        
+        deadends = []
+        for jdict in self.list:
+            try:
+                if (len(args)==1 and str(args[0]) == jdict["nucleusID"]) or (len(args)==2 and int(args[0]) == jdict["nucleusZ"] and int(args[1]) == jdict["nucleusA"]):        
+
+                    DECAY_SCHEME_EXISTS = True
+                    target = jdict["nucleusTargetID"]
+                    residual = jdict["nucleusID"]
+
+                    for eachq in jdict["recordQ"]:
+                        if eachq["energyNeutronSeparationEGAF"] == None:
+                            CAPTURE_STATE = False
+                        else:
+                            try:
+                                if float(eachq["energyNeutronSeparationEGAF"]) > 0.0:
+                                    CAPTURE_STATE = True
+                            except ValueError:
+                                print("Check Sn data type in {0}(n,g){1} dataset".format(target, residual))
+                                raise
+                    
+                    g = Gammas()
+                    gammas_array = None
+                    if intensity_units == "ELEMENTAL":
+                        gammas_array = g.get_gammas(self.list, residual, intensity="elemental")
+                    elif intensity_units == "ISOTOPIC":
+                        gammas_array = g.get_gammas(self.list, residual, intensity="isotopic")
+                    else:
+                        break
+
+                    gammas = gammas_array.tolist()
+                    level_index_cs = max(set([int(gamma[0]) for gamma in gammas]))
+                    level_energy_cs = None
+
+                    if CAPTURE_STATE == False:
+                        highest_level_if_no_cs = set([gamma[2] for gamma in gammas if int(gamma[0]) == level_index_cs])
+                    
+                    level_depop_cs = 0.0
+                    d_level_depop_cs = 0.0                    
+                    for gamma in gammas:
+                        if int(gamma[0]) == level_index_cs:
+                            level_energy_cs = float(gamma[2])
+                            depop_cs = float(gamma[6]) * (1+float(gamma[8]))
+                            level_depop_cs += depop_cs
+
+                            #f,x,dx,y,dy
+                            d_depop_cs = Uncertainties().quad_error(depop_cs, float(gamma[6]), float(gamma[7]), (1+float(gamma[8])), float(gamma[9]))
+                            d_level_depop_cs += float(d_depop_cs)**2
+                    d_level_depop_cs = np.sqrt(d_level_depop_cs)
+
+                    level_index_gs = 0
+                    level_energy_gs = None
+                    level_pop_gs = 0.0
+                    d_level_pop_gs = 0.0
+                    GROUND_STATE_FEEDING = False
+                    for gamma in gammas:
+                        if int(gamma[1]) == level_index_gs:
+                            GROUND_STATE_FEEDING = True
+                            level_energy_gs = float(gamma[3])
+                            pop_gs = float(gamma[6]) * (1+float(gamma[8]))
+                            level_pop_gs += pop_gs
+
+                            #f,x,dx,y,dy
+                            d_pop_gs = Uncertainties().quad_error(pop_gs, float(gamma[6]), float(gamma[7]), (1+float(gamma[8])), float(gamma[9]))
+                            d_level_pop_gs += float(d_pop_gs)**2
+                    d_level_pop_gs = np.sqrt(d_level_pop_gs)
+
+                    if GROUND_STATE_FEEDING == False:
+                        level_energy_gs = 0.0
+
+                    diff = level_pop_gs - level_depop_cs
+                    d_diff = np.sqrt(d_level_depop_cs**2 + d_level_pop_gs**2)
+
+                    percent_diff = (diff/level_depop_cs)*100
+                    d_percent_diff = (d_diff/level_depop_cs)*100 # Not included in list output
+
+                    if d_diff > 0:
+                        res = diff / d_diff
+
+                        deadends.append([level_index_gs, level_energy_gs, level_pop_gs, d_level_pop_gs, level_index_cs, level_energy_cs, level_depop_cs, d_level_depop_cs, diff, d_diff, res, percent_diff])
+
+            except ValueError:
+                WRONG_INPUTS = True
+
+        if WRONG_INPUTS == True:
+            print("Incorrect input sequence.")
+            print("Pass arguments to function as:")
+            print(" intensity_balance(edata, \"S35\", intensity=<str>)")
+            print("or:")
+            print(" intensity_balance(edata, 16, 35, intensity=<str>)")
+            return
+
+        if DECAY_SCHEME_EXISTS == False:
+            print("No residual compound-nucleus decay scheme in EGAF for input arguments provided.")
+            return
+        if len(deadends) == 0:
+            print("No gammas in decay scheme")
+            return
+        else:
+            if CAPTURE_STATE == True:
+                return deadends[0]
+            else:
+                print("Warning! Neutron-capture state not measured in EGAF.")
+                print("Highest level observed in residual nucleus: {0} keV.".format(highest_level_if_no_cs))
+                return deadends[0]
