@@ -9,6 +9,17 @@ edata = e.load_egaf()
 
 class AnalysisTests(unittest.TestCase):
 
+    doc = """Unit tests for the following methods of the `Analysis` class:
+    
+    `intensity_conversion`;
+    `modeled_sigma0`;
+    `modeled_sigma0_ecrit`;
+    `sum_feeding_gs`;
+    `sum_primaries`;
+    `normalise_intensities`;
+    `level_depopulations`.
+    """
+
     # Internal-conversion intensity tests
     def test_intensity_conversion_returns_tuple(self):
         total_trans = e.intensity_conversion(0.00075, 0.00012, 0.000335, 0.000005)
@@ -24,7 +35,7 @@ class AnalysisTests(unittest.TestCase):
             e.intensity_conversion(0.00075, 0.00012, 0.000335, 0.000005, 9.999999)
 
     def test_intensity_conversion_returned_floats_contents_of_tuple(self):
-        total_trans = e.modeled_sigma0(0.00075, 0.00012, 0.000335, 0.000005)
+        total_trans = e.intensity_conversion(0.00075, 0.00012, 0.000335, 0.000005)
         self.assertIsInstance(total_trans[0], float)
         self.assertIsInstance(total_trans[1], float)
 
@@ -208,7 +219,7 @@ class AnalysisTests(unittest.TestCase):
 
 
     # Primary-gamma summation tests
-    def test_sum_primaries_for_29Si_returns_array(self):
+    def test_sum_primaries_for_29Si_returns_tuple(self):
         sp_str = e.sum_primaries(edata, "Si29", intensity="isotopic")
         self.assertIsInstance(sp_str, tuple)
         sp_str = e.sum_primaries(edata, "Si29", intensity="population")
@@ -222,7 +233,7 @@ class AnalysisTests(unittest.TestCase):
         assert isinstance(sp_ints, Iterable)
 
     def test_sum_primaries_for_illegal_string_returns_None(self):
-        sp_str = e.get_gammas(edata, "THisIsB@LL@CK$", intensity="isotopic")
+        sp_str = e.sum_primaries(edata, "THisIsB@LL@CK$", intensity="isotopic")
         self.assertIsNone(sp_str)
 
     def test_sum_primaries_for_wrong_kwargs_returns_None(self):
@@ -396,3 +407,279 @@ class AnalysisTests(unittest.TestCase):
         self.assertIsInstance(list_levels, list)
         self.assertIsInstance(list_levels, Iterable)
 
+class IntensityBalance(unittest.TestCase):
+
+    __doc__ = """Unit tests for the `intensity_balance` method of the Analysis
+    class."""
+
+    rt = e.egaf_target_residual_dict(edata)
+    
+    def test_intensity_balance_returns_array(self):
+        for k,v in IntensityBalance.rt.items():
+            ib_i = e.intensity_balance(edata, k, intensity="isotopic")
+            try:
+                self.assertIsInstance(ib_i, np.ndarray)
+                assert isinstance(ib_i, Iterable)
+            except AssertionError:
+                self.assertIsNone(ib_i)
+
+            ib_e = e.intensity_balance(edata, k, intensity="elemental")
+            try:
+                self.assertIsInstance(ib_e, np.ndarray)
+                assert isinstance(ib_e, Iterable)
+            except AssertionError:
+                self.assertIsNone(ib_e)
+
+            ib_i_int = e.intensity_balance(edata, int(v[1]), int(v[2]), intensity="isotopic")
+            try:
+                self.assertIsInstance(ib_i_int, np.ndarray)
+                assert isinstance(ib_i_int, Iterable)
+            except AssertionError:
+                self.assertIsNone(ib_i_int)
+
+            ib_e_int = e.intensity_balance(edata, int(v[1]), int(v[2]), intensity="elemental")
+            try:
+                self.assertIsInstance(ib_e_int, np.ndarray)
+                assert isinstance(ib_e_int, Iterable)
+            except AssertionError:
+                self.assertIsNone(ib_e_int)
+        
+    def test_intensity_balance_for_illegal_string_returns_None(self):
+        ib_str = e.intensity_balance(edata, "THisIsB@LL@CK$", intensity="isotopic")
+        self.assertIsNone(ib_str)
+        ib_str = e.intensity_balance(edata, "Si29", intensity="THisIsB@LL@CK$")
+        self.assertIsNone(ib_str)
+
+    def test_intensity_balance_for_wrong_kwargs_returns_None(self):
+        ib_str = e.intensity_balance(edata, "Si29", intensity="population")
+        self.assertIsNone(ib_str)
+        ib_ints = e.intensity_balance(edata, 14, 29, intensity="population")
+        self.assertIsNone(ib_ints)
+
+    def test_intensity_balance_for_missing_kwargs_returns_None(self):
+        ib_str = e.intensity_balance(edata, "Si29")
+        self.assertIsNone(ib_str)
+        ib_ints = e.intensity_balance(edata, 14, 29)
+        self.assertIsNone(ib_ints)
+
+    def test_intensity_balance_raises_TypeError_if_first_arg_not_list(self):
+        with self.assertRaises(TypeError):
+            e.intensity_balance(14, 29, edata, intensity="elemental")
+        with self.assertRaises(TypeError):
+            e.intensity_balance("Si29", edata, intensity="elemental")
+
+    def test_intensity_balance_raises_NameError_if_wrong_list_name(self):
+        with self.assertRaises(NameError):
+            e.intensity_balance(XXXedata, "Si29", intensity="isotopic")
+        with self.assertRaises(NameError):
+            e.intensity_balance(XXXedata, 14, 29, intensity="isotopic")
+
+    def test_intensity_balance_raises_KeyError_if_bad_dict_items_in_list(self):
+        bad_dict_items_in_list = [{'a':0, 'b':1, 'c':2}]
+        with self.assertRaises(KeyError):
+            e.intensity_balance(bad_dict_items_in_list, "Si29", intensity="isotopic")
+            
+    def test_intensity_balance_in_all_EGAF_returned_contents_of_array(self):
+        self.assertEqual(len(IntensityBalance.rt), 245)
+
+        ib_si29 = e.intensity_balance(edata, "Si29", intensity="isotopic")
+        for ar in ib_si29:
+            self.assertEqual(len(ar), 9)
+            self.assertIsInstance(ar, np.ndarray)
+            self.assertIsInstance(ar, Iterable)
+            self.assertIsInstance(ar[0], float)
+            self.assertIsInstance(ar[1], float)
+            self.assertIsInstance(ar[2], float)
+            self.assertIsInstance(ar[3], float)
+            self.assertIsInstance(ar[4], float)
+            self.assertIsInstance(ar[5], float)
+            self.assertIsInstance(ar[6], float)
+            self.assertIsInstance(ar[7], float)
+            self.assertIsInstance(ar[8], float)
+            
+        for k,v in IntensityBalance.rt.items():
+            ib_i = e.intensity_balance(edata, str(k), intensity="isotopic")
+            try:
+                self.assertIsInstance(ib_i, np.ndarray)
+                self.assertIsInstance(ib_i, Iterable)
+            except AssertionError:
+                self.assertIsNone(ib_i)
+            try:
+                for ar in ib_i:
+                    self.assertEqual(len(ar), 9)
+                    self.assertIsInstance(ar, np.ndarray)
+                    self.assertIsInstance(ar, Iterable)
+
+                    self.assertIsInstance(ar[0], float)
+                    self.assertIsInstance(ar[1], float)
+                    self.assertIsInstance(ar[2], float)
+                    self.assertIsInstance(ar[3], float)
+                    self.assertIsInstance(ar[4], float)
+                    self.assertIsInstance(ar[5], float)
+                    self.assertIsInstance(ar[6], float)
+                    self.assertIsInstance(ar[7], float)
+                    self.assertIsInstance(ar[8], float)
+            except TypeError:
+                self.assertIsNone(ib_i)
+                
+            ib_e = e.intensity_balance(edata, str(k), intensity="elemental")
+            try:
+                self.assertIsInstance(ib_e, np.ndarray)
+                self.assertIsInstance(ib_e, Iterable)
+            except AssertionError:
+                self.assertIsNone(ib_e)
+            try:
+                for ar in ib_e:
+                    self.assertEqual(len(ar), 9)
+                    self.assertIsInstance(ar, np.ndarray)
+                    self.assertIsInstance(ar, Iterable)
+                    
+                    self.assertIsInstance(ar[0], float)
+                    self.assertIsInstance(ar[1], float)
+                    self.assertIsInstance(ar[2], float)
+                    self.assertIsInstance(ar[3], float)
+                    self.assertIsInstance(ar[4], float)
+                    self.assertIsInstance(ar[5], float)
+                    self.assertIsInstance(ar[6], float)
+                    self.assertIsInstance(ar[7], float)
+                    self.assertIsInstance(ar[8], float)
+            except TypeError:
+                self.assertIsNone(ib_e)
+
+
+class DeadEnds(unittest.TestCase):
+
+    __doc__ = """Unit tests for the `dead_ends` method of the Analysis class."""
+
+    rt = e.egaf_target_residual_dict(edata)
+    
+    def test_dead_ends_returns_list(self):
+        for k,v in DeadEnds.rt.items():
+            de_i = e.dead_ends(edata, k, intensity="isotopic")
+            try:
+                self.assertIsInstance(de_i, list)
+                assert isinstance(de_i, Iterable)
+            except AssertionError:
+                self.assertIsNone(de_i)
+
+            de_e = e.dead_ends(edata, k, intensity="elemental")
+            try:
+                self.assertIsInstance(de_e, list)
+                assert isinstance(de_e, Iterable)
+            except AssertionError:
+                self.assertIsNone(de_e)
+
+            de_i_int = e.dead_ends(edata, int(v[1]), int(v[2]), intensity="isotopic")
+            try:
+                self.assertIsInstance(de_i_int, list)
+                assert isinstance(de_i_int, Iterable)
+            except AssertionError:
+                self.assertIsNone(de_i_int)
+
+            de_e_int = e.dead_ends(edata, int(v[1]), int(v[2]), intensity="elemental")
+            try:
+                self.assertIsInstance(de_e_int, list)
+                assert isinstance(de_e_int, Iterable)
+            except AssertionError:
+                self.assertIsNone(de_e_int)
+        
+    def test_dead_ends_for_illegal_string_returns_None(self):
+        de_str = e.dead_ends(edata, "THisIsB@LL@CK$", intensity="isotopic")
+        self.assertIsNone(de_str)
+        de_str = e.dead_ends(edata, "Si29", intensity="THisIsB@LL@CK$")
+        self.assertIsNone(de_str)
+
+    def test_dead_ends_for_wrong_kwargs_returns_None(self):
+        de_str = e.dead_ends(edata, "Si29", intensity="population")
+        self.assertIsNone(de_str)
+        de_ints = e.dead_ends(edata, 14, 29, intensity="population")
+        self.assertIsNone(de_ints)
+
+    def test_dead_ends_for_missing_kwargs_returns_None(self):
+        de_str = e.dead_ends(edata, "Si29")
+        self.assertIsNone(de_str)
+        de_ints = e.dead_ends(edata, 14, 29)
+        self.assertIsNone(de_ints)
+
+    def test_dead_ends_raises_TypeError_if_first_arg_not_list(self):
+        with self.assertRaises(TypeError):
+            e.dead_ends(14, 29, edata, intensity="elemental")
+        with self.assertRaises(TypeError):
+            e.dead_ends("Si29", edata, intensity="elemental")
+
+    def test_dead_ends_raises_NameError_if_wrong_list_name(self):
+        with self.assertRaises(NameError):
+            e.dead_ends(XXXedata, "Si29", intensity="isotopic")
+        with self.assertRaises(NameError):
+            e.dead_ends(XXXedata, 14, 29, intensity="isotopic")
+
+    def test_dead_ends_raises_KeyError_if_bad_dict_items_in_list(self):
+        bad_dict_items_in_list = [{'a':0, 'b':1, 'c':2}]
+        with self.assertRaises(KeyError):
+            e.dead_ends(bad_dict_items_in_list, "Si29", intensity="isotopic")
+            
+    def test_dead_ends_in_all_EGAF_returned_contents_of_list(self):
+        self.assertEqual(len(DeadEnds.rt), 245)
+
+        de_si29 = e.dead_ends(edata, "Si29", intensity="isotopic")
+        self.assertEqual(len(de_si29), 12)
+        self.assertIsInstance(de_si29, list)
+        self.assertIsInstance(de_si29, Iterable)
+        self.assertIsInstance(de_si29[0], int)
+        self.assertIsInstance(de_si29[1], float)
+        self.assertIsInstance(de_si29[2], float)
+        self.assertIsInstance(de_si29[3], float)
+        self.assertIsInstance(de_si29[4], int)
+        self.assertIsInstance(de_si29[5], float)
+        self.assertIsInstance(de_si29[6], float)
+        self.assertIsInstance(de_si29[7], float)
+        self.assertIsInstance(de_si29[8], float)
+        self.assertIsInstance(de_si29[9], float)
+        self.assertIsInstance(de_si29[10], float)
+        self.assertIsInstance(de_si29[11], float)
+
+        self.assertGreater(float(de_si29[2]), float(de_si29[6]))
+        self.assertLess(float(de_si29[1]), float(de_si29[5]))
+            
+        for k,v in DeadEnds.rt.items():
+            de_i = e.dead_ends(edata, str(k), intensity="isotopic")
+            try:
+                self.assertEqual(len(de_i), 12)
+                self.assertIsInstance(de_i, list)
+                self.assertIsInstance(de_i, Iterable)
+
+                self.assertIsInstance(de_i[0], int)
+                self.assertIsInstance(de_i[1], float)
+                self.assertIsInstance(de_i[2], float)
+                self.assertIsInstance(de_i[3], float)
+                self.assertIsInstance(de_i[4], int)
+                self.assertIsInstance(de_i[5], float)
+                self.assertIsInstance(de_i[6], float)
+                self.assertIsInstance(de_i[7], float)
+                self.assertIsInstance(de_i[8], float)
+                self.assertIsInstance(de_i[9], float)
+                self.assertIsInstance(de_i[10], float)
+                self.assertIsInstance(de_i[11], float)
+            except TypeError:
+                self.assertIsNone(de_i)
+                
+            de_e = e.dead_ends(edata, str(k), intensity="elemental")
+            try:
+                self.assertEqual(len(de_e), 12)
+                self.assertIsInstance(de_e, list)
+                self.assertIsInstance(de_e, Iterable)
+
+                self.assertIsInstance(de_e[0], int)
+                self.assertIsInstance(de_e[1], float)
+                self.assertIsInstance(de_e[2], float)
+                self.assertIsInstance(de_e[3], float)
+                self.assertIsInstance(de_e[4], int)
+                self.assertIsInstance(de_e[5], float)
+                self.assertIsInstance(de_e[6], float)
+                self.assertIsInstance(de_e[7], float)
+                self.assertIsInstance(de_e[8], float)
+                self.assertIsInstance(de_e[9], float)
+                self.assertIsInstance(de_e[10], float)
+                self.assertIsInstance(de_e[11], float)
+            except TypeError:
+                self.assertIsNone(de_e)
