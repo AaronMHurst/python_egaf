@@ -116,9 +116,9 @@ class BaseEGAF(object):
             nucleus ID in a string.  The dictionary value is given in a tuple 
             with the following elements:
 
-            [0]: Target (A) nucleus <str>;
+            [0]: Target (A) nucleus ID <str>;
             [1]: Target atomic (Z) number <int>;
-            [2]: Target mass (A) number <int>.
+            [2]: Mass (A) number of residual compound nucleus <int>.
 
 
         Example:
