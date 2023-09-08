@@ -1138,9 +1138,9 @@ class Analysis(Gammas):
             dead_ends(edata, "S35", intensity="isotopic")
             dead_ends(edata, 16, 35, intensity="isotopic")
 
-            Excess intensity observed feeding the ground state in 186W(n,g)187W
-            dead_ends(edata, "W187", intensity="elemental")
-            dead_ends(edata, 74, 187, intensity="elemental")
+            Excess intensity observed feeding the ground state in 28Si(n,g)29Si
+            dead_ends(edata, "Si29", intensity="elemental")
+            dead_ends(edata, 14, 29, intensity="elemental")
         """
         self.list = list
         self.args = args
