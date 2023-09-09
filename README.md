@@ -1,10 +1,10 @@
 # pyEGAF
 
-This project is a Python package that allows for the extraction and manipulation of thermal-neutron capture gamma-ray data from the Evaluated Gamma-ray Activation File (EGAF) library [[1]](#1), [[2]](#2).  The EGAF library is a database of &gamma;-ray energies and their corresponding partial &gamma;-ray cross sections from thermal-neutron capture measurements carried out with a guided neutron beam at the Budapest Research Reactor for 245 isotopes encompassing measurements of natural elemental samples for targets from *Z* = 1-83, 90, and 92, except for Tc (*Z* = 43) and Pm (*Z* = 61).  The database comprises a total of 8172 primary &gamma; rays and 29605 secondary &gamma; rays (a total of 37777 &gamma; rays) associated with 12564 levels.  The (*n*,&gamma;) targets and corresponding residual compound nuclides relevant to the EGAF project are summarized in the schematic of the nuclear chart shown in the figure below.
+This project is a Python package enabling interaction, manipulation, and analysis of thermal-neutron capture gamma-ray data from the Evaluated Gamma-ray Activation File (EGAF) library [[1]](#1), [[2]](#2).  The EGAF library is a database of &gamma;-ray energies and their corresponding partial &gamma;-ray cross sections from thermal-neutron capture measurements carried out with a guided neutron beam at the Budapest Research Reactor for 245 isotopes encompassing measurements of natural elemental samples for targets from *Z* = 1-83, 90, and 92, except for Tc (*Z* = 43) and Pm (*Z* = 61).  The database comprises a total of 8172 primary &gamma; rays and 29605 secondary &gamma; rays (a total of 37777 &gamma; rays) associated with 12564 levels.  The (*n*,&gamma;) targets and corresponding residual compound nuclides relevant to the EGAF project are summarized in the schematic of the nuclear chart shown in the figure below.
 
 ![EGAF Nuclides](EGAF_nuclides.png?raw=true "Schematic of nuclear chart relevant to EGAF nuclides")
 
-The `pyEGAF` package provides users with a convenient means for access and analysis of the thermal neutron-capture data in EGAF including decay schemes and associated properties for all compound nuclides, as well as a capability to search for by &gamma;-ray energy for forensics applications.  After building, installation, and testing of the project, refer to the examples provided in the `Jupyter` notebook for an overview regarding some of the available methods.
+The `pyEGAF` package provides users with a convenient means of access and visualization of the thermal neutron-capture data in EGAF including decay-scheme information and associated nuclear structure properties for all compound nuclides contained therein.  In addition, the package also provides a capability to search by &gamma;-ray energy for forensics applications.  After building, installation, and testing of the project, refer to the examples provided in the `Jupyter Notebooks` for an overview regarding some of the available methods.
 
 # Building and installation
 
@@ -16,9 +16,15 @@ $ cd python_egaf
 $ sh installation.sh
 ```
 
+Alternatively, because the project is also maintained on the Python Package Index repository at https://pypi.org/project/pyEGAF/1.0.0/, it can also be installed using the `pip` command in a Unix terminal:
+
+```Bash
+$ pip install pyEGAF
+```
+
 # Testing
 
-A suite of Python modules containing 208 unit tests have been written for this project and are located in the `tests` folder.  To run the test suite and ensure they work with the Python environment, run `tox` in the project directory where the `tox.ini` file is also located:
+A suite of Python modules containing 224 unit tests have been written for this project and are located in the `tests` folder.  To run the test suite and ensure they work with the Python environment, run `tox` in the project directory where the `tox.ini` file is also located:
 
 ```Bash
 $ tox -r
@@ -28,7 +34,7 @@ This project has the following Python-package dependencies: `numpy`, `pandas`, a
 
 # Running the software
 
-After the installation the `pyEGAF` scripts can be ran from any location by importing the package and making an instance of the `EGAF` class:
+Following installation, the `pyEGAF` scripts can be ran from any location by importing the package and making an instance of the `EGAF` class:
 
 ```Bash
 $ python
@@ -38,13 +44,13 @@ $ python
 >>> e = egaf.EGAF()
 ```
 
-Most methods also require passing the EGAF `JSON` source data set as a list object:
+Most methods also require passing the EGAF `JSON` source data set as a list-object argument which first needs to be created:
 
 ```python
 >>> edata = e.load_egaf()
 ```
 
-A `Jupyter` notebook is provided illustrating use of the various methods for access and manipulation of the EGAF data.  Additionally, a few analysis methods commonly adopted in the analysis of thermal-neutron capture data are also included in the `pyEGAF` software package.  Launch the notebook provided in the `notebook` folder and execute the cells to run through the example-use cases.  This notebook also has a `matplotlib` Python-package dependency.
+Two `Jupyter Notebooks` are provided illustrating use of the various methods for interaction, manipulation, and visualization of the EGAF data.  Additionally, a few analysis methods commonly adopted in the analysis of thermal-neutron capture &gamma;-ray data are also included in the `pyEGAF` software package.  Launch the notebooks provided in the `notebook` folder and execute the cells to run through the example-use cases.  These notebooks also have a `matplotlib` Python-package dependency and utilize inline-plotting methods and builtin `Jupyter Notebook` magic commands.
 
 # Docstrings
 
@@ -67,7 +73,7 @@ Each of these formats are described below.
 
 ## ENSDF format
 
-The original EGAF data sets were prepared in accordance with the mixed-record 80-character column format of the Evaluated Nuclear Structure Data File (ENSDF) [[3]](#3).  These ENSDF-formatted files are maintained online by the International Atomic Energy Agency [[4]](#4).  The relevant fields of the `Normalization`, `Level`, and `Gamma` records that are commonly adopted in the EGAF data sets are explained in the manual [[3]](#3).  In addition, `Comment` records are also frequently encountered in EGAF data sets.  The ENSDF-formatted EGAF data sets can be accessed from the project folder by changing into the following directory and listing its contents:
+The original EGAF data sets were prepared in accordance with the mixed-record 80-character column format of the Evaluated Nuclear Structure Data File (ENSDF) [[3]](#3).  These ENSDF-formatted files are maintained online by the International Atomic Energy Agency [[4]](#4).  The relevant fields of the `Normalization`, `Level`, and `Gamma` records that are commonly adopted in the EGAF data sets are explained in the ENSDF manual [[3]](#3).  In addition, `Comment` records are also frequently encountered in EGAF data sets.  The ENSDF-formatted EGAF data sets can be accessed from the project folder by changing into the following directory and listing its contents:
 
 ```Bash
 $ cd pyEGAF/EGAF_ENSDF
@@ -80,7 +86,7 @@ Alternatively, individual files can also be accessed using `pyEGAF` methods by p
 >>> ensdf = e.get_ensdf(edata, "Si29")
 ```
 
-File printing is set to `False` by default.  To print the file to your `pwd` pass the boolean `True` to the function:
+File printing is suppressed by default.  To print the file to your `pwd` pass the boolean argument `True` to the same function:
 
 ```python
 >>> ensdf = e.get_ensdf(edata, "Si29", True)
