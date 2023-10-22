@@ -7,7 +7,7 @@ from .analysis import Analysis
 from .cap_gam import CapGam
 from .file_handler import RIPL, JSONFile, ENSDF
 
-__version__='0.1.0'
+__version__='1.0.0'
 __author__='Aaron M. Hurst'
 
 _ROOT = os.path.abspath(os.path.dirname(__file__))
