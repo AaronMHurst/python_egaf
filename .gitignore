@@ -6,8 +6,6 @@ notebook/*.csv
 notebook/running_egaf.ipynb
 notebook/.ipynb_checkpoints/
 *~
-DeltaSn.txt
-pyegaf_grin.tgz
 pyEGAF/__pycache__/
 pyEGAF/*.~
 tests/__pycache__/
